@@ -16,9 +16,12 @@ fonti:
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2021-04-22;60"
   - label: "L. 48/2008, ratifica Convenzione di Budapest (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2008-03-18;48"
-  - label: "Testo CEDU (Corte EDU)"
+  - label: "Testo CEDU, traduzione italiana (Corte EDU)"
     url: "https://www.echr.coe.int/documents/d/echr/Convention_ITA"
-stato: bozza
+  - label: "Convenzione 108+: 34ª ratifica (Consiglio d'Europa, 2026)"
+    url: "https://www.coe.int/en/web/data-protection/-/republic-of-moldova-becomes-the-34th-state-to-ratify-the-convention-108-"
+stato: verificata
+verificataIl: 2026-10-28
 ---
 
 ## In breve
@@ -35,22 +38,23 @@ Per questo la scheda non compare nelle pagine profilo.
 
 ## Obblighi chiave
 
-- **CEDU, art. 8**: diritto al rispetto della vita privata e familiare, del domicilio e della corrispondenza. Le ingerenze dell'autorità pubblica devono essere previste dalla legge e necessarie in una società democratica. Su questa base la Corte EDU ha deciso, ad esempio, sul monitoraggio delle email dei lavoratori (Bărbulescu c. Romania, 2017).
-- **CEDU, art. 10**: libertà di espressione, comprese le informazioni diffuse online, con i limiti previsti dalla legge.
-- **Convenzione 108 e Protocollo 108+**: principi sul trattamento dei dati, aggiornati nel 2018 in linea con il GDPR. Valgono anche verso gli Stati non UE che li hanno ratificati.
+- **CEDU, art. 8**: diritto al rispetto della vita privata e familiare, del domicilio e della corrispondenza. Un'ingerenza dell'autorità pubblica è ammessa solo se prevista dalla legge e necessaria in una società democratica per gli scopi elencati, tra cui sicurezza, prevenzione dei reati e protezione dei diritti altrui. Su questa base la Corte EDU ha deciso, ad esempio, sul monitoraggio delle email dei lavoratori (Bărbulescu c. Romania, 2017).
+- **CEDU, art. 10**: libertà di espressione, che comprende la libertà di ricevere e comunicare informazioni o idee senza ingerenze delle autorità e senza limiti di frontiera. Le restrizioni devono essere previste dalla legge e necessarie, ad esempio per proteggere la reputazione o i diritti altrui o per impedire la divulgazione di informazioni riservate.
+- **CEDU, artt. 34-35**: chi si ritiene vittima di una violazione da parte di uno Stato può ricorrere alla Corte, ma solo dopo aver esaurito i ricorsi interni ed entro quattro mesi dalla decisione interna definitiva.
+- **Convenzione 108 e Protocollo 108+**: principi sul trattamento dei dati, aggiornati nel 2018 in linea con il GDPR. La Convenzione 108 vincola anche Stati non UE. Il Protocollo 108+ non è ancora in vigore: servono 38 ratifiche, e il Consiglio d'Europa ha annunciato la 34ª nel maggio 2026.
 - **Convenzione di Budapest**: definizioni comuni di accesso abusivo, intercettazione, danneggiamento di dati e sistemi e frode informatica, più regole di cooperazione tra polizie e giudici.
 
 ## Impatto pratico
 
 - Nei controlli sui lavoratori e nella sorveglianza, i giudici italiani tengono conto della giurisprudenza della Corte EDU sull'art. 8, ad esempio su informativa preventiva e proporzionalità.
-- Per trasferimenti di dati e cooperazione con Paesi europei non UE, la Convenzione 108+ è un riferimento comune.
+- Per trasferimenti di dati e cooperazione con Paesi europei non UE, la Convenzione 108 è un riferimento comune, e lo sarà la 108+ quando entrerà in vigore.
 
 ## Sanzioni
 
-Nessuna sanzione diretta per imprese ed enti. La Corte EDU può condannare lo Stato, e solo dopo che sono stati esauriti i rimedi interni.
+Nessuna sanzione diretta per imprese ed enti. La Corte EDU può condannare lo Stato, solo dopo l'esaurimento dei ricorsi interni (art. 35 CEDU).
 
 ## Note aperte
 
-- Testo degli artt. 8 e 10 CEDU da riscontrare sulla traduzione ufficiale: il PDF della Corte EDU non è stato leggibile in automatico. Le leggi di ratifica sono state verificate su Normattiva il 28/10/2026.
-- Entrata in vigore del Protocollo 108+, che richiede un numero minimo di ratifiche.
-- Convenzione quadro sull'intelligenza artificiale (CETS 225, 2024): firma e ratifica italiana.
+- CEDU verificata sulla traduzione italiana pubblicata dalla Corte EDU; i testi facenti fede sono quelli in inglese e francese. Leggi di ratifica verificate su Normattiva il 28/10/2026.
+- Protocollo 108+: controllare il numero di ratifiche sul sito dell'Ufficio dei trattati.
+- Convenzione quadro sull'intelligenza artificiale (CETS 225, 2024): secondo fonti di settore non è ancora in vigore, e l'UE l'ha ratificata il 15/5/2026. Firma e ratifica italiana non riscontrate.

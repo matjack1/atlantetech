@@ -18,7 +18,7 @@ stato: bozza
 
 ## In breve
 
-Per i professionisti intellettuali (es. ingegneri) l’AI può essere solo strumentale e va comunicata al cliente (art. 13). Il datore di lavoro deve informare i lavoratori sull’uso dell’AI (art. 11). Norme su diritto d’autore e opere generate.
+Per i professionisti intellettuali (es. ingegneri) l’AI può essere solo strumentale e va comunicata al cliente (art. 13); per gli ingegneri lo recepisce l’art. 13 del [codice deontologico](/atti/settore/codice-deontologico-cni/). Il datore di lavoro deve informare i lavoratori sull’uso dell’AI (art. 11). Norme su diritto d’autore e opere generate.
 
 ## Si applica se…
 

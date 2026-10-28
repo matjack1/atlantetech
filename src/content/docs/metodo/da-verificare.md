@@ -9,7 +9,7 @@ Punti aperti al 28/10/2026. Lo stato delle iniziative si basa su informazioni ag
 
 ## Iniziative in corso
 
-- **Digital Omnibus** (proposta della Commissione, novembre 2025): modifiche a GDPR, regole sui cookie, AI Act (incluso il possibile rinvio degli obblighi per l'alto rischio) e Data Act. Verificare lo stato dell'iter e le date effettive. Per la parte su GDPR e cookie, a fine ottobre 2026 il Parlamento non ha ancora votato e i triloghi non sono iniziati (fonti di settore, non ancora riscontrate sui documenti ufficiali).
+- **Digital Omnibus** (proposta della Commissione, novembre 2025): modifiche a GDPR, regole sui cookie, AI Act (incluso il possibile rinvio degli obblighi per l'alto rischio) e Data Act. Verificare lo stato dell'iter e le date effettive. La parte sull'AI è legge: Reg. (UE) 2026/1744, «Omnibus digitale sull'IA», dell'8/7/2026 (GU UE L del 24/7/2026), che modifica l'AI Act; la [scheda AI Act](/atti/ai/ai-act/) va aggiornata. Per la parte su GDPR e cookie, a fine ottobre 2026 il Parlamento non ha ancora votato e i triloghi non sono iniziati (fonti di settore, non ancora riscontrate sui documenti ufficiali).
 - **Digital Fairness Act**: proposta attesa nel 2026 su pratiche commerciali online, dark pattern, abbonamenti.
 
 ## Punti aperti nelle schede

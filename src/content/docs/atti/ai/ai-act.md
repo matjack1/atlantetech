@@ -25,7 +25,7 @@ stato: bozza
 
 ## In breve
 
-Chiunque usi l’AI in ambito professionale è “deployer”: alfabetizzazione AI (art. 4) e trasparenza (art. 50). Chi integra l’AI nel prodotto (SaaS) ha obblighi aggiuntivi. Scadenze e art. 4 potenzialmente modificati dal Digital Omnibus: da verificare.
+Chiunque usi l’AI in ambito professionale è “deployer”: alfabetizzazione AI (art. 4) e trasparenza (art. 50). Chi integra l’AI nel prodotto (SaaS) ha obblighi aggiuntivi. L’AI Act è stato modificato dal Reg. (UE) 2026/1744 (Omnibus digitale sull’IA, GU UE del 24/7/2026): scadenze e art. 4 di questa scheda sono da aggiornare.
 
 ## Si applica se…
 
