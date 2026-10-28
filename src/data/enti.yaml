@@ -1,5 +1,7 @@
 # Registro degli enti. Ogni voce è citabile dalle schede in `autorita` tramite `id`.
 # livello, tipo, poteri, temi: chiavi di src/lib/tassonomia.mjs.
+# soggetti: profili per cui l'ente è un riferimento anche se nessuna scheda lo cita (pagine profilo).
+#   Per un ente citato dal nucleo comune limita invece i profili in cui compare.
 # Scritto a memoria: le voci con `note` hanno punti da verificare.
 
 # ── Internazionali ─────────────────────────────────────────────
@@ -571,6 +573,7 @@
   sigla: MIMIT
   livello: nazionali
   tipo: istituzioni
+  soggetti: [cooperative]
   poteri: [regola, vigila]
   temi: [contratti, settore, web]
   sito: https://www.mimit.gov.it/
@@ -584,6 +587,7 @@
   nome: Ministero del lavoro e delle politiche sociali
   livello: nazionali
   tipo: istituzioni
+  soggetti: [ets]
   poteri: [regola, vigila, registra]
   temi: [lavoro, settore]
   sito: https://www.lavoro.gov.it/
@@ -620,6 +624,7 @@
   nome: Dipartimento per lo sport
   livello: nazionali
   tipo: istituzioni
+  soggetti: [sport]
   poteri: [regola, registra]
   temi: [settore]
   sito: https://www.sport.governo.it/
@@ -704,6 +709,7 @@
   nome: Banca d'Italia
   livello: nazionali
   tipo: autorita
+  soggetti: [saas]
   poteri: [regola, vigila]
   temi: [sicurezza, fisco]
   sito: https://www.bancaditalia.it/
@@ -717,6 +723,7 @@
   sigla: Consob
   livello: nazionali
   tipo: autorita
+  soggetti: [saas]
   poteri: [regola, vigila]
   temi: [sicurezza]
   sito: https://www.consob.it/
@@ -730,6 +737,7 @@
   sigla: IVASS
   livello: nazionali
   tipo: autorita
+  soggetti: [saas]
   poteri: [regola, vigila]
   temi: [sicurezza]
   sito: https://www.ivass.it/
@@ -973,6 +981,7 @@
   sigla: CNI
   livello: nazionali
   tipo: categoria
+  soggetti: [ingegneri]
   poteri: [regola, giudica, registra, indirizza]
   temi: [settore]
   sito: https://www.cni.it/
@@ -986,6 +995,7 @@
   nome: Inarcassa
   livello: nazionali
   tipo: categoria
+  soggetti: [ingegneri]
   poteri: [regola, registra]
   temi: [settore]
   sito: https://www.inarcassa.it/
@@ -999,6 +1009,7 @@
   sigla: CEI
   livello: nazionali
   tipo: categoria
+  soggetti: [parrocchie]
   poteri: [regola]
   temi: [dati]
   sito: https://www.chiesacattolica.it/
@@ -1010,6 +1021,7 @@
   nome: CONI, federazioni ed enti di promozione sportiva
   livello: nazionali
   tipo: categoria
+  soggetti: [sport]
   poteri: [regola, registra]
   temi: [settore]
   sito: https://www.coni.it/
@@ -1023,6 +1035,7 @@
   nome: Associazioni di rappresentanza delle cooperative
   livello: nazionali
   tipo: categoria
+  soggetti: [cooperative]
   poteri: [vigila]
   temi: [settore]
   ruolo: >-
@@ -1095,6 +1108,7 @@
   nome: Comuni
   livello: territoriali
   tipo: istituzioni
+  soggetti: [artigiani]
   poteri: [regola, registra]
   ruolo: >-
     Sportelli unici online (SUAP per le attività produttive, SUE per l'edilizia), anagrafe tramite
@@ -1105,6 +1119,7 @@
   nome: Uffici regionali del RUNTS
   livello: territoriali
   tipo: agenzie
+  soggetti: [ets]
   poteri: [registra, vigila]
   temi: [settore]
   ruolo: >-
@@ -1128,6 +1143,7 @@
   sigla: CCIAA
   livello: territoriali
   tipo: agenzie
+  soggetti: [artigiani, cooperative, saas]
   poteri: [registra, supporta]
   temi: [documenti, settore]
   sito: https://www.unioncamere.gov.it/
@@ -1142,6 +1158,7 @@
   sigla: EDIH
   livello: territoriali
   tipo: ricerca
+  soggetti: [artigiani, saas]
   poteri: [supporta]
   temi: [ai, sicurezza]
   ruolo: >-
@@ -1164,6 +1181,7 @@
   nome: Ordini provinciali degli ingegneri
   livello: territoriali
   tipo: categoria
+  soggetti: [ingegneri]
   poteri: [registra, indirizza, autorizza]
   temi: [settore]
   ruolo: >-
@@ -1175,6 +1193,7 @@
   nome: Consigli di disciplina territoriali
   livello: territoriali
   tipo: categoria
+  soggetti: [ingegneri]
   poteri: [giudica]
   temi: [settore]
   ruolo: >-
@@ -1185,6 +1204,7 @@
   nome: Diocesi
   livello: territoriali
   tipo: categoria
+  soggetti: [parrocchie]
   poteri: [regola, vigila]
   temi: [dati]
   ruolo: >-
@@ -1213,6 +1233,7 @@
   luogo: torino
   scala: citta
   tipo: istituzioni
+  soggetti: [artigiani]
   poteri: [regola, registra]
   temi: [documenti, web]
   sito: https://www.comune.torino.it/
@@ -1260,6 +1281,7 @@
   luogo: torino
   scala: metropoli
   tipo: agenzie
+  soggetti: [artigiani, cooperative, saas]
   poteri: [registra, supporta]
   temi: [documenti, settore]
   sito: https://www.to.camcom.it/
@@ -1287,6 +1309,7 @@
   luogo: torino
   scala: metropoli
   tipo: categoria
+  soggetti: [ingegneri]
   poteri: [registra, indirizza, autorizza]
   temi: [settore]
   sito: https://torino.ordingegneri.it/
@@ -1304,6 +1327,7 @@
   luogo: torino
   scala: metropoli
   tipo: categoria
+  soggetti: [ets]
   poteri: [supporta]
   temi: [settore, dati]
   sito: https://volontariatotorino.it/
@@ -1319,6 +1343,7 @@
   luogo: torino
   scala: metropoli
   tipo: categoria
+  soggetti: [parrocchie]
   poteri: [regola, vigila]
   temi: [dati]
   sito: https://www.diocesi.torino.it/
@@ -1441,6 +1466,7 @@
   luogo: torino
   scala: regione
   tipo: agenzie
+  soggetti: [ets]
   poteri: [registra, vigila]
   temi: [settore]
   ruolo: >-
@@ -1481,6 +1507,7 @@
   luogo: torino
   scala: regione
   tipo: categoria
+  soggetti: [ingegneri]
   poteri: [indirizza]
   temi: [settore]
   sito: http://www.fiopa.it/
@@ -1497,6 +1524,7 @@
   luogo: torino
   scala: regione
   tipo: ricerca
+  soggetti: [artigiani, saas]
   poteri: [supporta]
   temi: [ai, sicurezza]
   ruolo: >-

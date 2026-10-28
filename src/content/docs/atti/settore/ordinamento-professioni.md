@@ -8,7 +8,7 @@ giurisdizione: IT
 tema: settore
 soggetti: [professionisti]
 applicazione: 2012-08-15
-autorita: [cni, ordini-provinciali]
+autorita: [ministero-giustizia]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2012-08-07;137"

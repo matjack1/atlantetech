@@ -38,7 +38,7 @@ Il build fallisce se un campo non rispetta lo schema (`src/content.config.ts`) o
 
 ## Enti
 
-Gli enti stanno in `src/data/enti.yaml`, una voce per ente con `id`, `nome`, `sigla`, `livello`, `tipo`, `poteri`, `temi`, `sito`, `ruolo` e `note` (punti da verificare). Livelli, tipi e poteri sono definiti in `src/lib/tassonomia.mjs`. Le pagine in [Enti e autorità](/enti/) si generano dal registro. Ogni voce elenca le schede che la citano. Un ente nuovo con un `tipo` non ancora presente nella pagina del suo livello richiede una nuova sezione `## …` in `src/content/docs/enti/<livello>.mdx`.
+Gli enti stanno in `src/data/enti.yaml`, una voce per ente con `id`, `nome`, `sigla`, `livello`, `tipo`, `poteri`, `temi`, `sito`, `ruolo`, `note` (punti da verificare) e `soggetti` (profili per cui l'ente è un riferimento anche se nessuna scheda lo cita). Livelli, tipi e poteri sono definiti in `src/lib/tassonomia.mjs`. Le pagine in [Enti e autorità](/enti/) si generano dal registro. Ogni voce elenca le schede che la citano. La sezione «Enti di riferimento» di ogni profilo unisce gli enti citati dalle schede applicabili (esclusi gli emittenti di standard) e quelli con il profilo in `soggetti`. Per un ente citato dal nucleo comune, `soggetti` indica invece i soli profili in cui compare: Banca d'Italia, Consob e IVASS, citati dalla legge italiana sull'AI, compaiono solo per i SaaS. Un ente nuovo con un `tipo` non ancora presente nella pagina del suo livello richiede una nuova sezione `## …` in `src/content/docs/enti/<livello>.mdx`.
 
 ## Sezioni
 

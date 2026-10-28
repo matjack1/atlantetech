@@ -38,6 +38,9 @@ const ente = z.object({
 	sito: z.string().url().optional(),
 	ruolo: z.string(),
 	note: z.string().optional(),
+	// Profili per cui l'ente è un riferimento anche se nessuna scheda lo cita; per gli enti del
+	// nucleo comune, i soli profili in cui compaiono
+	soggetti: z.array(z.enum(chiavi(SOGGETTI))).default([]),
 	// Enti locali: compaiono nella pagina del luogo invece che in quella del livello
 	luogo: z.enum(chiavi(LUOGHI)).optional(),
 	scala: z.enum(chiavi(SCALE)).optional(),

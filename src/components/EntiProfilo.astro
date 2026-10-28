@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content';
+import { LIVELLI, LUOGHI } from '../lib/tassonomia.mjs';
+import { getSchede, href, hrefEnte, nomeBreve, siApplica } from '../lib/format';
+
+interface Props {
+	/** Chiave di SOGGETTI, oppure `tutti` per il solo nucleo comune */
+	soggetto: string;
+}
+
+// Enti di un profilo: quelli citati in `autorita` dalle schede applicabili (esclusi gli emittenti
+// di standard) più quelli con il profilo in `soggetti`. Gli enti del nucleo comune vanno in coda,
+// salvo quelli con `soggetti` che non include il profilo (es. vigilanza finanziaria).
+const { soggetto } = Astro.props;
+const nucleo = soggetto === 'tutti';
+const comune = (s: { data: { soggetti: string[] } }) => s.data.soggetti.includes('tutti');
+const schede = (await getSchede()).filter(
+	(s) => s.data.tipo !== 'standard' && (nucleo ? comune(s) : siApplica(s.data.soggetti, soggetto))
+);
+const ordineLivelli = Object.keys(LIVELLI).reverse();
+const enti = (await getCollection('enti')).sort(
+	(a, b) =>
+		ordineLivelli.indexOf(a.data.livello) - ordineLivelli.indexOf(b.data.livello) ||
+		a.data.nome.localeCompare(b.data.nome, 'it')
+);
+const citanti = (id: string) => schede.filter((s) => s.data.autorita.some((r) => r.id === id));
+const proprio = (e: (typeof enti)[number]) => !nucleo && siApplica(e.data.soggetti, soggetto);
+
+const specifici = enti
+	.filter((e) => !e.data.luogo)
+	.map((e) => ({ e, atti: citanti(e.id).filter((s) => nucleo || !comune(s)) }))
+	.filter(({ e, atti }) => proprio(e) || atti.length > 0);
+const comuni = nucleo
+	? []
+	: enti.filter(
+			(e) =>
+				!specifici.some((x) => x.e.id === e.id) &&
+				citanti(e.id).some(comune) &&
+				(e.data.soggetti.length === 0 || proprio(e))
+		);
+const locali = Object.entries(LUOGHI)
+	.map(([k, label]) => ({ label, enti: enti.filter((e) => e.data.luogo === k && proprio(e)) }))
+	.filter((l) => l.enti.length > 0);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<table>
+	<thead>
+		<tr>
+			<th>Ente</th>
+			<th>Livello</th>
+			<th>Nelle schede</th>
+		</tr>
+	</thead>
+	<tbody>
+		{
+			specifici.map(({ e, atti }) => (
+				<tr>
+					<td>
+						<a href={hrefEnte(e)}>{e.data.nome}</a>
+					</td>
+					<td>{LIVELLI[e.data.livello]}</td>
+					<td>
+						{atti.length === 0
+							? '—'
+							: atti.map((s, i) => (
+									<>
+										{i > 0 && ', '}
+										<a href={href(s.id)}>{s.data.nome ?? s.data.title}</a>
+									</>
+								))}
+					</td>
+				</tr>
+			))
+		}
+	</tbody>
+</table>
+
+{
+	locali.map((l) => (
+		<p>
+			<strong>A {l.label}:</strong>{' '}
+			{l.enti.map((e, i) => (
+				<>
+					{i > 0 && ', '}
+					<a href={hrefEnte(e)}>{nomeBreve(e)}</a>
+				</>
+			))}
+			.
+		</p>
+	))
+}
+
+{
+	comuni.length > 0 && (
+		<p>
+			<strong>
+				Per il <a href={`${base}/nucleo/#enti-di-riferimento`}>nucleo comune</a>:
+			</strong>{' '}
+			{comuni.map((e, i) => (
+				<>
+					{i > 0 && ', '}
+					<a href={hrefEnte(e)}>{nomeBreve(e)}</a>
+				</>
+			))}
+			.
+		</p>
+	)
+}
