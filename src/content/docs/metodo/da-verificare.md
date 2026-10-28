@@ -5,15 +5,18 @@ sidebar:
   order: 2
 ---
 
-Punti aperti al 27/10/2026. Lo stato delle iniziative si basa su informazioni aggiornate a giugno 2026.
+Punti aperti al 28/10/2026. Lo stato delle iniziative si basa su informazioni aggiornate a giugno 2026.
 
 ## Iniziative in corso
 
-- **Digital Omnibus** (proposta della Commissione, novembre 2025): modifiche a GDPR, regole sui cookie, AI Act (incluso il possibile rinvio degli obblighi per l'alto rischio) e Data Act. Verificare lo stato dell'iter e le date effettive.
+- **Digital Omnibus** (proposta della Commissione, novembre 2025): modifiche a GDPR, regole sui cookie, AI Act (incluso il possibile rinvio degli obblighi per l'alto rischio) e Data Act. Verificare lo stato dell'iter e le date effettive. Per la parte su GDPR e cookie, a fine ottobre 2026 il Parlamento non ha ancora votato e i triloghi non sono iniziati (fonti di settore, non ancora riscontrate sui documenti ufficiali).
 - **Digital Fairness Act**: proposta attesa nel 2026 su pratiche commerciali online, dark pattern, abbonamenti.
 
 ## Punti aperti nelle schede
 
+- Codice Privacy, art. 2-quaterdecies.1 (D.L. 19/2026): provvedimento del Garante sulla notifica semplificata dei breach per le microimprese.
+- Amministratori di sistema: portata attuale dell'esclusione dei trattamenti amministrativo-contabili.
+- EU-US Data Privacy Framework: esito delle impugnazioni della decisione di adeguatezza.
 - Data Act: autorità nazionale competente designata in Italia.
 - NIS2: determinazioni ACN aggiornate su soglie, registrazione e misure di base.
 - Cloud PA: regolamento ACN vigente sulla qualificazione dei servizi cloud.

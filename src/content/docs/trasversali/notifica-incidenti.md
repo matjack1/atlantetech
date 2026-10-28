@@ -33,4 +33,5 @@ Lo stesso incidente può far scattare più notifiche: un attacco ransomware a un
 
 - Decorrenza in Italia dell'obbligo di notifica NIS2 secondo il calendario ACN.
 - Modalità e moduli di notifica del Garante, di ACN e della piattaforma unica CRA.
+- Microimprese (meno di cinque dipendenti): procedura di notifica semplificata al Garante prevista dall'art. 2-quaterdecies.1 del [Codice Privacy](/atti/dati/codice-privacy/), non ancora disciplinata dal Garante a fine ottobre 2026.
 - Effetti del Digital Omnibus sulla notifica GDPR (soglia di rischio, punto unico di notifica).
