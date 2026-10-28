@@ -1,0 +1,73 @@
+---
+import { SOGGETTI, TEMI } from '../lib/tassonomia.mjs';
+import { getSchede, href, paginaProfilo, siApplica } from '../lib/format';
+
+// Matrice atti × soggetti, generata dal frontmatter delle schede
+const schede = await getSchede();
+const soggetti = Object.entries(SOGGETTI);
+---
+
+<div class="matrice">
+	<table>
+		<thead>
+			<tr>
+				<th>Atto</th>
+				{
+					soggetti.map(([k, label]) => (
+						<th title={label}>
+							<a href={paginaProfilo(k)}>{label}</a>
+						</th>
+					))
+				}
+			</tr>
+		</thead>
+		{
+			Object.entries(TEMI).map(([tema, label]) => (
+				<tbody>
+					<tr>
+						<th colspan={soggetti.length + 1} class="tema">
+							{label}
+						</th>
+					</tr>
+					{schede
+						.filter((s) => s.data.tema === tema)
+						.map((s) => (
+							<tr>
+								<td>
+									<a href={href(s.id)}>{s.data.nome ?? s.data.title}</a>
+								</td>
+								{soggetti.map(([k]) => (
+									<td class="cella">
+										{s.data.soggetti.includes('tutti') ? '●' : siApplica(s.data.soggetti, k) ? '○' : ''}
+									</td>
+								))}
+							</tr>
+						))}
+				</tbody>
+			))
+		}
+	</table>
+</div>
+
+<style>
+	.matrice {
+		overflow-x: auto;
+	}
+	.matrice table {
+		display: table;
+		font-size: var(--sl-text-sm);
+	}
+	thead th {
+		vertical-align: bottom;
+		font-weight: 600;
+		min-width: 5.5rem;
+	}
+	th.tema {
+		background: var(--sl-color-gray-6);
+		text-align: start;
+	}
+	.cella {
+		text-align: center;
+		color: var(--sl-color-accent-high);
+	}
+</style>

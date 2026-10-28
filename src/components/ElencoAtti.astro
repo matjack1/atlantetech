@@ -1,0 +1,46 @@
+---
+import { TEMI } from '../lib/tassonomia.mjs';
+import { formatData, getSchede, href, siApplica } from '../lib/format';
+
+interface Props {
+	/** Chiave di SOGGETTI, oppure `tutti` per il solo nucleo comune */
+	soggetto: string;
+}
+
+const { soggetto } = Astro.props;
+const schede = (await getSchede()).filter((s) =>
+	soggetto === 'tutti' ? s.data.soggetti.includes('tutti') : siApplica(s.data.soggetti, soggetto)
+);
+const temi = Object.entries(TEMI).filter(([k]) => schede.some((s) => s.data.tema === k));
+---
+
+{
+	temi.map(([tema, label]) => (
+		<>
+			<h3>{label}</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Atto</th>
+						<th>Quando</th>
+						<th>Applicazione</th>
+					</tr>
+				</thead>
+				<tbody>
+					{schede
+						.filter((s) => s.data.tema === tema)
+						.map((s) => (
+							<tr>
+								<td>
+									<a href={href(s.id)}>{s.data.nome ?? s.data.title}</a>
+									{soggetto !== 'tutti' && s.data.soggetti.includes('tutti') && <small> · nucleo</small>}
+								</td>
+								<td>{s.data.condizione ?? 'Sempre'}</td>
+								<td>{formatData(s.data.applicazione)}</td>
+							</tr>
+						))}
+				</tbody>
+			</table>
+		</>
+	))
+}

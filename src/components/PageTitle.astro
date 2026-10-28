@@ -1,0 +1,137 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+import { TEMI, TIPI } from '../lib/tassonomia.mjs';
+import { etichettaSoggetti, formatData } from '../lib/format';
+
+const { data } = Astro.locals.starlightRoute.entry;
+const volontario = data.tipo === 'standard';
+---
+
+<Default />
+{
+	data.estremi && (
+		<aside class="scheda not-content">
+			<dl>
+				<dt>Estremi</dt>
+				<dd>{data.estremi}</dd>
+				<dt>Tipo</dt>
+				<dd>{TIPI[data.tipo]}</dd>
+				{data.tema && (
+					<>
+						<dt>Tema</dt>
+						<dd>{TEMI[data.tema]}</dd>
+					</>
+				)}
+				{data.soggetti.length > 0 && (
+					<>
+						<dt>{volontario ? 'Rilevante per' : 'Si applica a'}</dt>
+						<dd>
+							{etichettaSoggetti(data.soggetti)}
+							{data.condizione && <>, {data.condizione}</>}
+						</dd>
+					</>
+				)}
+				{data.recepimento && (
+					<>
+						<dt>Recepimento IT</dt>
+						<dd>{data.recepimento}</dd>
+					</>
+				)}
+				{!volontario && (
+					<>
+						<dt>Applicazione</dt>
+						<dd>{formatData(data.applicazione)}</dd>
+					</>
+				)}
+				{data.scadenze.length > 0 && (
+					<>
+						<dt>Altre scadenze</dt>
+						<dd>
+							<ul>
+								{data.scadenze.map((s) => (
+									<li>
+										<strong>{formatData(s.data)}</strong> — {s.cosa}
+									</li>
+								))}
+							</ul>
+						</dd>
+					</>
+				)}
+				{data.autorita.length > 0 && (
+					<>
+						<dt>Autorità</dt>
+						<dd>{data.autorita.join(', ')}</dd>
+					</>
+				)}
+				{data.fonti.length > 0 && (
+					<>
+						<dt>Fonti</dt>
+						<dd>
+							<ul>
+								{data.fonti.map((f) => (
+									<li>
+										<a href={f.url} rel="noopener">{f.label}</a>
+									</li>
+								))}
+							</ul>
+						</dd>
+					</>
+				)}
+				<dt>Stato</dt>
+				<dd>
+					<span class:list={['badge', data.stato]}>{data.stato}</span>
+					{data.verificataIl && <> · verificata il {formatData(data.verificataIl)}</>}
+				</dd>
+			</dl>
+		</aside>
+	)
+}
+
+<style>
+	.scheda {
+		margin-top: 1rem;
+		padding: 1rem 1.25rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		background: var(--sl-color-gray-6);
+		font-size: var(--sl-text-sm);
+	}
+	dl {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		gap: 0.4rem 1rem;
+		margin: 0;
+	}
+	dt {
+		font-weight: 600;
+		color: var(--sl-color-gray-2);
+	}
+	dd {
+		margin: 0;
+	}
+	ul {
+		margin: 0;
+		padding-left: 1rem;
+	}
+	.badge {
+		padding: 0.05rem 0.5rem;
+		border-radius: 999px;
+		font-weight: 600;
+	}
+	.bozza {
+		background: var(--sl-color-orange-low);
+		color: var(--sl-color-orange-high);
+	}
+	.verificata {
+		background: var(--sl-color-green-low);
+		color: var(--sl-color-green-high);
+	}
+	@media (max-width: 40rem) {
+		dl {
+			grid-template-columns: 1fr;
+		}
+		dd {
+			margin-bottom: 0.4rem;
+		}
+	}
+</style>
