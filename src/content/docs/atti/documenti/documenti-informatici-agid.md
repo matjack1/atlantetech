@@ -10,8 +10,7 @@ tema: documenti
 soggetti: [tutti]
 condizione: "se formi o conservi documenti informatici con valore legale"
 applicazione: 2022-01-01
-autorita:
-  - "AgID"
+autorita: [agid]
 stato: bozza
 ---
 

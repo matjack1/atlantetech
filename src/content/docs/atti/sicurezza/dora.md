@@ -9,11 +9,7 @@ tema: sicurezza
 soggetti: [saas]
 condizione: "se hai clienti del settore finanziario"
 applicazione: 2025-01-17
-autorita:
-  - "Banca d’Italia"
-  - "Consob"
-  - "IVASS"
-  - "ESAs"
+autorita: [banca-italia, consob, ivass, esas]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"

@@ -8,9 +8,7 @@ giurisdizione: UE
 tema: dati
 soggetti: [tutti]
 applicazione: 2018-05-25
-autorita:
-  - "Garante privacy"
-  - "EDPB"
+autorita: [garante-privacy, edpb]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"

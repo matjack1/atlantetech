@@ -16,10 +16,7 @@ scadenze:
     cosa: "Modelli GPAI e governance"
   - data: 2027-08-02
     cosa: "Alto rischio ex art. 6(1)"
-autorita:
-  - "AgID"
-  - "ACN"
-  - "AI Office (Commissione)"
+autorita: [agid, acn, ai-office]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"

@@ -8,6 +8,7 @@ tipo: standard
 giurisdizione: INT
 tema: standard
 soggetti: [saas]
+autorita: [nist]
 fonti:
   - label: "NIST"
     url: "https://www.nist.gov/cyberframework"

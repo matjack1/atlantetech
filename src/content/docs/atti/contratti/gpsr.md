@@ -9,8 +9,7 @@ tema: contratti
 soggetti: [artigiani, cooperative, piva]
 condizione: "se vendi prodotti ai consumatori"
 applicazione: 2024-12-13
-autorita:
-  - "MIMIT"
+autorita: [mimit]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2023/988/oj"

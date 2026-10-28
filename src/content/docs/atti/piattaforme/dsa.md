@@ -8,9 +8,7 @@ giurisdizione: UE
 tema: piattaforme
 soggetti: [saas]
 applicazione: 2024-02-17
-autorita:
-  - "AGCOM (coordinatore dei servizi digitali)"
-  - "Commissione europea"
+autorita: [agcom, commissione-ue]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2022/2065/oj"

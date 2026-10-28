@@ -8,6 +8,7 @@ tipo: standard
 giurisdizione: INT
 tema: standard
 soggetti: [saas]
+autorita: [csa]
 fonti:
   - label: "Cloud Security Alliance — STAR"
     url: "https://cloudsecurityalliance.org/star"

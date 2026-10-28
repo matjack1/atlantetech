@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import { LIVELLI, TEMI } from '../lib/tassonomia.mjs';
+import { hrefEnte, nomeBreve } from '../lib/format';
+
+// Per ogni tema, gli enti che se ne occupano, divisi per livello. Esclusi gli enti locali.
+const enti = await getCollection('enti', (e) => !e.data.luogo);
+const livelli = Object.entries(LIVELLI);
+---
+
+<div class="wrap">
+	<table>
+		<thead>
+			<tr>
+				<th>Tema</th>
+				{livelli.map(([, label]) => <th>{label}</th>)}
+			</tr>
+		</thead>
+		<tbody>
+			{
+				Object.entries(TEMI).map(([tema, label]) => (
+					<tr>
+						<td>{label}</td>
+						{livelli.map(([livello]) => (
+							<td>
+								{enti
+									.filter((e) => e.data.livello === livello && e.data.temi.includes(tema as never))
+									.map((e, i) => (
+										<>
+											{i > 0 && ', '}
+											<a href={hrefEnte(e)}>{nomeBreve(e)}</a>
+										</>
+									))}
+							</td>
+						))}
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+</div>
+
+<style>
+	.wrap {
+		overflow-x: auto;
+	}
+	td:first-child {
+		white-space: nowrap;
+	}
+</style>

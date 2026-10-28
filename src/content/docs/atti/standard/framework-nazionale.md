@@ -8,6 +8,7 @@ tipo: standard
 giurisdizione: IT
 tema: standard
 soggetti: [saas, cooperative]
+autorita: [cini, acn]
 fonti:
   - label: "cybersecurityframework.it"
     url: "https://www.cybersecurityframework.it/"

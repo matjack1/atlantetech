@@ -10,8 +10,7 @@ soggetti: [tutti]
 condizione: "se hai un sito o una app"
 applicazione: 2003-10-31
 recepimento: "Codice Privacy, artt. 121 ss. (art. 122 per i cookie)"
-autorita:
-  - "Garante privacy"
+autorita: [garante-privacy]
 fonti:
   - label: "Direttiva (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/dir/2002/58/oj"

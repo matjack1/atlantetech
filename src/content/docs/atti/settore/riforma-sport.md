@@ -8,8 +8,7 @@ giurisdizione: IT
 tema: settore
 soggetti: [sport]
 applicazione: 2023-07-01
-autorita:
-  - "Dipartimento per lo Sport"
+autorita: [dipartimento-sport]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2021-02-28;36"

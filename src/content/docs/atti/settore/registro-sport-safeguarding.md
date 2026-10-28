@@ -7,8 +7,7 @@ estremi: "D.Lgs. 28 febbraio 2021, n. 39"
 giurisdizione: IT
 tema: settore
 soggetti: [sport]
-autorita:
-  - "Dipartimento per lo Sport"
+autorita: [dipartimento-sport]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2021-02-28;39"

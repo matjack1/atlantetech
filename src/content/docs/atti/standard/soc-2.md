@@ -8,6 +8,7 @@ tipo: standard
 giurisdizione: INT
 tema: standard
 soggetti: [saas]
+autorita: [aicpa]
 fonti:
   - label: "AICPA"
     url: "https://www.aicpa-cima.com/"

@@ -8,6 +8,7 @@ tipo: standard
 giurisdizione: IT
 tema: standard
 soggetti: [piva, professionisti, ets, parrocchie, sport, artigiani, cooperative]
+autorita: [cini]
 fonti:
   - label: "cybersecurityframework.it"
     url: "https://www.cybersecurityframework.it/"

@@ -9,8 +9,7 @@ giurisdizione: IT
 tema: settore
 soggetti: [ingegneri]
 condizione: "se eserciti la libera professione con partita IVA"
-autorita:
-  - "Inarcassa"
+autorita: [inarcassa]
 fonti:
   - label: "Inarcassa"
     url: "https://www.inarcassa.it/"

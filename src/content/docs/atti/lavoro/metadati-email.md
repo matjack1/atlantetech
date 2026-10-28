@@ -9,8 +9,7 @@ giurisdizione: IT
 tema: lavoro
 soggetti: [tutti]
 condizione: "se dai email aziendali a dipendenti o collaboratori"
-autorita:
-  - "Garante privacy"
+autorita: [garante-privacy]
 stato: bozza
 ---
 

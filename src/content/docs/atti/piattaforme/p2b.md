@@ -9,8 +9,7 @@ tema: piattaforme
 soggetti: [saas, artigiani, piva]
 condizione: "se vendi tramite marketplace o gestisci un marketplace"
 applicazione: 2020-07-12
-autorita:
-  - "AGCOM"
+autorita: [agcom]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2019/1150/oj"

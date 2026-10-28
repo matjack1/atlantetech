@@ -24,6 +24,7 @@ export default defineConfig({
 					items: [{ label: 'Ingegneri', items: [{ autogenerate: { directory: 'ordini/ingegneri' } }] }],
 				},
 				{ label: 'Temi trasversali', items: [{ autogenerate: { directory: 'trasversali' } }] },
+				{ label: 'Enti e autorità', items: [{ autogenerate: { directory: 'enti' } }] },
 				{
 					label: 'Per tema',
 					items: Object.entries(TEMI).map(([tema, label]) => ({

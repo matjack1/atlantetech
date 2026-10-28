@@ -9,9 +9,7 @@ tema: lavoro
 soggetti: [tutti]
 condizione: "se hai dipendenti"
 recepimento: "Riformulato dal D.Lgs. 14 settembre 2015, n. 151"
-autorita:
-  - "Ispettorato nazionale del lavoro"
-  - "Garante privacy"
+autorita: [inl, garante-privacy]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1970-05-20;300"

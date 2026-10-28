@@ -8,9 +8,7 @@ giurisdizione: IT
 tema: documenti
 soggetti: [tutti]
 applicazione: 2006-01-01
-autorita:
-  - "AgID"
-  - "ACN"
+autorita: [agid, acn]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82"

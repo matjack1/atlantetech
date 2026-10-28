@@ -12,8 +12,7 @@ applicazione: 2019-01-01
 scadenze:
   - data: 2024-01-01
     cosa: "Obbligo di e-fattura esteso a tutti i forfettari"
-autorita:
-  - "Agenzia delle Entrate"
+autorita: [agenzia-entrate]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2015-08-05;127"

@@ -13,8 +13,7 @@ recepimento: "Recepisce la Dir. (UE) 2019/1937"
 scadenze:
   - data: 2023-12-17
     cosa: "Obbligo per i soggetti privati con meno di 250 lavoratori"
-autorita:
-  - "ANAC"
+autorita: [anac]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-10;24"

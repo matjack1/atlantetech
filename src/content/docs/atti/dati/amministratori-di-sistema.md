@@ -9,8 +9,7 @@ giurisdizione: IT
 tema: dati
 soggetti: [tutti]
 condizione: "se qualcuno, anche esterno, amministra i tuoi sistemi"
-autorita:
-  - "Garante privacy"
+autorita: [garante-privacy]
 fonti:
   - label: "Provvedimento (Garante)"
     url: "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/1577499"

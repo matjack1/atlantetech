@@ -9,8 +9,7 @@ tema: ip
 soggetti: [tutti]
 condizione: "se pubblichi foto, video o contenuti di terzi"
 recepimento: "Dir. 2009/24/CE sul software (artt. 64-bis ss.)"
-autorita:
-  - "AGCOM"
+autorita: [agcom]
 fonti:
   - label: "L. 633/1941 (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633"

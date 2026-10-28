@@ -8,9 +8,7 @@ tipo: provvedimento
 giurisdizione: IT
 tema: settore
 soggetti: [ingegneri]
-autorita:
-  - "Consiglio Nazionale degli Ingegneri"
-  - "Ordini provinciali"
+autorita: [cni, ordini-provinciali]
 fonti:
   - label: "Consiglio Nazionale degli Ingegneri"
     url: "https://www.cni.it/"

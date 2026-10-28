@@ -1,10 +1,12 @@
 ---
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 import { TEMI, TIPI } from '../lib/tassonomia.mjs';
-import { etichettaSoggetti, formatData } from '../lib/format';
+import { getEntries } from 'astro:content';
+import { etichettaSoggetti, formatData, hrefEnte, nomeBreve } from '../lib/format';
 
 const { data } = Astro.locals.starlightRoute.entry;
 const volontario = data.tipo === 'standard';
+const autorita = data.estremi ? await getEntries(data.autorita) : [];
 ---
 
 <Default />
@@ -57,10 +59,19 @@ const volontario = data.tipo === 'standard';
 						</dd>
 					</>
 				)}
-				{data.autorita.length > 0 && (
+				{autorita.length > 0 && (
 					<>
-						<dt>Autorità</dt>
-						<dd>{data.autorita.join(', ')}</dd>
+						<dt>{volontario ? 'Emesso da' : 'Autorità'}</dt>
+						<dd>
+							{autorita.map((e, i) => (
+								<>
+									{i > 0 && ', '}
+									<a href={hrefEnte(e)} title={e.data.nome}>
+										{nomeBreve(e)}
+									</a>
+								</>
+							))}
+						</dd>
 					</>
 				)}
 				{data.fonti.length > 0 && (

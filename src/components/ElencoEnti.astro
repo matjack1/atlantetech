@@ -1,0 +1,136 @@
+---
+import { getCollection } from 'astro:content';
+import { POTERI, TEMI, TIPI_ENTE } from '../lib/tassonomia.mjs';
+import { getSchede, href } from '../lib/format';
+
+/** Enti di un livello e tipo, oppure enti locali di un luogo e scala. */
+type Props = { livello: string; tipo: string } | { luogo: string; scala: string };
+
+const props = Astro.props;
+const locale = 'luogo' in props;
+const ordineTipi = Object.keys(TIPI_ENTE);
+const enti = (
+	await getCollection('enti', ({ data }) =>
+		'luogo' in props
+			? data.luogo === props.luogo && data.scala === props.scala
+			: !data.luogo && data.livello === props.livello && data.tipo === props.tipo
+	)
+).sort(
+	(a, b) =>
+		ordineTipi.indexOf(a.data.tipo) - ordineTipi.indexOf(b.data.tipo) || a.data.nome.localeCompare(b.data.nome, 'it')
+);
+const schede = await getSchede();
+---
+
+{
+	enti.map(({ id, data }) => {
+		const atti = schede.filter((s) => s.data.autorita.some((r) => r.id === id));
+		return (
+			<section class="ente" id={id}>
+				<h3>
+					{data.nome}
+					{data.sigla && <span class="sigla"> · {data.sigla}</span>}
+				</h3>
+				{locale && <p class="tipo">{TIPI_ENTE[data.tipo]}</p>}
+				<p>{data.ruolo}</p>
+				<ul class="poteri not-content">
+					{data.poteri.map((p) => (
+						<li>{POTERI[p]}</li>
+					))}
+				</ul>
+				<dl class="not-content">
+					{data.temi.length > 0 && (
+						<>
+							<dt>Temi</dt>
+							<dd>{data.temi.map((t) => TEMI[t]).join(', ')}</dd>
+						</>
+					)}
+					{atti.length > 0 && (
+						<>
+							<dt>Nelle schede</dt>
+							<dd>
+								{atti.map((s, i) => (
+									<>
+										{i > 0 && ', '}
+										<a href={href(s.id)}>{s.data.nome ?? s.data.title}</a>
+									</>
+								))}
+							</dd>
+						</>
+					)}
+					{data.sito && (
+						<>
+							<dt>Sito</dt>
+							<dd>
+								<a href={data.sito} rel="noopener">{new URL(data.sito).hostname.replace(/^www\./, '')}</a>
+							</dd>
+						</>
+					)}
+					{data.note && (
+						<>
+							<dt>Da verificare</dt>
+							<dd>{data.note}</dd>
+						</>
+					)}
+				</dl>
+			</section>
+		);
+	})
+}
+
+<style>
+	.ente {
+		margin-top: 1.5rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--sl-color-gray-5);
+		scroll-margin-top: calc(var(--sl-nav-height) + 1rem);
+	}
+	.tipo {
+		margin-top: 0.1rem;
+		font-size: var(--sl-text-xs);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--sl-color-gray-3);
+	}
+	.sigla {
+		font-weight: 400;
+		color: var(--sl-color-gray-3);
+	}
+	.poteri {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		margin: 0.5rem 0 0;
+		padding: 0;
+		list-style: none;
+		font-size: var(--sl-text-xs);
+	}
+	.poteri li {
+		padding: 0.05rem 0.55rem;
+		border-radius: 999px;
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-accent-high);
+	}
+	dl {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		gap: 0.25rem 1rem;
+		margin: 0.6rem 0 0;
+		font-size: var(--sl-text-sm);
+	}
+	dt {
+		font-weight: 600;
+		color: var(--sl-color-gray-2);
+	}
+	dd {
+		margin: 0;
+	}
+	@media (max-width: 40rem) {
+		dl {
+			grid-template-columns: 1fr;
+		}
+		dd {
+			margin-bottom: 0.3rem;
+		}
+	}
+</style>

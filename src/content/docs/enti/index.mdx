@@ -1,0 +1,82 @@
+---
+title: Enti e autorità
+description: Chi fa le norme sul digitale, chi le applica, chi le interpreta e a chi rivolgersi, dal livello globale a quello locale.
+sidebar:
+  label: Panoramica
+  order: 1
+---
+
+import EntiPerTema from '../../../components/EntiPerTema.astro';
+
+:::caution[Bozza]
+Scritto a memoria: da verificare sulle fonti ufficiali prima dell'uso.
+:::
+
+Le norme delle schede passano per molti enti: qualcuno le scrive, qualcuno vigila e sanziona, qualcuno le interpreta con linee guida, qualcuno decide i ricorsi. Ogni ente ha una voce nella pagina del suo livello, e le schede lo citano nel campo **Autorità**.
+
+| Livello | Chi c'è |
+|---|---|
+| [Internazionali](/enti/internazionali/) | ONU, OCSE, Consiglio d'Europa, WIPO, ICANN, ISO e altri enti di standard |
+| [Unione europea](/enti/ue/) | Commissione, EDPB, EDPS, ENISA, AI Office, CEN-CENELEC, Corte di giustizia |
+| [Nazionali](/enti/nazionali/) | Garante privacy, AgID, ACN, AGCOM, AGCM, ANAC, ministeri, CNI, Accredia, giudici, Polizia postale |
+| [Territoriali](/enti/territoriali/) | Regioni, Comuni, Camere di commercio, Corecom, Ordini provinciali, diocesi, tribunali |
+| [Torino](/enti/torino/) | Approfondimento locale: dal Comune al Piemonte, fino a ALCOTRA, EUSALP e alle autorità di Francia e Svizzera |
+
+## C'è qualcosa di globale?
+
+Non esiste un regolatore globale del digitale. Il livello internazionale arriva a imprese ed enti solo in modo indiretto:
+
+- **trattati** recepiti dalle leggi nazionali, come la Convenzione di Budapest sul cybercrime o i trattati WIPO sul diritto d'autore;
+- **principi** che l'UE ha poi trasformato in regole, come i principi OCSE sull'AI;
+- **standard e contratti**: ISO 27001, PCI DSS o le regole ICANN sui domini non sono leggi, ma clienti, banche e registrar li impongono.
+
+## Che tipo di voce hanno
+
+Ogni ente ha uno o più di questi poteri, indicati nella sua voce.
+
+| Potere | Effetto |
+|---|---|
+| Adotta leggi o trattati | Vincolante. Per i trattati, vincola lo Stato che li ratifica |
+| Emana atti attuativi vincolanti | Vincolante: regolamenti, provvedimenti generali, linee guida AgID previste dal CAD, codici deontologici |
+| Vigila e sanziona | Vincolante: ispezioni, ordini, sanzioni |
+| Decide ricorsi e controversie | Vincolante per le parti; le sentenze delle corti superiori orientano tutti |
+| Autorizza, accredita o certifica | Condizione per poter fare qualcosa (videosorveglianza, servizi fiduciari, certificati accreditati) |
+| Tiene albi e registri | L'iscrizione è spesso condizione per operare o per avere agevolazioni |
+| Svolge indagini penali | Polizia giudiziaria, a cui si presentano le denunce |
+| Linee guida e pareri non vincolanti | Non obbligano, ma indicano come l'autorità valuterà un caso: discostarsene va motivato |
+| Standard tecnici volontari | Diventano obbligatori se richiamati da una norma o da un contratto; le norme armonizzate danno presunzione di conformità |
+| Supporto e risposta agli incidenti | Allerte, assistenza, finanziamenti |
+
+## A chi rivolgersi
+
+| Situazione | Ente |
+|---|---|
+| Violazione di dati personali (data breach) | [Garante privacy](/enti/nazionali/#garante-privacy), entro 72 ore; per i soggetti NIS2 anche [CSIRT Italia](/enti/nazionali/#csirt-italia). Vedi [Notifica degli incidenti](/trasversali/notifica-incidenti/) |
+| Attacco informatico, frode online, ransomware | Denuncia alla [Polizia postale](/enti/nazionali/#polizia-postale); segnalazione a [CSIRT Italia](/enti/nazionali/#csirt-italia) |
+| Reclamo sul trattamento dei propri dati | [Garante privacy](/enti/nazionali/#garante-privacy) |
+| Telemarketing indesiderato | Registro delle opposizioni ([MIMIT](/enti/nazionali/#mimit)), poi [Garante privacy](/enti/nazionali/#garante-privacy) |
+| Contenuto illegale su una piattaforma | Prima la segnalazione alla piattaforma (DSA), poi [AGCOM](/enti/nazionali/#agcom) |
+| Pirateria di contenuti protetti | [AGCOM](/enti/nazionali/#agcom) |
+| Pratica commerciale scorretta, clausole vessatorie | [AGCM](/enti/nazionali/#agcm) |
+| Controversia con l'operatore telefonico o internet | [Corecom](/enti/territoriali/#corecom) (ConciliaWeb) |
+| PA che non rispetta obblighi digitali (accessibilità, domicilio digitale, servizi online) | Difensore civico per il digitale presso [AgID](/enti/nazionali/#agid) |
+| Telecamere o strumenti di controllo sui lavoratori senza accordo sindacale | [Ispettorato territoriale](/enti/territoriali/#itl) o [INL](/enti/nazionali/#inl) |
+| Sistema di AI non conforme all'AI Act | [ACN](/enti/nazionali/#acn), autorità di vigilanza del mercato; per banche, investimenti e assicurazioni [Banca d'Italia](/enti/nazionali/#banca-italia), [Consob](/enti/nazionali/#consob), [IVASS](/enti/nazionali/#ivass) |
+| Testare un sistema di AI in sandbox, o accreditarsi come organismo di valutazione della conformità | [AgID](/enti/nazionali/#agid) e [ACN](/enti/nazionali/#acn) per le sandbox, [AgID](/enti/nazionali/#agid) per la notifica degli organismi |
+| Ricerca applicata, trasferimento tecnologico o capacità di calcolo per l'AI | [AI4I](/enti/nazionali/#ai4i), [FAIR](/enti/nazionali/#fair), [EuroHPC](/enti/ue/#eurohpc), [EDIH](/enti/territoriali/#edih) |
+| Segnalazione esterna di illeciti (whistleblowing) | [ANAC](/enti/nazionali/#anac) |
+| Fattura elettronica scartata, problemi con lo SdI | [Agenzia delle entrate](/enti/nazionali/#agenzia-entrate) |
+| Verificare un certificato ISO 27001 | [Accredia](/enti/nazionali/#accredia) o IAF CertSearch ([IAF](/enti/internazionali/#iaf)) |
+| Contestare un dominio | .it: [Registro .it](/enti/nazionali/#registro-it); generici: [WIPO](/enti/internazionali/#wipo) (UDRP) |
+| Condotta di un ingegnere | [Ordine provinciale](/enti/territoriali/#ordini-provinciali) e [Consiglio di disciplina](/enti/territoriali/#consigli-disciplina) |
+| Iscrizione o controlli su un ETS | [Ufficio regionale del RUNTS](/enti/territoriali/#uffici-runts) |
+| Opporsi a un provvedimento del Garante | [Tribunale ordinario](/enti/territoriali/#tribunale) |
+| Impugnare una sanzione AGCM o AGCOM | [TAR del Lazio](/enti/nazionali/#giustizia-amministrativa) |
+
+Termini e modalità dei ricorsi sono da verificare caso per caso, insieme al provvedimento che si vuole impugnare.
+
+## Chi si occupa di cosa
+
+Gli enti di ogni livello che hanno competenze su ciascun tema.
+
+<EntiPerTema />

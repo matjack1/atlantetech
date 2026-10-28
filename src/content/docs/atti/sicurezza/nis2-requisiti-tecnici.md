@@ -10,8 +10,7 @@ tema: sicurezza
 soggetti: [saas]
 condizione: "se cloud, data center, MSP o altro fornitore digitale in ambito NIS2"
 applicazione: 2024-10-18
-autorita:
-  - "ACN"
+autorita: [acn]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg_impl/2024/2690/oj"

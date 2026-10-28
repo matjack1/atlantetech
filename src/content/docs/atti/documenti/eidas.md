@@ -8,8 +8,7 @@ giurisdizione: UE
 tema: documenti
 soggetti: [tutti]
 applicazione: 2024-05-20
-autorita:
-  - "AgID"
+autorita: [agid]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2024/1183/oj"

@@ -45,3 +45,52 @@ export const TIPI = {
 	provvedimento: 'Provvedimento, regolamento o linee guida di un’autorità o di un ordine',
 	standard: 'Standard volontario',
 };
+
+/** Livello di un ente; ogni livello è una pagina /enti/<livello>/. */
+export const LIVELLI = {
+	internazionali: 'Internazionali',
+	ue: 'Unione europea',
+	nazionali: 'Nazionali',
+	territoriali: 'Territoriali',
+};
+
+/** Natura di un ente; raggruppa gli enti nella pagina del livello. */
+export const TIPI_ENTE = {
+	istituzioni: 'Istituzioni e organizzazioni',
+	autorita: 'Autorità indipendenti',
+	agenzie: 'Agenzie ed enti pubblici',
+	reti: 'Comitati e reti di cooperazione',
+	internet: 'Governance di internet',
+	standard: 'Normazione, accreditamento e standard',
+	categoria: 'Ordini, casse ed enti di riferimento',
+	ricerca: 'Ricerca, innovazione e investimenti',
+	giudici: 'Giudici',
+	polizia: 'Forze dell’ordine',
+};
+
+/** Cosa può fare un ente. Le prime quattro voci hanno effetti vincolanti. */
+export const POTERI = {
+	legifera: 'Adotta leggi o trattati',
+	regola: 'Emana atti attuativi vincolanti',
+	vigila: 'Vigila e sanziona',
+	giudica: 'Decide ricorsi e controversie',
+	autorizza: 'Autorizza, accredita o certifica',
+	registra: 'Tiene albi e registri',
+	indaga: 'Svolge indagini penali',
+	indirizza: 'Linee guida e pareri non vincolanti',
+	norma: 'Standard tecnici volontari',
+	supporta: 'Supporto e risposta agli incidenti',
+};
+
+/** Approfondimenti locali; ogni luogo è una pagina /enti/<luogo>/. Gli enti con `luogo` compaiono solo lì. */
+export const LUOGHI = {
+	torino: 'Torino',
+};
+
+/** Scala di un ente locale, dal micro al macro. */
+export const SCALE = {
+	citta: 'Città',
+	metropoli: 'Area metropolitana',
+	regione: 'Regione',
+	transfrontaliero: 'Oltre confine',
+};

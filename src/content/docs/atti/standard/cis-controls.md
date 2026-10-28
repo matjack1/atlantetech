@@ -8,6 +8,7 @@ tipo: standard
 giurisdizione: INT
 tema: standard
 soggetti: [saas]
+autorita: [cis]
 fonti:
   - label: "Center for Internet Security"
     url: "https://www.cisecurity.org/controls"

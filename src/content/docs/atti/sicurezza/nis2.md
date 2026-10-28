@@ -10,8 +10,7 @@ soggetti: [saas]
 condizione: "se medio-grande in un settore NIS2, o fornitore di un soggetto NIS2"
 applicazione: 2024-10-18
 recepimento: "D.Lgs. 4 settembre 2024, n. 138 (in vigore dal 16/10/2024)"
-autorita:
-  - "ACN"
+autorita: [acn]
 fonti:
   - label: "Direttiva (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"

@@ -12,9 +12,7 @@ applicazione: 2019-06-27
 scadenze:
   - data: 2025-02-27
     cosa: "Applicazione dello schema EUCC (Reg. di esecuzione (UE) 2024/482)"
-autorita:
-  - "ENISA"
-  - "ACN (autorità nazionale di certificazione)"
+autorita: [enisa, acn]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2019/881/oj"

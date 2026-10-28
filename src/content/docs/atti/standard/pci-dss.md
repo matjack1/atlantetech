@@ -9,6 +9,7 @@ giurisdizione: INT
 tema: standard
 soggetti: [artigiani, piva, saas]
 condizione: "se tratti direttamente dati di carte di pagamento"
+autorita: [pci-ssc]
 fonti:
   - label: "PCI Security Standards Council"
     url: "https://www.pcisecuritystandards.org/"

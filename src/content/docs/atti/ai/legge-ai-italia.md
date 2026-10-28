@@ -9,9 +9,7 @@ tema: ai
 soggetti: [tutti]
 condizione: "se usi sistemi di AI"
 applicazione: 2025-10-10
-autorita:
-  - "AgID"
-  - "ACN"
+autorita: [agid, acn, banca-italia, consob, ivass]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2025-09-23;132"

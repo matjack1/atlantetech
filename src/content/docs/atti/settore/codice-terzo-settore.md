@@ -12,8 +12,7 @@ applicazione: 2017-08-03
 scadenze:
   - data: 2021-11-23
     cosa: "Avvio operativo del RUNTS"
-autorita:
-  - "Ministero del Lavoro (RUNTS)"
+autorita: [ministero-lavoro, uffici-runts]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2017-07-03;117"

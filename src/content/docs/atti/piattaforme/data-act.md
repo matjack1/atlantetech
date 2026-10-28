@@ -11,8 +11,6 @@ applicazione: 2025-09-12
 scadenze:
   - data: 2027-01-12
     cosa: "Eliminazione dei costi di switching ed egress (Capo VI)"
-autorita:
-  - "Da verificare (autorità nazionale competente)"
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2023/2854/oj"
@@ -41,4 +39,5 @@ _Da compilare._
 
 ## Note aperte
 
+- Verificare l'autorità nazionale competente designata dall'Italia.
 - Verificare estremi e date sul testo ufficiale.

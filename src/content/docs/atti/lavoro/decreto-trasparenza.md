@@ -10,8 +10,7 @@ soggetti: [tutti]
 condizione: "se hai dipendenti o collaboratori"
 applicazione: 2022-08-13
 recepimento: "Recepisce la Dir. (UE) 2019/1152"
-autorita:
-  - "Ispettorato nazionale del lavoro"
+autorita: [inl]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2022-06-27;104"

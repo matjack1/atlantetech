@@ -10,8 +10,7 @@ soggetti: [saas, artigiani, cooperative]
 condizione: "se offri servizi ai consumatori (escluse le microimprese)"
 applicazione: 2025-06-28
 recepimento: "D.Lgs. 27 maggio 2022, n. 82"
-autorita:
-  - "AgID"
+autorita: [agid]
 fonti:
   - label: "Direttiva (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/dir/2019/882/oj"

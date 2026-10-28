@@ -25,8 +25,7 @@ recepimento: "D.Lgs. …"          # solo per direttive
 scadenze:                        # altre date rilevanti
   - data: 2027-01-12
     cosa: "Eliminazione dei costi di switching"
-autorita:
-  - "AGCOM"
+autorita: [commissione-ue]       # id di src/data/enti.yaml; per gli standard, chi li emette
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2023/2854/oj"
@@ -35,7 +34,11 @@ verificataIl: 2026-10-27         # quando si è controllato sul testo ufficiale
 ---
 ```
 
-Il build fallisce se un campo non rispetta lo schema (`src/content.config.ts`).
+Il build fallisce se un campo non rispetta lo schema (`src/content.config.ts`) o se `autorita` cita un ente che non esiste.
+
+## Enti
+
+Gli enti stanno in `src/data/enti.yaml`, una voce per ente con `id`, `nome`, `sigla`, `livello`, `tipo`, `poteri`, `temi`, `sito`, `ruolo` e `note` (punti da verificare). Livelli, tipi e poteri sono definiti in `src/lib/tassonomia.mjs`. Le pagine in [Enti e autorità](/enti/) si generano dal registro. Ogni voce elenca le schede che la citano. Un ente nuovo con un `tipo` non ancora presente nella pagina del suo livello richiede una nuova sezione `## …` in `src/content/docs/enti/<livello>.mdx`.
 
 ## Sezioni
 

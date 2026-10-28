@@ -22,3 +22,9 @@ export const getSchede = async () =>
 	);
 
 export const href = (id: string) => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${id}/`;
+
+/** Link alla voce di un ente nella pagina del suo livello. */
+export const hrefEnte = (e: { id: string; data: { livello: string; luogo?: string } }) =>
+	`${import.meta.env.BASE_URL.replace(/\/$/, '')}/enti/${e.data.luogo ?? e.data.livello}/#${e.id}`;
+
+export const nomeBreve = (e: { data: { nome: string; sigla?: string } }) => e.data.sigla ?? e.data.nome;

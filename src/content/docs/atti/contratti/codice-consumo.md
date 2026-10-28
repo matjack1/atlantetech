@@ -10,8 +10,7 @@ soggetti: [piva, professionisti, artigiani, cooperative, saas]
 condizione: "se hai clienti consumatori"
 applicazione: 2005-10-23
 recepimento: "Dir. (UE) 2019/770 recepita con D.Lgs. 4 novembre 2021, n. 173"
-autorita:
-  - "AGCM"
+autorita: [agcm]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206"

@@ -14,8 +14,7 @@ scadenze:
     cosa: "Digitalizzazione dell’intero ciclo di vita dei contratti"
   - data: 2025-01-01
     cosa: "BIM obbligatorio sopra soglia (art. 43) — soglie da verificare dopo il correttivo"
-autorita:
-  - "ANAC"
+autorita: [anac]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36"

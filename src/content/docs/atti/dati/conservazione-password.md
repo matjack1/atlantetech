@@ -9,9 +9,7 @@ giurisdizione: IT
 tema: dati
 soggetti: [tutti]
 condizione: "se gestisci credenziali di utenti (sito con login, app, gestionale)"
-autorita:
-  - "ACN"
-  - "Garante privacy"
+autorita: [acn, garante-privacy]
 stato: bozza
 ---
 

@@ -9,8 +9,7 @@ tema: ip
 soggetti: [saas]
 applicazione: 2021-06-07
 recepimento: "D.Lgs. 8 novembre 2021, n. 177"
-autorita:
-  - "AGCOM"
+autorita: [agcom]
 fonti:
   - label: "Direttiva (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/dir/2019/790/oj"

@@ -1,0 +1,1587 @@
+# Registro degli enti. Ogni voce è citabile dalle schede in `autorita` tramite `id`.
+# livello, tipo, poteri, temi: chiavi di src/lib/tassonomia.mjs.
+# Scritto a memoria: le voci con `note` hanno punti da verificare.
+
+# ── Internazionali ─────────────────────────────────────────────
+
+- id: onu
+  nome: Organizzazione delle Nazioni Unite
+  sigla: ONU
+  livello: internazionali
+  tipo: istituzioni
+  poteri: [legifera, indirizza]
+  temi: [ai, sicurezza]
+  sito: https://www.un.org/
+  ruolo: >-
+    Non regola direttamente imprese ed enti. Ha adottato il Global Digital Compact (2024) e la
+    Convenzione contro la criminalità informatica (adottata nel 2024, aperta alla firma nel 2025),
+    e nel 2025 ha istituito un panel scientifico e un dialogo globale sulla governance dell'AI.
+  note: Stato di firma e ratifica della Convenzione sulla criminalità informatica da parte dell'Italia.
+
+- id: itu
+  nome: Unione internazionale delle telecomunicazioni
+  sigla: ITU
+  livello: internazionali
+  tipo: istituzioni
+  poteri: [regola, norma]
+  temi: [standard]
+  sito: https://www.itu.int/
+  ruolo: >-
+    Agenzia ONU per le telecomunicazioni. Ripartisce frequenze e orbite satellitari (regole
+    vincolanti per gli Stati) e pubblica raccomandazioni tecniche (ITU-T). Per imprese ed enti
+    l'effetto è solo indiretto.
+
+- id: ocse
+  nome: Organizzazione per la cooperazione e lo sviluppo economico
+  sigla: OCSE
+  livello: internazionali
+  tipo: istituzioni
+  poteri: [indirizza]
+  temi: [ai, dati]
+  sito: https://www.oecd.org/
+  ruolo: >-
+    Principi sull'AI (2019, aggiornati nel 2024), la cui definizione di sistema di AI è ripresa
+    dall'AI Act, e linee guida su privacy e flussi transfrontalieri di dati. Non sono vincolanti,
+    ma sono la base di molte norme UE. Dal 2024 ospita il Global Partnership on AI (GPAI).
+
+- id: unesco
+  nome: Organizzazione delle Nazioni Unite per l'educazione, la scienza e la cultura
+  sigla: UNESCO
+  livello: internazionali
+  tipo: istituzioni
+  poteri: [indirizza]
+  temi: [ai]
+  sito: https://www.unesco.org/
+  ruolo: >-
+    Raccomandazione sull'etica dell'intelligenza artificiale (2021), il primo testo globale
+    sull'etica dell'AI adottato dagli Stati membri. Non è vincolante.
+
+- id: g7
+  nome: G7
+  livello: internazionali
+  tipo: istituzioni
+  poteri: [indirizza]
+  temi: [ai]
+  ruolo: >-
+    Processo di Hiroshima sull'AI (2023): principi guida e codice di condotta volontario per chi
+    sviluppa sistemi di AI avanzati.
+
+- id: uncitral
+  nome: Commissione ONU per il diritto del commercio internazionale
+  sigla: UNCITRAL
+  livello: internazionali
+  tipo: istituzioni
+  poteri: [indirizza]
+  temi: [documenti, contratti]
+  sito: https://uncitral.un.org/
+  ruolo: >-
+    Leggi modello su commercio elettronico (1996), firme elettroniche (2001) e documenti
+    trasferibili elettronici (2017). Sono la base di molte norme nazionali sul documento
+    elettronico.
+
+- id: wipo
+  nome: Organizzazione mondiale della proprietà intellettuale
+  sigla: OMPI / WIPO
+  livello: internazionali
+  tipo: istituzioni
+  poteri: [registra, giudica]
+  temi: [ip]
+  sito: https://www.wipo.int/
+  ruolo: >-
+    Amministra i trattati su diritto d'autore, brevetti e marchi (Convenzione di Berna, trattati
+    WIPO internet del 1996) e i sistemi di deposito internazionale (PCT per i brevetti, Madrid per
+    i marchi). Con la procedura UDRP del suo Centro di arbitrato risolve le controversie sui nomi
+    a dominio generici (.com, .org…).
+
+- id: consiglio-europa
+  nome: Consiglio d'Europa
+  livello: internazionali
+  tipo: istituzioni
+  poteri: [legifera]
+  temi: [dati, ai, sicurezza]
+  sito: https://www.coe.int/
+  ruolo: >-
+    Organizzazione di 46 Stati europei, distinta dall'UE. Le sue convenzioni vincolano gli Stati
+    che le ratificano. L'Italia ha ratificato la Convenzione 108 sulla protezione dei dati
+    (aggiornata come 108+ nel 2018) e la Convenzione di Budapest sulla criminalità informatica
+    (L. 48/2008). Nel 2024 ha adottato la Convenzione quadro sull'intelligenza artificiale, primo
+    trattato vincolante sull'AI, aperto anche a Stati extraeuropei.
+  note: Stato di ratifica italiana della 108+ e della Convenzione quadro sull'AI.
+
+- id: corte-edu
+  nome: Corte europea dei diritti dell'uomo
+  sigla: Corte EDU
+  livello: internazionali
+  tipo: giudici
+  poteri: [giudica]
+  temi: [dati, lavoro]
+  sito: https://www.echr.coe.int/
+  ruolo: >-
+    Applica la Convenzione europea dei diritti dell'uomo (Consiglio d'Europa). Dall'art. 8, sulla
+    vita privata, derivano sentenze su sorveglianza e controlli sui lavoratori, come Bărbulescu
+    (2017) sulle email aziendali. Si ricorre solo contro uno Stato e dopo aver esaurito i rimedi
+    interni.
+
+- id: icann
+  nome: Internet Corporation for Assigned Names and Numbers
+  sigla: ICANN
+  livello: internazionali
+  tipo: internet
+  poteri: [regola]
+  temi: [web]
+  sito: https://www.icann.org/
+  ruolo: >-
+    Ente privato no-profit che coordina nomi a dominio e indirizzi IP a livello globale. Le sue
+    regole arrivano a chi registra un dominio generico tramite i contratti con registri e
+    registrar: dati di registrazione (WHOIS/RDAP) e procedura UDRP.
+
+- id: ietf
+  nome: Internet Engineering Task Force
+  sigla: IETF
+  livello: internazionali
+  tipo: internet
+  poteri: [norma]
+  temi: [standard, sicurezza]
+  sito: https://www.ietf.org/
+  ruolo: >-
+    Standard dei protocolli internet (RFC): TLS, HTTP e quelli per l'email (SPF, DKIM, DMARC).
+    Sono volontari, ma di fatto necessari per l'interoperabilità e spesso richiamati da linee
+    guida tecniche nazionali.
+
+- id: w3c
+  nome: World Wide Web Consortium
+  sigla: W3C
+  livello: internazionali
+  tipo: internet
+  poteri: [norma]
+  temi: [web, standard]
+  sito: https://www.w3.org/
+  ruolo: >-
+    Standard del web, tra cui le WCAG sull'accessibilità. La norma europea EN 301 549 le recepisce,
+    e da lì entrano negli obblighi di accessibilità per la PA e nell'European Accessibility Act.
+
+- id: iso
+  nome: International Organization for Standardization
+  sigla: ISO
+  livello: internazionali
+  tipo: standard
+  poteri: [norma]
+  temi: [standard]
+  sito: https://www.iso.org/
+  ruolo: >-
+    Norme internazionali volontarie e a pagamento. Molte di quelle informatiche nascono con la IEC
+    nel comitato congiunto JTC 1 (SC 27 sicurezza e privacy, SC 42 AI): ISO/IEC 27001, 27701, 42001.
+    In Italia sono distribuite da UNI.
+
+- id: iec
+  nome: International Electrotechnical Commission
+  sigla: IEC
+  livello: internazionali
+  tipo: standard
+  poteri: [norma]
+  temi: [standard, sicurezza]
+  sito: https://www.iec.ch/
+  ruolo: >-
+    Norme elettrotecniche ed elettroniche, tra cui la serie IEC 62443 sulla sicurezza dei sistemi
+    industriali. Con ISO pubblica le norme ISO/IEC dell'informatica.
+
+- id: iaf
+  nome: International Accreditation Forum
+  sigla: IAF
+  livello: internazionali
+  tipo: standard
+  poteri: [autorizza]
+  temi: [standard]
+  sito: https://iaf.nu/
+  ruolo: >-
+    Accordi di mutuo riconoscimento fra enti di accreditamento: un certificato emesso sotto
+    accreditamento di un firmatario, ad esempio ISO 27001, vale anche all'estero. La banca dati
+    IAF CertSearch permette di verificare un certificato.
+
+- id: nist
+  nome: National Institute of Standards and Technology
+  sigla: NIST
+  livello: internazionali
+  tipo: standard
+  poteri: [norma]
+  temi: [standard, sicurezza, ai]
+  sito: https://www.nist.gov/
+  ruolo: >-
+    Agenzia federale degli Stati Uniti. Cybersecurity Framework (CSF 2.0), pubblicazioni SP 800 e
+    AI Risk Management Framework sono riferimenti diffusi anche in Europa. Sono volontari al di
+    fuori della PA federale USA.
+
+- id: aicpa
+  nome: American Institute of Certified Public Accountants
+  sigla: AICPA
+  livello: internazionali
+  tipo: standard
+  poteri: [norma]
+  temi: [standard]
+  sito: https://www.aicpa-cima.com/
+  ruolo: >-
+    Associazione dei revisori USA. Definisce i Trust Services Criteria, su cui si basano i report
+    SOC 2.
+
+- id: pci-ssc
+  nome: PCI Security Standards Council
+  sigla: PCI SSC
+  livello: internazionali
+  tipo: standard
+  poteri: [norma]
+  temi: [standard]
+  sito: https://www.pcisecuritystandards.org/
+  ruolo: >-
+    Fondato dai circuiti delle carte di pagamento. Pubblica il PCI DSS, che i contratti con banche
+    e circuiti impongono a chi tratta dati di carte.
+
+- id: csa
+  nome: Cloud Security Alliance
+  sigla: CSA
+  livello: internazionali
+  tipo: standard
+  poteri: [norma, registra]
+  temi: [standard]
+  sito: https://cloudsecurityalliance.org/
+  ruolo: >-
+    Associazione no-profit. Pubblica la Cloud Controls Matrix e tiene il registro pubblico STAR,
+    con le autovalutazioni e le certificazioni dei fornitori cloud.
+
+- id: cis
+  nome: Center for Internet Security
+  sigla: CIS
+  livello: internazionali
+  tipo: standard
+  poteri: [norma]
+  temi: [standard, sicurezza]
+  sito: https://www.cisecurity.org/
+  ruolo: >-
+    Associazione no-profit. Pubblica i CIS Controls e i benchmark di configurazione sicura di
+    sistemi operativi e servizi.
+
+# ── Unione europea ─────────────────────────────────────────────
+
+- id: parlamento-ue
+  nome: Parlamento europeo
+  livello: ue
+  tipo: istituzioni
+  poteri: [legifera]
+  sito: https://www.europarl.europa.eu/
+  ruolo: >-
+    Approva, con il Consiglio, regolamenti e direttive (GDPR, NIS2, AI Act, DSA…). I regolamenti
+    si applicano direttamente; le direttive vanno recepite con legge nazionale.
+
+- id: consiglio-ue
+  nome: Consiglio dell'Unione europea
+  livello: ue
+  tipo: istituzioni
+  poteri: [legifera]
+  sito: https://www.consilium.europa.eu/
+  ruolo: >-
+    Riunisce i ministri degli Stati membri e approva le norme con il Parlamento europeo. Per
+    l'Italia vi partecipa il Governo.
+
+- id: commissione-ue
+  nome: Commissione europea
+  livello: ue
+  tipo: istituzioni
+  poteri: [regola, vigila, indirizza]
+  temi: [piattaforme, ai, dati, sicurezza]
+  sito: https://commission.europa.eu/
+  ruolo: >-
+    Propone le norme e adotta gli atti delegati e di esecuzione, ad esempio i requisiti tecnici
+    NIS2 per i fornitori digitali. Vigila direttamente sul DMA e sulle piattaforme e i motori di
+    ricerca molto grandi soggetti al DSA. Adotta le decisioni di adeguatezza per i trasferimenti
+    di dati verso Paesi terzi (ad esempio l'EU-US Data Privacy Framework) e le clausole
+    contrattuali tipo. Direzioni rilevanti: DG CNECT (digitale), DG JUST (dati e consumatori),
+    DG COMP (concorrenza).
+
+- id: ai-office
+  nome: Ufficio europeo per l'IA
+  sigla: AI Office
+  livello: ue
+  tipo: agenzie
+  poteri: [vigila, indirizza]
+  temi: [ai]
+  sito: https://digital-strategy.ec.europa.eu/en/policies/ai-office
+  ruolo: >-
+    Struttura della Commissione (DG CNECT). Vigila sui modelli di AI per finalità generali (GPAI),
+    redige linee guida e il codice di buone pratiche GPAI e coordina l'applicazione dell'AI Act
+    con le autorità nazionali.
+
+- id: edps
+  nome: Garante europeo della protezione dei dati
+  sigla: GEPD / EDPS
+  livello: ue
+  tipo: autorita
+  poteri: [vigila, indirizza]
+  temi: [dati, ai]
+  sito: https://www.edps.europa.eu/
+  ruolo: >-
+    Vigila sui trattamenti di dati delle istituzioni e delle agenzie UE (Reg. 2018/1725) ed è
+    anche autorità AI Act per le istituzioni UE. Non è competente per imprese ed enti italiani,
+    per i quali il riferimento è il Garante nazionale. Partecipa all'EDPB.
+
+- id: edpb
+  nome: Comitato europeo per la protezione dei dati
+  sigla: CEPD / EDPB
+  livello: ue
+  tipo: reti
+  poteri: [indirizza, giudica]
+  temi: [dati]
+  sito: https://www.edpb.europa.eu/
+  ruolo: >-
+    Riunisce le autorità di protezione dei dati degli Stati UE (per l'Italia il Garante) e l'EDPS.
+    Adotta linee guida, raccomandazioni e pareri sul GDPR, e decisioni vincolanti nelle
+    controversie fra autorità (art. 65). Le sue linee guida sono il riferimento interpretativo
+    principale anche in Italia.
+
+- id: enisa
+  nome: Agenzia dell'Unione europea per la cibersicurezza
+  sigla: ENISA
+  livello: ue
+  tipo: agenzie
+  poteri: [indirizza, norma, supporta]
+  temi: [sicurezza]
+  sito: https://www.enisa.europa.eu/
+  ruolo: >-
+    Prepara gli schemi europei di certificazione previsti dal Cybersecurity Act e gestisce la
+    banca dati europea delle vulnerabilità (EUVD). Con il Cyber Resilience Act gestirà anche la
+    piattaforma unica per le segnalazioni dei produttori. Pubblica guide tecniche, tra cui quella
+    sull'attuazione dei requisiti NIS2.
+
+- id: esas
+  nome: Autorità europee di vigilanza (EBA, ESMA, EIOPA)
+  sigla: ESAs
+  livello: ue
+  tipo: autorita
+  poteri: [regola, vigila]
+  temi: [sicurezza]
+  sito: https://www.eba.europa.eu/
+  ruolo: >-
+    Autorità bancaria (EBA), dei mercati (ESMA) e delle assicurazioni (EIOPA). Redigono le norme
+    tecniche di DORA e, come capofila della sorveglianza (lead overseer), vigilano sui fornitori
+    ICT critici del settore finanziario, come i grandi cloud provider.
+
+- id: eccc
+  nome: Centro europeo di competenza per la cibersicurezza
+  sigla: ECCC
+  livello: ue
+  tipo: agenzie
+  poteri: [supporta]
+  temi: [sicurezza]
+  sito: https://cybersecurity-centre.europa.eu/
+  ruolo: >-
+    Gestisce i fondi UE per la cibersicurezza (Europa digitale, Orizzonte Europa) con la rete dei
+    centri nazionali di coordinamento. In Italia il centro nazionale ha sede presso l'ACN.
+
+- id: eurohpc
+  nome: Impresa comune per il calcolo ad alte prestazioni europeo
+  sigla: EuroHPC JU
+  livello: ue
+  tipo: ricerca
+  poteri: [supporta]
+  temi: [ai]
+  sito: https://eurohpc-ju.europa.eu/
+  ruolo: >-
+    Finanzia i supercalcolatori europei e le AI Factory, che offrono capacità di calcolo e supporto
+    a startup, PMI e ricerca per addestrare modelli di AI. In Italia la AI Factory IT4LIA fa capo a
+    Cineca (Bologna, supercalcolatore Leonardo).
+  note: Scritto a memoria; partner e servizi dell'AI Factory italiana.
+
+- id: euipo
+  nome: Ufficio dell'Unione europea per la proprietà intellettuale
+  sigla: EUIPO
+  livello: ue
+  tipo: agenzie
+  poteri: [registra]
+  temi: [ip]
+  sito: https://www.euipo.europa.eu/
+  ruolo: >-
+    Registra marchi e disegni dell'UE, validi in tutti gli Stati membri, e ospita l'Osservatorio
+    europeo sulle violazioni dei diritti di proprietà intellettuale.
+
+- id: board-dsa
+  nome: Comitato europeo per i servizi digitali
+  livello: ue
+  tipo: reti
+  poteri: [indirizza]
+  temi: [piattaforme]
+  ruolo: >-
+    Riunisce i coordinatori nazionali dei servizi digitali (per l'Italia AGCOM) e assiste la
+    Commissione nell'applicazione del DSA.
+
+- id: ai-board
+  nome: Comitato europeo per l'intelligenza artificiale
+  sigla: AI Board
+  livello: ue
+  tipo: reti
+  poteri: [indirizza]
+  temi: [ai]
+  ruolo: >-
+    Rappresentanti degli Stati membri. Coordina le autorità nazionali e dà pareri e
+    raccomandazioni sull'applicazione dell'AI Act.
+
+- id: ai-panel
+  nome: Gruppo di esperti scientifici indipendenti e forum consultivo dell'AI Act
+  livello: ue
+  tipo: reti
+  poteri: [indirizza]
+  temi: [ai]
+  ruolo: >-
+    Il gruppo di esperti (art. 68 AI Act) assiste l'AI Office sui modelli per finalità generali e
+    può segnalare i rischi sistemici. Il forum consultivo (art. 67) raccoglie industria, PMI,
+    società civile e mondo accademico e dà pareri al Comitato e alla Commissione.
+
+- id: edib
+  nome: Comitato europeo per l'innovazione in materia di dati
+  sigla: EDIB
+  livello: ue
+  tipo: reti
+  poteri: [indirizza]
+  temi: [piattaforme, dati]
+  ruolo: >-
+    Gruppo di esperti previsto dal Data Governance Act, con compiti anche per il Data Act. Promuove
+    prassi uniformi fra le autorità nazionali competenti.
+
+- id: nis-cg
+  nome: Gruppo di cooperazione NIS e reti operative (rete CSIRT, EU-CyCLONe)
+  livello: ue
+  tipo: reti
+  poteri: [indirizza, supporta]
+  temi: [sicurezza]
+  ruolo: >-
+    Il Gruppo di cooperazione riunisce le autorità NIS2 degli Stati membri, la Commissione ed ENISA
+    e pubblica orientamenti sull'attuazione. La rete dei CSIRT nazionali (per l'Italia CSIRT Italia)
+    ed EU-CyCLONe coordinano la risposta agli incidenti transfrontalieri e alle crisi su larga scala.
+
+- id: berec
+  nome: Organismo dei regolatori europei delle comunicazioni elettroniche
+  sigla: BEREC
+  livello: ue
+  tipo: reti
+  poteri: [indirizza]
+  sito: https://www.berec.europa.eu/
+  ruolo: >-
+    Riunisce i regolatori delle telecomunicazioni (per l'Italia AGCOM). Linee guida su neutralità
+    della rete e roaming.
+
+- id: cen-cenelec
+  nome: Comitato europeo di normazione e Comitato europeo di normazione elettrotecnica
+  sigla: CEN-CENELEC
+  livello: ue
+  tipo: standard
+  poteri: [norma]
+  temi: [standard, ai, sicurezza]
+  sito: https://www.cencenelec.eu/
+  ruolo: >-
+    Organismi europei di normazione. Su mandato della Commissione redigono le norme armonizzate,
+    che danno presunzione di conformità ai regolamenti: sono in preparazione quelle per l'AI Act e
+    il Cyber Resilience Act. Il comitato JTC 21 si occupa di AI, il JTC 13 di cibersicurezza e
+    protezione dei dati.
+
+- id: etsi
+  nome: Istituto europeo per le norme di telecomunicazione
+  sigla: ETSI
+  livello: ue
+  tipo: standard
+  poteri: [norma]
+  temi: [standard, sicurezza, documenti]
+  sito: https://www.etsi.org/
+  ruolo: >-
+    Norme per telecomunicazioni e sicurezza: EN 303 645 (sicurezza dei dispositivi IoT di
+    consumo), EN 301 549 (accessibilità ICT, con CEN e CENELEC) e le norme tecniche sui servizi
+    fiduciari eIDAS.
+
+- id: ea
+  nome: European co-operation for Accreditation
+  sigla: EA
+  livello: ue
+  tipo: standard
+  poteri: [autorizza]
+  temi: [standard]
+  sito: https://european-accreditation.org/
+  ruolo: >-
+    Rete degli enti nazionali di accreditamento previsti dal Reg. (CE) 765/2008 (per l'Italia
+    Accredia), legati da un accordo di mutuo riconoscimento.
+
+- id: cgue
+  nome: Corte di giustizia dell'Unione europea
+  sigla: CGUE
+  livello: ue
+  tipo: giudici
+  poteri: [giudica]
+  temi: [dati, web, piattaforme]
+  sito: https://curia.europa.eu/
+  ruolo: >-
+    Interpreta il diritto UE in modo vincolante per tutti i giudici nazionali, su rinvio
+    pregiudiziale. Sentenze chiave: Planet49 (2019) sui cookie, Schrems II (2020) sui
+    trasferimenti di dati, SCHUFA (2023) sulle decisioni automatizzate.
+
+- id: europol
+  nome: Europol, Centro europeo per la lotta alla criminalità informatica
+  sigla: EC3
+  livello: ue
+  tipo: polizia
+  poteri: [supporta]
+  temi: [sicurezza]
+  sito: https://www.europol.europa.eu/
+  ruolo: >-
+    Coordina e supporta le indagini transfrontaliere sul cybercrime delle polizie nazionali. Non
+    svolge indagini in proprio.
+
+# ── Nazionali ──────────────────────────────────────────────────
+
+- id: parlamento-it
+  nome: Parlamento
+  livello: nazionali
+  tipo: istituzioni
+  poteri: [legifera]
+  sito: https://www.parlamento.it/
+  ruolo: >-
+    Leggi nazionali e leggi di delegazione europea, con cui delega al Governo il recepimento delle
+    direttive.
+
+- id: governo
+  nome: Governo e Presidenza del Consiglio dei ministri
+  livello: nazionali
+  tipo: istituzioni
+  poteri: [legifera, regola]
+  sito: https://www.governo.it/
+  ruolo: >-
+    Decreti legislativi di recepimento (ad esempio il D.Lgs. 138/2024 per NIS2), decreti-legge e
+    DPCM attuativi, come quelli sul perimetro di sicurezza nazionale cibernetica.
+
+- id: dtd
+  nome: Dipartimento per la trasformazione digitale
+  livello: nazionali
+  tipo: istituzioni
+  poteri: [regola, indirizza, supporta]
+  temi: [documenti, ai]
+  sito: https://innovazione.gov.it/
+  ruolo: >-
+    Struttura della Presidenza del Consiglio. Coordina le piattaforme digitali nazionali (SPID,
+    pagoPA, app IO, piattaforma notifiche) e i fondi PNRR per la digitalizzazione di PA e Comuni.
+    Predispone la strategia nazionale per l'AI d'intesa con AgID e ACN e ne monitora l'attuazione;
+    la strategia è approvata almeno ogni due anni dal Comitato interministeriale per la
+    transizione digitale (art. 19 L. 132/2025).
+
+- id: mimit
+  nome: Ministero delle imprese e del made in Italy
+  sigla: MIMIT
+  livello: nazionali
+  tipo: istituzioni
+  poteri: [regola, vigila]
+  temi: [contratti, settore, web]
+  sito: https://www.mimit.gov.it/
+  ruolo: >-
+    Sorveglianza del mercato sulla sicurezza dei prodotti (GPSR), telecomunicazioni e frequenze,
+    vigilanza sulle cooperative (in parte delegata alle associazioni di rappresentanza). Registro
+    pubblico delle opposizioni contro il telemarketing, gestito dalla Fondazione Ugo Bordoni.
+    Vigila su Accredia e da esso dipende l'UIBM.
+
+- id: ministero-lavoro
+  nome: Ministero del lavoro e delle politiche sociali
+  livello: nazionali
+  tipo: istituzioni
+  poteri: [regola, vigila, registra]
+  temi: [lavoro, settore]
+  sito: https://www.lavoro.gov.it/
+  ruolo: >-
+    Gestisce il Registro unico nazionale del Terzo settore (RUNTS) con gli uffici regionali e
+    vigila sul Terzo settore. Vigila sulle casse di previdenza dei professionisti, tra cui
+    Inarcassa, insieme al MEF.
+
+- id: ministero-giustizia
+  nome: Ministero della giustizia
+  livello: nazionali
+  tipo: istituzioni
+  poteri: [regola, vigila]
+  temi: [settore]
+  sito: https://www.giustizia.it/
+  ruolo: >-
+    Vigila sugli Ordini e sui Consigli nazionali delle professioni, tra cui il CNI. Adotta i
+    decreti sui parametri dei compensi professionali e gestisce il processo telematico e i
+    registri giudiziari.
+
+- id: ministero-interno
+  nome: Ministero dell'interno
+  livello: nazionali
+  tipo: istituzioni
+  poteri: [regola, registra]
+  temi: [documenti]
+  sito: https://www.interno.gov.it/
+  ruolo: >-
+    Carta d'identità elettronica (CIE) e anagrafe nazionale della popolazione residente (ANPR).
+    Dal Ministero dipendono la Polizia di Stato e i Vigili del fuoco, che tengono gli elenchi dei
+    professionisti antincendio.
+
+- id: dipartimento-sport
+  nome: Dipartimento per lo sport
+  livello: nazionali
+  tipo: istituzioni
+  poteri: [regola, registra]
+  temi: [settore]
+  sito: https://www.sport.governo.it/
+  ruolo: >-
+    Struttura della Presidenza del Consiglio. Tiene, tramite Sport e Salute, il Registro nazionale
+    delle attività sportive dilettantistiche (RASD), da cui dipendono le agevolazioni di ASD e SSD,
+    ed emana indirizzi attuativi della riforma dello sport.
+
+- id: osservatorio-ia-lavoro
+  nome: Osservatorio sull'adozione di sistemi di intelligenza artificiale nel mondo del lavoro
+  livello: nazionali
+  tipo: istituzioni
+  poteri: [indirizza]
+  temi: [ai, lavoro]
+  ruolo: >-
+    Istituito presso il Ministero del lavoro e presieduto dal Ministro (art. 12 L. 132/2025).
+    Definisce una strategia sull'uso dell'AI nel lavoro, monitora l'impatto sul mercato del lavoro
+    e promuove la formazione di lavoratori e datori di lavoro sull'AI.
+  note: Adozione del decreto ministeriale su componenti e funzionamento, previsto entro 90 giorni dall'entrata in vigore della legge.
+
+- id: garante-privacy
+  nome: Garante per la protezione dei dati personali
+  sigla: Garante privacy
+  livello: nazionali
+  tipo: autorita
+  poteri: [regola, vigila, indirizza]
+  temi: [dati, web, lavoro]
+  sito: https://www.garanteprivacy.it/
+  ruolo: >-
+    Autorità di controllo GDPR per l'Italia. Riceve reclami, segnalazioni e notifiche di
+    violazione dei dati (entro 72 ore), svolge ispezioni anche tramite la Guardia di finanza e
+    applica sanzioni. Adotta provvedimenti generali (amministratori di sistema, cookie, metadati
+    delle email), approva regole deontologiche e codici di condotta, e pubblica FAQ e linee guida.
+    Siede nell'EDPB. Mantiene i suoi poteri anche sui sistemi di AI che trattano dati personali
+    (art. 20(4) L. 132/2025).
+
+- id: agcom
+  nome: Autorità per le garanzie nelle comunicazioni
+  sigla: AGCOM
+  livello: nazionali
+  tipo: autorita
+  poteri: [regola, vigila, giudica]
+  temi: [piattaforme, ip, web, ai]
+  sito: https://www.agcom.it/
+  ruolo: >-
+    Telecomunicazioni e media. È il coordinatore dei servizi digitali per il DSA e vigila sul
+    regolamento P2B. Tutela il diritto d'autore online, con il suo regolamento e la piattaforma
+    antipirateria Piracy Shield. Ha adottato linee guida sugli influencer e regole sulla verifica
+    dell'età per i siti con contenuti per adulti. Delega ai Corecom la conciliazione con gli
+    operatori. La L. 132/2025 (art. 20(4)) fa salvi i suoi poteri di coordinatore DSA anche
+    sull'AI.
+
+- id: agcm
+  nome: Autorità garante della concorrenza e del mercato
+  sigla: AGCM
+  livello: nazionali
+  tipo: autorita
+  poteri: [vigila]
+  temi: [contratti, web, piattaforme]
+  sito: https://www.agcm.it/
+  ruolo: >-
+    Antitrust e tutela del consumatore: pratiche commerciali scorrette (anche online, su app e
+    social), clausole vessatorie, diritti nei contratti a distanza. Le sanzioni per le pratiche
+    scorrette arrivano a 10 milioni di euro, o al 4% del fatturato per le infrazioni diffuse
+    nell'UE.
+  note: Massimali di sanzione dopo il D.Lgs. 26/2023.
+
+- id: anac
+  nome: Autorità nazionale anticorruzione
+  sigla: ANAC
+  livello: nazionali
+  tipo: autorita
+  poteri: [regola, vigila, registra]
+  temi: [settore, lavoro]
+  sito: https://www.anticorruzione.it/
+  ruolo: >-
+    Contratti pubblici: banca dati nazionale, fascicolo virtuale dell'operatore economico,
+    digitalizzazione delle gare. Anticorruzione e trasparenza della PA. Gestisce il canale esterno
+    di whistleblowing e applica le relative sanzioni.
+
+- id: banca-italia
+  nome: Banca d'Italia
+  livello: nazionali
+  tipo: autorita
+  poteri: [regola, vigila]
+  temi: [sicurezza, fisco]
+  sito: https://www.bancaditalia.it/
+  ruolo: >-
+    Vigila su banche, istituti di pagamento e di moneta elettronica, anche per DORA e per i
+    servizi di pagamento (PSD2). Per i sistemi di AI usati dagli istituti finanziari è autorità di
+    vigilanza del mercato dell'AI Act (art. 74(6)), come confermato dall'art. 20 L. 132/2025.
+
+- id: consob
+  nome: Commissione nazionale per le società e la borsa
+  sigla: Consob
+  livello: nazionali
+  tipo: autorita
+  poteri: [regola, vigila]
+  temi: [sicurezza]
+  sito: https://www.consob.it/
+  ruolo: >-
+    Vigila su mercati, imprese di investimento e prestatori di servizi per le cripto-attività
+    (MiCA, con Banca d'Italia), anche per DORA. Autorità di vigilanza del mercato dell'AI Act per
+    i soggetti vigilati (art. 20 L. 132/2025).
+
+- id: ivass
+  nome: Istituto per la vigilanza sulle assicurazioni
+  sigla: IVASS
+  livello: nazionali
+  tipo: autorita
+  poteri: [regola, vigila]
+  temi: [sicurezza]
+  sito: https://www.ivass.it/
+  ruolo: >-
+    Vigila su imprese e intermediari assicurativi, anche per DORA. Autorità di vigilanza del
+    mercato dell'AI Act per i soggetti vigilati (art. 20 L. 132/2025).
+
+- id: agid
+  nome: Agenzia per l'Italia digitale
+  sigla: AgID
+  livello: nazionali
+  tipo: agenzie
+  poteri: [regola, vigila, autorizza, indirizza]
+  temi: [documenti, ai, contratti, web]
+  sito: https://www.agid.gov.it/
+  ruolo: >-
+    Adotta le linee guida attuative del CAD, vincolanti per la PA (documento informatico,
+    conservazione, interoperabilità, accessibilità). Vigila sull'accessibilità di siti e app e
+    dei servizi coperti dall'European Accessibility Act. Qualifica e vigila i prestatori di
+    servizi fiduciari eIDAS, i gestori di PEC e i gestori di identità SPID. Per l'AI è una delle
+    due autorità nazionali (art. 20 L. 132/2025): promuove innovazione e sviluppo ed è autorità di
+    notifica dell'AI Act, quindi notifica, valuta, accredita e monitora gli organismi che verificano
+    la conformità dei sistemi di AI. Gestisce con l'ACN gli spazi di sperimentazione (sandbox) e
+    supporta il Dipartimento per la trasformazione digitale nel monitoraggio della strategia
+    nazionale. Presso AgID opera il Difensore civico per il digitale, a
+    cui segnalare le violazioni digitali della PA.
+  note: Riparto di competenze con il MIMIT sull'accessibilità dei prodotti (EAA).
+
+- id: acn
+  nome: Agenzia per la cybersicurezza nazionale
+  sigla: ACN
+  livello: nazionali
+  tipo: agenzie
+  poteri: [regola, vigila, autorizza, indirizza, supporta]
+  temi: [sicurezza, ai, dati, standard]
+  sito: https://www.acn.gov.it/
+  ruolo: >-
+    Autorità nazionale NIS2 e punto di contatto unico: registrazione dei soggetti sul portale,
+    obblighi di base, notifiche di incidente (al CSIRT Italia), sanzioni. È l'autorità nazionale
+    di certificazione della cibersicurezza (Cybersecurity Act) e gestisce il perimetro di
+    sicurezza nazionale cibernetica e la qualificazione dei servizi cloud per la PA. Ospita il
+    centro nazionale di coordinamento (NCC). Per l'AI è autorità di vigilanza del mercato e punto
+    di contatto unico con l'UE (art. 20 L. 132/2025): vigila sui sistemi di AI, con poteri
+    ispettivi e sanzionatori, e gestisce con AgID le sandbox. Ha pubblicato con il Garante le linee guida sulla conservazione delle
+    password. Nei singoli settori NIS2 operano anche le autorità di settore (ministeri).
+
+- id: csirt-italia
+  nome: CSIRT Italia
+  livello: nazionali
+  tipo: agenzie
+  poteri: [supporta]
+  temi: [sicurezza]
+  sito: https://www.csirt.gov.it/
+  ruolo: >-
+    Il CSIRT nazionale, all'interno dell'ACN. Riceve le notifiche di incidente NIS2 e del
+    perimetro e pubblica allerte e bollettini sulle vulnerabilità. Chiunque può segnalare un
+    incidente anche volontariamente.
+
+- id: ai4i
+  nome: Istituto italiano di ricerca sull'intelligenza artificiale per l'industria
+  sigla: AI4I
+  livello: nazionali
+  tipo: ricerca
+  poteri: [supporta]
+  temi: [ai]
+  sito: https://ai4i.it/
+  ruolo: >-
+    Fondazione con sede a Torino, istituita dall'art. 62-bis del D.L. 73/2021 per la ricerca
+    applicata e il trasferimento tecnologico dell'AI all'industria (Industria 4.0). Membri fondatori
+    e vigilanti sono MEF, MUR, MIMIT e Dipartimento per la trasformazione digitale. Non ha poteri
+    di regolazione. È utile per progetti, collaborazioni e trasferimento tecnologico, non per
+    sapere quali obblighi si applicano.
+  note: Inclusione fra gli enti coordinati dal comitato dell'art. 19(6) L. 132/2025; ruolo nelle AI Factory EuroHPC.
+
+- id: fair
+  nome: Fondazione FAIR (Future Artificial Intelligence Research)
+  sigla: FAIR
+  livello: nazionali
+  tipo: ricerca
+  poteri: [supporta]
+  temi: [ai]
+  sito: https://fondazione-fair.it/
+  ruolo: >-
+    Partenariato esteso del PNRR sull'AI, che riunisce università, enti di ricerca e imprese. Fa
+    ricerca di base e applicata e pubblica bandi a cascata per imprese e università.
+  note: Scritto a memoria; stato dei bandi dopo la chiusura del PNRR.
+
+- id: cdp-venture
+  nome: CDP Venture Capital
+  livello: nazionali
+  tipo: ricerca
+  poteri: [supporta]
+  temi: [ai, sicurezza]
+  sito: https://www.cdpventurecapital.it/
+  ruolo: >-
+    SGR che gestisce il Fondo di sostegno al venture capital. L'art. 23 della L. 132/2025 ne
+    autorizza l'uso, fino a un miliardo di euro, per investimenti in equity e quasi equity in PMI
+    innovative e campioni tecnologici con sede operativa in Italia, attivi in AI, cibersicurezza,
+    tecnologie quantistiche e telecomunicazioni.
+  note: La legge cita la SGR dell'art. 1, comma 116, L. 145/2018 senza nominarla; l'identificazione con CDP Venture Capital è da confermare.
+
+- id: agenzia-entrate
+  nome: Agenzia delle entrate
+  livello: nazionali
+  tipo: agenzie
+  poteri: [regola, vigila]
+  temi: [fisco]
+  sito: https://www.agenziaentrate.gov.it/
+  ruolo: >-
+    Gestisce il Sistema di interscambio (SdI) per la fatturazione elettronica, i corrispettivi
+    telematici, il portale Fatture e corrispettivi e il cassetto fiscale. Le specifiche tecniche
+    escono come provvedimenti del direttore.
+
+- id: inl
+  nome: Ispettorato nazionale del lavoro
+  sigla: INL
+  livello: nazionali
+  tipo: agenzie
+  poteri: [autorizza, vigila]
+  temi: [lavoro]
+  sito: https://www.ispettorato.gov.it/
+  ruolo: >-
+    Autorizza videosorveglianza e altri strumenti di controllo a distanza quando manca l'accordo
+    sindacale (art. 4 Statuto dei lavoratori). Vigila sugli obblighi informativi verso i
+    lavoratori. Per le imprese con unità in più province decide la sede centrale, negli altri casi
+    l'ispettorato territoriale.
+
+- id: registro-it
+  nome: Registro .it (Istituto di informatica e telematica del CNR)
+  livello: nazionali
+  tipo: internet
+  poteri: [registra, giudica]
+  temi: [web, ip]
+  sito: https://www.nic.it/
+  ruolo: >-
+    Assegna i nomi a dominio .it secondo il proprio regolamento. Con la procedura di opposizione,
+    seguita dalla riassegnazione presso enti terzi, si contesta un dominio registrato da altri.
+
+- id: siae
+  nome: Società italiana degli autori ed editori
+  sigla: SIAE
+  livello: nazionali
+  tipo: agenzie
+  poteri: [registra, autorizza]
+  temi: [ip]
+  sito: https://www.siae.it/
+  ruolo: >-
+    Gestione collettiva del diritto d'autore. Rilascia licenze per musica in eventi, locali, siti
+    e streaming, anche ad associazioni, ASD e parrocchie che organizzano eventi. Tiene il registro
+    pubblico speciale dei programmi per elaboratore.
+
+- id: uibm
+  nome: Ufficio italiano brevetti e marchi
+  sigla: UIBM
+  livello: nazionali
+  tipo: agenzie
+  poteri: [registra]
+  temi: [ip]
+  sito: https://uibm.mise.gov.it/
+  ruolo: >-
+    Ufficio del MIMIT per il deposito e la registrazione di marchi, brevetti e disegni nazionali.
+
+- id: comitato-autorita-ia
+  nome: Comitato di coordinamento delle autorità nazionali per l'AI
+  livello: nazionali
+  tipo: reti
+  poteri: [indirizza]
+  temi: [ai]
+  ruolo: >-
+    Istituito presso la Presidenza del Consiglio (art. 20(3) L. 132/2025). Ne fanno parte i
+    direttori generali di AgID e ACN e il capo del Dipartimento per la trasformazione digitale; per
+    le questioni di competenza partecipano Banca d'Italia, CONSOB e IVASS. Coordina l'esercizio
+    delle funzioni delle due autorità.
+
+- id: comitato-enti-ia
+  nome: Comitato di coordinamento su enti, organismi e fondazioni per l'innovazione digitale e l'AI
+  livello: nazionali
+  tipo: reti
+  poteri: [indirizza]
+  temi: [ai]
+  ruolo: >-
+    Presieduto dal Presidente del Consiglio o dall'autorità delegata, con i ministri di economia,
+    imprese, lavoro, università, salute e pubblica amministrazione e le autorità delegate per la
+    cybersicurezza e l'innovazione (art. 19(6-7) L. 132/2025). Coordina l'indirizzo degli enti e
+    delle fondazioni pubblici o finanziati dallo Stato che lavorano su innovazione digitale e AI, e
+    ne individua l'elenco.
+
+- id: accredia
+  nome: Accredia
+  livello: nazionali
+  tipo: standard
+  poteri: [autorizza]
+  temi: [standard]
+  sito: https://www.accredia.it/
+  ruolo: >-
+    Ente unico nazionale di accreditamento (Reg. 765/2008). Accredita gli organismi che certificano
+    i sistemi di gestione (ISO/IEC 27001, 9001, 42001…), i laboratori e gli organismi di
+    ispezione. La sua banca dati permette di verificare un certificato accreditato.
+
+- id: uni
+  nome: Ente italiano di normazione
+  sigla: UNI
+  livello: nazionali
+  tipo: standard
+  poteri: [norma]
+  temi: [standard]
+  sito: https://www.uni.com/
+  ruolo: >-
+    Adotta e distribuisce in Italia le norme ISO ed europee (es. UNI CEI EN ISO/IEC 27001).
+    Pubblica norme nazionali e prassi di riferimento (UNI/PdR), tra cui quelle sui profili
+    professionali ICT (UNI 11621) e sui profili per il trattamento dei dati personali, compreso
+    il DPO (UNI 11697).
+
+- id: cei-normazione
+  nome: Comitato elettrotecnico italiano
+  sigla: CEI (normazione)
+  livello: nazionali
+  tipo: standard
+  poteri: [norma]
+  temi: [standard]
+  sito: https://www.ceinorme.it/
+  ruolo: >-
+    Normazione nel settore elettrico, elettronico e delle telecomunicazioni; membro italiano di IEC
+    e CENELEC. Da non confondere con la Conferenza episcopale italiana, che ha la stessa sigla.
+
+- id: cini
+  nome: Laboratorio nazionale di cybersecurity del CINI
+  livello: nazionali
+  tipo: standard
+  poteri: [norma]
+  temi: [standard, sicurezza]
+  sito: https://www.consorzio-cini.it/
+  ruolo: >-
+    Laboratorio del consorzio interuniversitario per l'informatica. Con il Centro di ricerca di
+    cyber intelligence della Sapienza ha curato il Framework nazionale per la cybersecurity e la
+    data protection e i Controlli essenziali di cybersecurity.
+  note: Ruolo di ACN e Garante nelle diverse edizioni del Framework.
+
+- id: cni
+  nome: Consiglio nazionale degli ingegneri
+  sigla: CNI
+  livello: nazionali
+  tipo: categoria
+  poteri: [regola, giudica, registra, indirizza]
+  temi: [settore]
+  sito: https://www.cni.it/
+  ruolo: >-
+    Adotta il codice deontologico e il regolamento sulla formazione continua, invia circolari agli
+    Ordini e tiene l'Albo unico nazionale. Decide i ricorsi contro le decisioni disciplinari
+    territoriali. Il comitato C3i si occupa dell'ingegneria dell'informazione. Per le altre
+    professioni con albo il ruolo è del rispettivo Consiglio nazionale.
+
+- id: inarcassa
+  nome: Inarcassa
+  livello: nazionali
+  tipo: categoria
+  poteri: [regola, registra]
+  temi: [settore]
+  sito: https://www.inarcassa.it/
+  ruolo: >-
+    Cassa di previdenza di ingegneri e architetti liberi professionisti: iscrizione, contributi
+    (soggettivo, e integrativo addebitato in fattura), regolamenti e controlli sui redditi
+    dichiarati.
+
+- id: cei
+  nome: Conferenza episcopale italiana
+  sigla: CEI
+  livello: nazionali
+  tipo: categoria
+  poteri: [regola]
+  temi: [dati]
+  sito: https://www.chiesacattolica.it/
+  ruolo: >-
+    Ha adottato il decreto generale sulla protezione dei dati (2018), che in base all'art. 91 GDPR
+    disciplina i trattamenti degli enti ecclesiastici, parrocchie comprese.
+
+- id: coni
+  nome: CONI, federazioni ed enti di promozione sportiva
+  livello: nazionali
+  tipo: categoria
+  poteri: [regola, registra]
+  temi: [settore]
+  sito: https://www.coni.it/
+  ruolo: >-
+    Il CONI, e per lo sport paralimpico il CIP, riconosce a fini sportivi federazioni, discipline
+    associate ed enti di promozione, a cui ASD e SSD si affiliano. Federazioni ed enti adottano
+    regolamenti, modelli organizzativi e codici di condotta per la tutela dei minori
+    (safeguarding).
+
+- id: rappresentanza-coop
+  nome: Associazioni di rappresentanza delle cooperative
+  livello: nazionali
+  tipo: categoria
+  poteri: [vigila]
+  temi: [settore]
+  ruolo: >-
+    Associazioni riconosciute, come Confcooperative, Legacoop e AGCI, che svolgono la revisione
+    periodica delle cooperative aderenti su delega del MIMIT. Le cooperative non aderenti sono
+    revisionate dal ministero.
+
+- id: cassazione
+  nome: Corte di cassazione
+  livello: nazionali
+  tipo: giudici
+  poteri: [giudica]
+  temi: [dati, lavoro]
+  sito: https://www.cortedicassazione.it/
+  ruolo: >-
+    Ultimo grado della giustizia civile e penale. I suoi orientamenti su privacy, controlli sui
+    lavoratori e responsabilità professionale guidano i giudici di merito.
+
+- id: giustizia-amministrativa
+  nome: TAR e Consiglio di Stato
+  livello: nazionali
+  tipo: giudici
+  poteri: [giudica]
+  temi: [settore, piattaforme]
+  sito: https://www.giustizia-amministrativa.it/
+  ruolo: >-
+    Decidono i ricorsi contro gli atti della PA e delle autorità indipendenti (per AGCM e AGCOM è
+    competente il TAR del Lazio), contro bandi e aggiudicazioni di gare e contro le linee guida
+    vincolanti. Il Consiglio di Stato è il giudice d'appello e dà pareri sugli atti normativi del
+    Governo.
+
+- id: polizia-postale
+  nome: Polizia postale e per la sicurezza cibernetica
+  livello: nazionali
+  tipo: polizia
+  poteri: [indaga, supporta]
+  temi: [sicurezza]
+  sito: https://www.commissariatodips.it/
+  ruolo: >-
+    Specialità della Polizia di Stato. Indaga su accessi abusivi, frodi online, ransomware e abusi
+    sui minori online. Le denunce si presentano anche tramite il Commissariato di PS online. Il
+    CNAIPIC protegge le infrastrutture critiche; sul territorio operano centri regionali e
+    sezioni provinciali.
+
+- id: gdf
+  nome: Guardia di finanza
+  livello: nazionali
+  tipo: polizia
+  poteri: [indaga, vigila]
+  temi: [fisco, dati]
+  sito: https://www.gdf.gov.it/
+  ruolo: >-
+    Controlli fiscali, anche su fatturazione elettronica e pagamenti. Il Nucleo speciale tutela
+    privacy e frodi tecnologiche svolge ispezioni per conto del Garante privacy.
+
+# ── Territoriali ───────────────────────────────────────────────
+
+- id: regioni
+  nome: Regioni e Province autonome
+  livello: territoriali
+  tipo: istituzioni
+  poteri: [legifera, registra, supporta]
+  temi: [settore]
+  ruolo: >-
+    Leggi regionali (sanità, formazione, edilizia, energia), fascicolo sanitario elettronico,
+    agende digitali regionali e società informatiche in-house. Tengono gli uffici regionali del
+    RUNTS; alcune hanno un CSIRT regionale per gli enti del territorio.
+
+- id: comuni
+  nome: Comuni
+  livello: territoriali
+  tipo: istituzioni
+  poteri: [regola, registra]
+  ruolo: >-
+    Sportelli unici online (SUAP per le attività produttive, SUE per l'edilizia), anagrafe tramite
+    ANPR, regolamenti locali, ad esempio sulla videosorveglianza urbana. Come PA sono soggetti agli
+    obblighi del CAD, di accessibilità e di trasparenza.
+
+- id: uffici-runts
+  nome: Uffici regionali del RUNTS
+  livello: territoriali
+  tipo: agenzie
+  poteri: [registra, vigila]
+  temi: [settore]
+  ruolo: >-
+    Iscrivono, controllano e cancellano gli ETS con sede nella regione. Ricevono il deposito di
+    statuti, bilanci e rendiconti.
+
+- id: corecom
+  nome: Comitati regionali per le comunicazioni
+  sigla: Corecom
+  livello: territoriali
+  tipo: autorita
+  poteri: [giudica, vigila]
+  temi: [web]
+  ruolo: >-
+    Svolgono funzioni delegate da AGCOM: conciliazione gratuita delle controversie con operatori
+    telefonici e internet (piattaforma ConciliaWeb), vigilanza sull'emittenza locale e sulla par
+    condicio, tutela dei minori.
+
+- id: cciaa
+  nome: Camere di commercio
+  sigla: CCIAA
+  livello: territoriali
+  tipo: agenzie
+  poteri: [registra, supporta]
+  temi: [documenti, settore]
+  sito: https://www.unioncamere.gov.it/
+  ruolo: >-
+    Tengono il registro delle imprese e l'albo delle società cooperative (con InfoCamere).
+    Rilasciano firma digitale, CNS e identità digitale per le imprese e offrono il cassetto
+    digitale dell'imprenditore. I Punti impresa digitale (PID) fanno orientamento e
+    autovalutazioni su digitalizzazione e cibersicurezza.
+
+- id: edih
+  nome: Poli europei dell'innovazione digitale
+  sigla: EDIH
+  livello: territoriali
+  tipo: ricerca
+  poteri: [supporta]
+  temi: [ai, sicurezza]
+  ruolo: >-
+    Centri cofinanziati dall'UE e dal MIMIT che offrono a PMI e PA test prima dell'investimento,
+    formazione e supporto su AI, cibersicurezza e calcolo ad alte prestazioni.
+  note: Elenco dei poli italiani attivi.
+
+- id: itl
+  nome: Ispettorati territoriali del lavoro
+  sigla: ITL
+  livello: territoriali
+  tipo: agenzie
+  poteri: [autorizza, vigila]
+  temi: [lavoro]
+  ruolo: >-
+    Articolazioni dell'INL. Autorizzano gli strumenti di controllo a distanza per le imprese con
+    unità in una sola provincia e svolgono le ispezioni.
+
+- id: ordini-provinciali
+  nome: Ordini provinciali degli ingegneri
+  livello: territoriali
+  tipo: categoria
+  poteri: [registra, indirizza, autorizza]
+  temi: [settore]
+  ruolo: >-
+    Tengono l'albo, verificano i crediti formativi e ricevono PEC e dati delle polizze. Rilasciano
+    pareri di congruità sui compensi. Organizzano commissioni tematiche (ICT, sicurezza, privacy) e
+    formazione. Come enti pubblici hanno obblighi propri (vedi L'Ordine come ente pubblico).
+
+- id: consigli-disciplina
+  nome: Consigli di disciplina territoriali
+  livello: territoriali
+  tipo: categoria
+  poteri: [giudica]
+  temi: [settore]
+  ruolo: >-
+    Istruiscono e decidono i procedimenti disciplinari sugli iscritti, separati dal Consiglio
+    dell'Ordine (DPR 137/2012, art. 8). Le decisioni si impugnano davanti al CNI.
+
+- id: diocesi
+  nome: Diocesi
+  livello: territoriali
+  tipo: categoria
+  poteri: [regola, vigila]
+  temi: [dati]
+  ruolo: >-
+    Applicano il decreto CEI agli enti del proprio territorio. Le parrocchie si rivolgono
+    all'ufficio diocesano competente per modulistica, registri e procedure sulla protezione dei
+    dati.
+  note: Organizzazione diocesana per la protezione dei dati (referenti, uffici).
+
+- id: tribunale
+  nome: Tribunale ordinario
+  livello: territoriali
+  tipo: giudici
+  poteri: [giudica]
+  temi: [dati, lavoro, contratti, ip]
+  ruolo: >-
+    Decide le opposizioni ai provvedimenti del Garante privacy, le cause di lavoro, il risarcimento
+    del danno da trattamento illecito (art. 82 GDPR) e le controversie contrattuali. Le sezioni
+    specializzate in materia di impresa trattano marchi, brevetti, diritto d'autore e
+    concorrenza.
+
+# ── Torino (luogo: torino), dalla città al transfrontaliero ────
+
+- id: to-comune
+  nome: Comune di Torino
+  livello: territoriali
+  luogo: torino
+  scala: citta
+  tipo: istituzioni
+  poteri: [regola, registra]
+  temi: [documenti, web]
+  sito: https://www.comune.torino.it/
+  ruolo: >-
+    Sportello unico per le attività produttive (SUAP) ed edilizia (SUE) online, anagrafe e
+    certificati, tributi locali, regolamenti comunali (commercio, occupazione di suolo pubblico,
+    videosorveglianza urbana). Il territorio è diviso in circoscrizioni, che gestiscono servizi di
+    prossimità. Come PA, il Comune è soggetto a CAD, accessibilità, trasparenza e, per i suoi
+    acquisti di software e servizi, al codice dei contratti pubblici.
+  note: Numero e competenze attuali delle circoscrizioni.
+
+- id: to-city-lab
+  nome: Torino City Lab
+  livello: territoriali
+  luogo: torino
+  scala: citta
+  tipo: ricerca
+  poteri: [autorizza, supporta]
+  temi: [ai]
+  sito: https://torinocitylab.it/
+  ruolo: >-
+    Iniziativa del Comune che consente a imprese e centri di ricerca di sperimentare in città, in
+    condizioni reali, soluzioni innovative come guida autonoma, droni, AI e servizi urbani, con le
+    autorizzazioni del Comune. Un banco di prova locale, distinto dalle sandbox nazionali previste
+    dall'AI Act.
+  note: Scritto a memoria; modalità di adesione e ambiti attivi.
+
+- id: to-citta-metropolitana
+  nome: Città metropolitana di Torino
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: istituzioni
+  poteri: [regola, supporta]
+  sito: https://www.cittametropolitana.torino.it/
+  ruolo: >-
+    Ente di area vasta che ha preso il posto della Provincia: pianificazione territoriale, strade,
+    scuole superiori, ambiente. Supporta i Comuni più piccoli, anche su servizi digitali e
+    stazione appaltante, ed è partner italiano del programma ALCOTRA.
+  note: Servizi digitali offerti ai Comuni del territorio.
+
+- id: to-cciaa
+  nome: Camera di commercio di Torino
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: agenzie
+  poteri: [registra, supporta]
+  temi: [documenti, settore]
+  sito: https://www.to.camcom.it/
+  ruolo: >-
+    Registro delle imprese e albo delle cooperative per la provincia. Rilascia firma digitale, CNS
+    e identità digitale per le imprese, e tramite il Punto impresa digitale offre autovalutazioni
+    di maturità digitale e cibersicurezza. È partner dell'EDIH EXPAND.
+
+- id: to-uffici-statali
+  nome: Uffici statali a Torino
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: agenzie
+  poteri: [autorizza, vigila]
+  temi: [lavoro, fisco]
+  ruolo: >-
+    Articolazioni locali degli enti nazionali. L'Ispettorato territoriale del lavoro autorizza gli
+    strumenti di controllo a distanza per le imprese con unità solo nella provincia e svolge le
+    ispezioni. Le direzioni provinciali dell'Agenzia delle entrate seguono le pratiche fiscali.
+
+- id: to-ordine-ingegneri
+  nome: Ordine degli ingegneri della provincia di Torino
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: categoria
+  poteri: [registra, indirizza, autorizza]
+  temi: [settore]
+  sito: https://torino.ordingegneri.it/
+  ruolo: >-
+    Tiene l'albo provinciale, verifica i crediti formativi e rilascia pareri di congruità sui
+    compensi. Ha commissioni tematiche, tra cui la Commissione sistemi informativi e
+    telecomunicazioni (ICT), che organizza corsi e documenta i temi dell'ingegneria
+    dell'informazione. I procedimenti disciplinari spettano al Consiglio di disciplina presso
+    l'Ordine.
+
+- id: to-volto
+  nome: Vol.To, Centro servizi per il volontariato di Torino
+  sigla: Vol.To
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: categoria
+  poteri: [supporta]
+  temi: [settore, dati]
+  sito: https://volontariatotorino.it/
+  ruolo: >-
+    Centro servizi per il volontariato della Città metropolitana, nato nel 2015 dalla fusione di
+    VSSP e Idea Solidale. Assiste gratuitamente associazioni ed ETS su RUNTS, statuti, adempimenti,
+    privacy e comunicazione.
+  note: Servizi specifici su RUNTS e privacy.
+
+- id: to-diocesi
+  nome: Arcidiocesi di Torino
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: categoria
+  poteri: [regola, vigila]
+  temi: [dati]
+  sito: https://www.diocesi.torino.it/
+  ruolo: >-
+    Applica il decreto CEI sulla protezione dei dati alle parrocchie e agli enti della diocesi, e
+    fornisce indicazioni e modulistica. Fa parte della regione ecclesiastica Piemonte e Valle
+    d'Aosta.
+  note: Ufficio o referente diocesano per la protezione dei dati.
+
+- id: to-tribunale
+  nome: Tribunale e Corte d'appello di Torino
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: giudici
+  poteri: [giudica]
+  temi: [dati, lavoro, contratti, ip]
+  sito: https://www.tribunale.torino.giustizia.it/
+  ruolo: >-
+    Il Tribunale decide le cause civili, del lavoro e penali del circondario, comprese le
+    opposizioni ai provvedimenti del Garante privacy quando il titolare ha sede a Torino. La
+    sezione specializzata in materia di impresa, presso Tribunale e Corte d'appello, è competente
+    per tutto il Piemonte e per la Valle d'Aosta (L. 27/2012, art. 2) su marchi, brevetti, diritto
+    d'autore, concorrenza e controversie societarie.
+  note: Criterio di competenza territoriale per l'opposizione ai provvedimenti del Garante.
+
+- id: to-atenei
+  nome: Politecnico e Università di Torino
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: ricerca
+  poteri: [supporta]
+  temi: [ai, sicurezza]
+  sito: https://www.polito.it/
+  ruolo: >-
+    Ricerca, laboratori e trasferimento tecnologico su AI, cibersicurezza e dati, con incubatori
+    di startup. Promuovono il competence center CIM4.0; l'Università guida l'EDIH CHEDIH. Il
+    Politecnico ha un protocollo d'intesa con la Polizia postale (COSC Piemonte e Valle d'Aosta)
+    per la condivisione delle informazioni sulle minacce, rinnovato nel 2026.
+
+- id: to-cim40
+  nome: Competence Industry Manufacturing 4.0
+  sigla: CIM4.0
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: ricerca
+  poteri: [supporta]
+  temi: [ai, sicurezza]
+  sito: https://cim.eu/
+  ruolo: >-
+    Uno degli otto centri di competenza ad alta specializzazione promossi dal MIMIT, costituito da
+    Politecnico e Università di Torino con partner industriali. Offre linee pilota, formazione e
+    bandi per progetti di innovazione, e coordina l'EDIH EXPAND su AI e cibersicurezza per la
+    manifattura.
+
+- id: to-fondazioni
+  nome: Fondazioni di origine bancaria e OGR
+  livello: territoriali
+  luogo: torino
+  scala: metropoli
+  tipo: ricerca
+  poteri: [supporta]
+  temi: [ai]
+  sito: https://www.compagniadisanpaolo.it/
+  ruolo: >-
+    Compagnia di San Paolo e Fondazione CRT finanziano con bandi progetti di innovazione e di
+    digitalizzazione, anche per ETS, associazioni ed enti del territorio. Le OGR (Officine Grandi
+    Riparazioni), polo della Fondazione CRT, ospitano acceleratori e la sede di AI4I.
+  note: Bandi attivi sulla digitalizzazione del Terzo settore.
+
+- id: pie-regione
+  nome: Regione Piemonte
+  livello: territoriali
+  luogo: torino
+  scala: regione
+  tipo: istituzioni
+  poteri: [legifera, regola, registra, supporta]
+  temi: [settore, sicurezza]
+  sito: https://www.regione.piemonte.it/
+  ruolo: >-
+    Leggi e regolamenti regionali (sanità, formazione, edilizia, energia, Terzo settore), fondi
+    europei FESR e FSE+ con bandi per la digitalizzazione delle imprese, fascicolo sanitario
+    elettronico. Tiene l'ufficio regionale del RUNTS. È essa stessa soggetto NIS2: la DGR 15-1430
+    del 28/07/2025 fissa le modalità di adempimento.
+
+- id: pie-csi
+  nome: CSI Piemonte
+  livello: territoriali
+  luogo: torino
+  scala: regione
+  tipo: agenzie
+  poteri: [supporta]
+  temi: [sicurezza, documenti]
+  sito: https://www.csipiemonte.it/
+  ruolo: >-
+    Consorzio pubblico per il sistema informativo, società informatica in-house di Regione,
+    Comune di Torino, aziende sanitarie e altri enti piemontesi. Ospita dal 2020 il CSIRT della PA
+    locale piemontese, accreditato da Trusted Introducer, che collabora con il CSIRT Italia.
+    Rilevante per chi fornisce software o servizi a PA piemontesi.
+
+- id: pie-corecom
+  nome: Corecom Piemonte
+  livello: territoriali
+  luogo: torino
+  scala: regione
+  tipo: autorita
+  poteri: [giudica, vigila]
+  temi: [web]
+  sito: https://www.cr.piemonte.it/
+  ruolo: >-
+    Comitato regionale per le comunicazioni, organo del Consiglio regionale con funzioni delegate
+    da AGCOM. Conciliazione gratuita delle controversie con operatori telefonici e internet
+    (ConciliaWeb), vigilanza sull'emittenza locale.
+
+- id: pie-runts
+  nome: Ufficio regionale del RUNTS del Piemonte
+  livello: territoriali
+  luogo: torino
+  scala: regione
+  tipo: agenzie
+  poteri: [registra, vigila]
+  temi: [settore]
+  ruolo: >-
+    Presso la Regione Piemonte: iscrive, controlla e cancella gli ETS con sede in Piemonte e
+    riceve il deposito di statuti e bilanci.
+
+- id: pie-tar
+  nome: TAR Piemonte
+  livello: territoriali
+  luogo: torino
+  scala: regione
+  tipo: giudici
+  poteri: [giudica]
+  temi: [settore]
+  ruolo: >-
+    Tribunale amministrativo regionale, con sede a Torino. Decide i ricorsi contro gli atti di
+    Regione, Comuni, Città metropolitana, Ordini e altri enti piemontesi, comprese gare e
+    autorizzazioni. Per gli atti di AGCM e AGCOM resta competente il TAR del Lazio.
+
+- id: pie-cosc
+  nome: Centro operativo per la sicurezza cibernetica Piemonte e Valle d'Aosta
+  sigla: COSC
+  livello: territoriali
+  luogo: torino
+  scala: regione
+  tipo: polizia
+  poteri: [indaga, supporta]
+  temi: [sicurezza]
+  ruolo: >-
+    Articolazione regionale della Polizia postale, con sede in corso Tazzoli 235 a Torino e
+    sezioni operative nelle province. Riceve denunce su frodi online, accessi abusivi e ransomware,
+    e ha protocolli di condivisione delle informazioni con enti e università del territorio.
+
+- id: pie-fiopa
+  nome: Federazione interregionale degli Ordini degli ingegneri del Piemonte e della Valle d'Aosta
+  sigla: FIOPA
+  livello: territoriali
+  luogo: torino
+  scala: regione
+  tipo: categoria
+  poteri: [indirizza]
+  temi: [settore]
+  sito: http://www.fiopa.it/
+  ruolo: >-
+    Coordinamento volontario degli Ordini provinciali, non previsto dalla legge professionale.
+    Rappresenta gli ingegneri verso la Regione su norme regionali e protocolli, ad esempio sui
+    dati dei contratti pubblici, e organizza formazione.
+  note: Sede e organi attuali.
+
+- id: pie-edih
+  nome: EDIH di Piemonte e Valle d'Aosta (EXPAND, CHEDIH)
+  sigla: EDIH
+  livello: territoriali
+  luogo: torino
+  scala: regione
+  tipo: ricerca
+  poteri: [supporta]
+  temi: [ai, sicurezza]
+  ruolo: >-
+    EXPAND, coordinato da CIM4.0 con CSI Piemonte, Camera di commercio di Torino, Politecnico e
+    altri, si rivolge alla manifattura. CHEDIH, guidato dall'Università di Torino, si occupa di
+    salute circolare e agroalimentare. Entrambi offrono a PMI e PA test prima dell'investimento,
+    formazione e supporto su AI e cibersicurezza, in gran parte gratuiti.
+  note: La rete italiana degli EDIH è in riorganizzazione; verificare servizi e requisiti attuali.
+
+- id: alcotra
+  nome: Programma Interreg ALCOTRA Italia-Francia
+  sigla: ALCOTRA
+  livello: ue
+  luogo: torino
+  scala: transfrontaliero
+  tipo: ricerca
+  poteri: [supporta]
+  sito: https://www.interreg-alcotra.eu/
+  ruolo: >-
+    Programma europeo di cooperazione transfrontaliera 2021-2027 sulle Alpi occidentali, con circa
+    182 milioni di euro FESR. Partecipano Piemonte, con Città metropolitana di Torino e provincia di
+    Cuneo, Valle d'Aosta, Liguria con la provincia di Imperia e i territori francesi confinanti.
+    L'autorità di gestione è la Regione Auvergne-Rhône-Alpes. Finanzia progetti comuni di enti e
+    imprese dei due versanti.
+
+- id: alpmed
+  nome: Euroregione Alpi-Mediterraneo
+  sigla: AlpMed
+  livello: internazionali
+  luogo: torino
+  scala: transfrontaliero
+  tipo: reti
+  poteri: [indirizza]
+  sito: https://pie.camcom.it/
+  ruolo: >-
+    Nata da un protocollo del 2006 e istituita nel 2007 da Piemonte, Liguria, Valle d'Aosta,
+    Provence-Alpes-Côte d'Azur e Rhône-Alpes. Oggi opera soprattutto come rete delle Camere di
+    commercio, allargata a Corsica e Sardegna, presieduta nel 2023 da Unioncamere Piemonte. Non ha
+    poteri normativi.
+  note: Stato giuridico attuale e ruolo delle Regioni.
+
+- id: eusalp
+  nome: Strategia dell'Unione europea per la regione alpina
+  sigla: EUSALP
+  livello: ue
+  luogo: torino
+  scala: transfrontaliero
+  tipo: reti
+  poteri: [indirizza]
+  sito: https://alpine-region.eu/
+  ruolo: >-
+    Strategia macroregionale che coordina Stati e Regioni dell'arco alpino, Piemonte compreso,
+    anche con Paesi non UE come Svizzera e Liechtenstein. I gruppi d'azione si occupano tra l'altro
+    di connettività e servizi digitali. Orienta i fondi, ma non fa regole.
+  note: Scritto a memoria; gruppi d'azione attivi sul digitale.
+
+- id: cnil
+  nome: Commission nationale de l'informatique et des libertés
+  sigla: CNIL
+  livello: ue
+  luogo: torino
+  scala: transfrontaliero
+  tipo: autorita
+  poteri: [regola, vigila, indirizza]
+  temi: [dati, web]
+  sito: https://www.cnil.fr/
+  ruolo: >-
+    Autorità francese di protezione dei dati. Conta per chi da Torino ha clienti, utenti o
+    dipendenti in Francia. Con lo sportello unico del GDPR (art. 56), se lo stabilimento principale
+    è in Italia l'autorità capofila resta il Garante italiano e la CNIL partecipa come autorità
+    interessata. Le sue raccomandazioni, ad esempio su cookie e AI, sono molto seguite in tutta
+    Europa.
+
+- id: ifpdt
+  nome: Incaricato federale della protezione dei dati e della trasparenza (Svizzera)
+  sigla: IFPDT
+  livello: internazionali
+  luogo: torino
+  scala: transfrontaliero
+  tipo: autorita
+  poteri: [vigila, indirizza]
+  temi: [dati]
+  sito: https://www.edoeb.admin.ch/
+  ruolo: >-
+    Autorità svizzera per la nuova legge federale sulla protezione dei dati (nLPD, in vigore dal
+    1/09/2023), che si applica anche a trattamenti svolti dall'estero con effetti in Svizzera. La
+    Svizzera ha una decisione di adeguatezza UE, quindi i trasferimenti di dati verso la Svizzera
+    sono liberi.

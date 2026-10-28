@@ -9,8 +9,7 @@ tema: dati
 soggetti: [tutti]
 applicazione: 2004-01-01
 recepimento: "Adeguato al GDPR con D.Lgs. 10 agosto 2018, n. 101"
-autorita:
-  - "Garante privacy"
+autorita: [garante-privacy]
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2003-06-30;196"

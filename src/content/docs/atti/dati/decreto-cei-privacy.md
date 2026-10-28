@@ -7,6 +7,7 @@ estremi: "Decreto generale CEI, 24 maggio 2018"
 giurisdizione: CEI
 tema: dati
 soggetti: [parrocchie]
+autorita: [cei, diocesi]
 fonti:
   - label: "Art. 91 GDPR (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"

@@ -14,9 +14,7 @@ scadenze:
     cosa: "Adeguamento alla riforma delle professioni (DPR 137/2012)"
   - data: 2022-03-23
     cosa: "Integrazione"
-autorita:
-  - "Consiglio Nazionale degli Ingegneri"
-  - "Consigli di disciplina territoriali"
+autorita: [cni, consigli-disciplina]
 fonti:
   - label: "Testo aggiornato al 14/06/2023 (PDF, CNI)"
     url: "https://www.cni.it/images/News/2023/Codice_deontologico_CNI_14-06-2023_DEF.rev.1.pdf"

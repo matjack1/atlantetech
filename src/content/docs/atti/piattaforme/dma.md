@@ -8,8 +8,7 @@ giurisdizione: UE
 tema: piattaforme
 soggetti: [saas]
 applicazione: 2023-05-02
-autorita:
-  - "Commissione europea"
+autorita: [commissione-ue]
 fonti:
   - label: "Testo (EUR-Lex)"
     url: "https://eur-lex.europa.eu/eli/reg/2022/1925/oj"
