@@ -9,7 +9,8 @@ npm run build   # sito statico in dist/
 
 - Schede: `src/content/docs/atti/<tema>/*.md`
 - Profili per soggetto: `src/content/docs/profili/`, ingegneri in `src/content/docs/ordini/ingegneri/`
+- Normativa di base (fonti e indice degli atti): `src/content/docs/fonti/`
 - Enti: registro in `src/data/enti.yaml`, pagine in `src/content/docs/enti/`
-- Tassonomie (soggetti, temi, livelli, poteri): `src/lib/tassonomia.mjs`
+- Tassonomie (soggetti, temi, fonti, livelli, poteri): `src/lib/tassonomia.mjs`
 - Schema: `src/content.config.ts`
 - Come scrivere una scheda: `src/content/docs/metodo/scheda.md`

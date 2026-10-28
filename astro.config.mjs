@@ -18,6 +18,7 @@ export default defineConfig({
 			sidebar: [
 				{ label: 'Panoramica', link: '/' },
 				{ label: 'Nucleo comune', link: '/nucleo/' },
+				{ label: 'Normativa di base', items: [{ autogenerate: { directory: 'fonti' } }] },
 				{ label: 'Per soggetto', items: [{ autogenerate: { directory: 'profili' } }] },
 				{
 					label: 'Ordini professionali',

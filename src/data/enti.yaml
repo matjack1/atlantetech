@@ -100,15 +100,15 @@
   livello: internazionali
   tipo: istituzioni
   poteri: [legifera]
-  temi: [dati, ai, sicurezza]
+  temi: [fondamenti, dati, ai, sicurezza]
   sito: https://www.coe.int/
   ruolo: >-
     Organizzazione di 46 Stati europei, distinta dall'UE. Le sue convenzioni vincolano gli Stati
-    che le ratificano. L'Italia ha ratificato la Convenzione 108 sulla protezione dei dati
-    (aggiornata come 108+ nel 2018) e la Convenzione di Budapest sulla criminalità informatica
-    (L. 48/2008). Nel 2024 ha adottato la Convenzione quadro sull'intelligenza artificiale, primo
+    che le ratificano. L'Italia ha ratificato la CEDU (L. 848/1955), la Convenzione 108 sulla
+    protezione dei dati (L. 98/1989) e il protocollo del 2018 che la aggiorna come 108+ (L. 60/2021),
+    e la Convenzione di Budapest sulla criminalità informatica (L. 48/2008). Nel 2024 ha adottato la Convenzione quadro sull'intelligenza artificiale, primo
     trattato vincolante sull'AI, aperto anche a Stati extraeuropei.
-  note: Stato di ratifica italiana della 108+ e della Convenzione quadro sull'AI.
+  note: Entrata in vigore della 108+; firma e ratifica italiana della Convenzione quadro sull'AI.
 
 - id: corte-edu
   nome: Corte europea dei diritti dell'uomo
@@ -116,7 +116,7 @@
   livello: internazionali
   tipo: giudici
   poteri: [giudica]
-  temi: [dati, lavoro]
+  temi: [fondamenti, dati, lavoro]
   sito: https://www.echr.coe.int/
   ruolo: >-
     Applica la Convenzione europea dei diritti dell'uomo (Consiglio d'Europa). Dall'art. 8, sulla
@@ -513,7 +513,7 @@
   livello: ue
   tipo: giudici
   poteri: [giudica]
-  temi: [dati, web, piattaforme]
+  temi: [fondamenti, dati, web, piattaforme]
   sito: https://curia.europa.eu/
   ruolo: >-
     Interpreta il diritto UE in modo vincolante per tutti i giudici nazionali, su rinvio
@@ -1053,6 +1053,19 @@
   ruolo: >-
     Ultimo grado della giustizia civile e penale. I suoi orientamenti su privacy, controlli sui
     lavoratori e responsabilità professionale guidano i giudici di merito.
+
+- id: corte-costituzionale
+  nome: Corte costituzionale
+  livello: nazionali
+  tipo: giudici
+  poteri: [giudica]
+  temi: [fondamenti]
+  sito: https://www.cortecostituzionale.it/
+  ruolo: >-
+    Giudica la legittimità costituzionale delle leggi e degli atti con forza di legge dello Stato e
+    delle Regioni e i conflitti di attribuzione, ad esempio tra Stato e Regioni (art. 134 Cost.). La
+    norma dichiarata illegittima cessa di avere efficacia dal giorno dopo la pubblicazione della
+    decisione (art. 136 Cost.).
 
 - id: giustizia-amministrativa
   nome: TAR e Consiglio di Stato

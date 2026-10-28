@@ -3,7 +3,7 @@ import { file } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
-import { LIVELLI, LUOGHI, POTERI, SCALE, SOGGETTI, TEMI, TIPI, TIPI_ENTE } from './lib/tassonomia.mjs';
+import { FONTI, LIVELLI, LUOGHI, POTERI, SCALE, SOGGETTI, TEMI, TIPI, TIPI_ENTE } from './lib/tassonomia.mjs';
 
 const chiavi = <T extends object>(o: T) => Object.keys(o) as [keyof T & string, ...(keyof T & string)[]];
 
@@ -12,6 +12,8 @@ const scheda = z.object({
 	nome: z.string().optional(),
 	estremi: z.string().optional(),
 	tipo: z.enum(chiavi(TIPI)).default('atto'),
+	// solo se quello ricavato dagli estremi è sbagliato (vedi fonteDi in lib/format.ts)
+	fonte: z.enum(chiavi(FONTI)).optional(),
 	// ISO = norme ISO/IEC; INT = altri standard internazionali (NIST, CIS, AICPA, CSA, PCI)
 	giurisdizione: z.enum(['UE', 'IT', 'CEI', 'ISO', 'INT']).optional(),
 	tema: z.enum(chiavi(TEMI)).optional(),

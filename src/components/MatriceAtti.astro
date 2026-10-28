@@ -2,8 +2,10 @@
 import { SOGGETTI, TEMI } from '../lib/tassonomia.mjs';
 import { getSchede, href, paginaProfilo, siApplica } from '../lib/format';
 
-// Matrice atti × soggetti, generata dal frontmatter delle schede
-const schede = await getSchede();
+// Matrice atti × soggetti, generata dal frontmatter delle schede. Esclude le schede senza soggetti
+// (Costituzione, Trattati), che non creano obblighi diretti.
+const schede = (await getSchede()).filter((s) => s.data.soggetti.length > 0);
+const temi = Object.entries(TEMI).filter(([tema]) => schede.some((s) => s.data.tema === tema));
 const soggetti = Object.entries(SOGGETTI);
 ---
 
@@ -22,7 +24,7 @@ const soggetti = Object.entries(SOGGETTI);
 			</tr>
 		</thead>
 		{
-			Object.entries(TEMI).map(([tema, label]) => (
+			temi.map(([tema, label]) => (
 				<tbody>
 					<tr>
 						<th colspan={soggetti.length + 1} class="tema">

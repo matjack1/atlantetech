@@ -28,3 +28,25 @@ export const hrefEnte = (e: { id: string; data: { livello: string; luogo?: strin
 	`${import.meta.env.BASE_URL.replace(/\/$/, '')}/enti/${e.data.luogo ?? e.data.livello}/#${e.id}`;
 
 export const nomeBreve = (e: { data: { nome: string; sigla?: string } }) => e.data.sigla ?? e.data.nome;
+
+type Scheda = { id: string; data: { tipo: string; giurisdizione?: string; estremi?: string; fonte?: string } };
+
+/** Tipo di fonte di una scheda (chiave di FONTI). */
+export const fonteDi = ({ id, data }: Scheda): string => {
+	if (data.fonte) return data.fonte;
+	if (data.tipo === 'standard') return 'standard';
+	if (data.tipo === 'provvedimento' || data.giurisdizione === 'CEI') return 'provvedimenti';
+	const e = data.estremi ?? '';
+	if (/^Costituzione/.test(e)) return 'costituzione';
+	if (/^(TUE|TFUE|Trattat|Carta)/.test(e)) return 'trattati';
+	if (data.giurisdizione === 'INT') return 'convenzioni';
+	if (/^Reg\./.test(e)) return 'regolamenti';
+	if (/^Dir\./.test(e)) return 'direttive';
+	if (/^(D\.Lgs\.|D\.L\.)/.test(e)) return 'decreti';
+	if (/^(D\.P\.R\.|D\.M\.)/.test(e)) return 'regolamenti_it';
+	if (/^(L\.|R\.D\.)/.test(e)) return 'leggi';
+	throw new Error(`Fonte non riconosciuta per ${id}: aggiungere \`fonte\` al frontmatter`);
+};
+
+/** Anno dell'atto, il primo che compare negli estremi. */
+export const annoDi = (estremi = '') => Number(estremi.match(/\b(1[89]|20)\d\d\b/)?.[0] ?? 9999);

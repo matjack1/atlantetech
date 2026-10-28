@@ -25,6 +25,7 @@ export const PAGINE_PROFILO = {
 
 /** Ambito tematico; ogni tema è una cartella in src/content/docs/atti/. */
 export const TEMI = {
+	fondamenti: 'Norme fondamentali',
 	dati: 'Dati personali',
 	web: 'Sito web e comunicazioni',
 	documenti: 'Identità, firme e PEC',
@@ -44,6 +45,23 @@ export const TIPI = {
 	atto: 'Atto normativo',
 	provvedimento: 'Provvedimento, regolamento o linee guida di un’autorità o di un ordine',
 	standard: 'Standard volontario',
+};
+
+/**
+ * Tipo di fonte, in ordine gerarchico; ogni tipo è una sezione di /fonti/indice/.
+ * Ricavato da tipo, giurisdizione ed estremi della scheda (`fonteDi`); `fonte` nel frontmatter lo forza.
+ */
+export const FONTI = {
+	costituzione: 'Costituzione',
+	trattati: 'Trattati e Carta dei diritti dell’UE',
+	convenzioni: 'Convenzioni internazionali',
+	regolamenti: 'Regolamenti UE',
+	direttive: 'Direttive UE',
+	leggi: 'Leggi e codici',
+	decreti: 'Decreti legislativi e decreti-legge',
+	regolamenti_it: 'Regolamenti governativi e ministeriali',
+	provvedimenti: 'Provvedimenti e regole di autorità, ordini ed enti',
+	standard: 'Standard volontari',
 };
 
 /** Livello di un ente; ogni livello è una pagina /enti/<livello>/. */

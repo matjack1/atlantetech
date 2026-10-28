@@ -1,0 +1,43 @@
+---
+import { TEMI } from '../lib/tassonomia.mjs';
+import { annoDi, etichettaSoggetti, fonteDi, getSchede, href } from '../lib/format';
+
+interface Props {
+	/** Chiave di FONTI */
+	fonte: string;
+}
+
+// Schede di un tipo di fonte, per anno dell'atto; gli standard restano in ordine di nome.
+const { fonte } = Astro.props;
+const atti = (await getSchede())
+	.filter((s) => fonteDi(s) === fonte)
+	.sort((a, b) => (fonte === 'standard' ? 0 : annoDi(a.data.estremi) - annoDi(b.data.estremi)));
+---
+
+<table>
+	<thead>
+		<tr>
+			<th>Atto</th>
+			<th>Estremi</th>
+			<th>Tema</th>
+			<th>Si applica a</th>
+		</tr>
+	</thead>
+	<tbody>
+		{
+			atti.map((s) => (
+				<tr>
+					<td>
+						<a href={href(s.id)}>{s.data.nome ?? s.data.title}</a>
+					</td>
+					<td>
+						{s.data.estremi}
+						{fonte === 'direttive' && s.data.recepimento && <small> · recepita con {s.data.recepimento}</small>}
+					</td>
+					<td>{s.data.tema ? TEMI[s.data.tema] : '—'}</td>
+					<td>{s.data.soggetti.length > 0 ? etichettaSoggetti(s.data.soggetti) : '—'}</td>
+				</tr>
+			))
+		}
+	</tbody>
+</table>
