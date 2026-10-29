@@ -1,11 +1,13 @@
-# Normativa ICT
+# Atlante tech
 
-Mappa della normativa italiana ed europea sul digitale per imprese, professionisti ed enti (Astro + Starlight).
+Mappa della normativa italiana ed europea sulla tecnologia per imprese, professionisti ed enti (Astro + Starlight).
 
 ```sh
-npm run dev     # http://localhost:4321
+npm run dev     # http://localhost:4321/atlantetech/
 npm run build   # sito statico in dist/
 ```
+
+Pubblicato su https://matjack1.github.io/atlantetech/ a ogni push su `main` (`.github/workflows/deploy.yml`). Il base path sta in `astro.config.mjs`; i link nelle schede si scrivono dalla radice (`/nucleo/`) e `src/lib/hast-base.mjs` aggiunge il prefisso in build.
 
 - Schede: `src/content/docs/atti/<tema>/*.md`
 - Profili per soggetto: `src/content/docs/profili/`, ingegneri in `src/content/docs/ordini/ingegneri/`

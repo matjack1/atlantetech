@@ -2,13 +2,22 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { TEMI } from './src/lib/tassonomia.mjs';
+import { satteri } from '@astrojs/markdown-satteri';
+import hastBase from './src/lib/hast-base.mjs';
+
+// GitHub Pages di progetto: il sito sta sotto /atlantetech/
+const base = '/atlantetech';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://matjack1.github.io',
+	base,
+	// Starlight aggiunge i suoi plugin a questo stesso processore
+	markdown: { processor: satteri({ hastPlugins: [hastBase(base)] }) },
 	integrations: [
 		starlight({
-			title: 'Normativa ICT',
-			description: 'Mappa della normativa italiana ed europea sul digitale per imprese, professionisti ed enti.',
+			title: 'Atlante tech',
+			description: 'Mappa della normativa italiana ed europea sulla tecnologia per imprese, professionisti ed enti.',
 			locales: { root: { label: 'Italiano', lang: 'it' } },
 			lastUpdated: true,
 			components: {
