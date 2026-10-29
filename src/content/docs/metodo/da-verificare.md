@@ -9,7 +9,7 @@ Punti aperti al 28/10/2026. Lo stato delle iniziative si basa su informazioni ag
 
 ## Iniziative in corso
 
-- **Digital Omnibus** (proposta della Commissione, novembre 2025): modifiche a GDPR, regole sui cookie, AI Act (incluso il possibile rinvio degli obblighi per l'alto rischio) e Data Act. Verificare lo stato dell'iter e le date effettive. La parte sull'AI è legge: Reg. (UE) 2026/1744, «Omnibus digitale sull'IA», dell'8/7/2026 (GU UE L del 24/7/2026), che modifica l'AI Act; la [scheda AI Act](/atti/ai/ai-act/) va aggiornata. Per la parte su GDPR e cookie, a fine ottobre 2026 il Parlamento non ha ancora votato e i triloghi non sono iniziati (fonti di settore, non ancora riscontrate sui documenti ufficiali).
+- **Digital Omnibus** (proposta della Commissione, novembre 2025): modifiche a GDPR, regole sui cookie, AI Act (incluso il possibile rinvio degli obblighi per l'alto rischio) e Data Act. Verificare lo stato dell'iter e le date effettive. La parte sull'AI è legge: Reg. (UE) 2026/1744, «Omnibus digitale sull'IA», dell'8/7/2026 (GU UE L del 24/7/2026), che modifica l'AI Act: rinvia l'alto rischio al 2027-2028 e attenua l'alfabetizzazione (vedi [AI Act](/atti/ai/ai-act/)). Per la parte su GDPR e cookie, a fine ottobre 2026 il Parlamento non ha ancora votato e i triloghi non sono iniziati (fonti di settore, non ancora riscontrate sui documenti ufficiali).
 - **Digital Fairness Act**: proposta attesa nel 2026 su pratiche commerciali online, dark pattern, abbonamenti.
 
 ## Punti aperti nelle schede
@@ -21,7 +21,7 @@ Punti aperti al 28/10/2026. Lo stato delle iniziative si basa su informazioni ag
 - NIS2: determinazioni ACN aggiornate su soglie, registrazione e misure di base.
 - Cloud PA: regolamento ACN vigente sulla qualificazione dei servizi cloud.
 - Product Liability: stato del recepimento italiano (termine 09/12/2026).
-- AI Act, art. 4: il Digital Omnibus propone di ridimensionare l'obbligo di alfabetizzazione per i deployer.
+- AI Act: linee guida della Commissione sull'alto rischio, codici di buone pratiche sulla marcatura (art. 50.7) e decreti italiani sulle sanzioni.
 - Obbligo PEC per gli amministratori di società (L. 207/2024): portata dopo i chiarimenti ministeriali.
 - Collegamento POS-registratore telematico dal 2026: decorrenza e modalità.
 - E-fattura: esonero degli enti in regime L. 398/1991 sotto soglia.
