@@ -21,7 +21,7 @@ stato: bozza
 
 ## In breve
 
-Banner e consenso per cookie e strumenti di tracciamento non tecnici (analytics, pixel social, video incorporati), su qualsiasi sito: anche quello della parrocchia o dell’associazione.
+Banner e consenso per cookie e strumenti di tracciamento non tecnici (analytics, pixel social, video incorporati), su qualsiasi sito: anche quello della parrocchia o dell’associazione. Per i pixel nelle newsletter vedi [Tracking pixel nelle email](/atti/web/tracking-pixel-email/).
 
 ## Si applica se…
 

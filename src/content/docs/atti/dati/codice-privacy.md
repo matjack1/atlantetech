@@ -40,7 +40,7 @@ Tratti dati personali in Italia: vale per gli stessi soggetti del GDPR, senza so
 - **Dati particolari**: per motivi di interesse pubblico rilevante servono una norma o un atto generale (art. 2-sexies). I dati genetici, biometrici e sanitari seguono anche le misure di garanzia del Garante (art. 2-septies).
 - **Persone autorizzate**: il titolare o il responsabile designano chi tratta i dati sotto la loro autorità e ne definiscono i compiti (art. 2-quaterdecies).
 - **Lavoro**: restano fermi il divieto di indagini sulle opinioni (art. 113, che rinvia all'art. 8 dello Statuto dei lavoratori) e la disciplina dei [controlli a distanza](/atti/lavoro/controlli-a-distanza/) (art. 114, che rinvia all'art. 4 dello Statuto). Nel telelavoro e nel lavoro agile vanno rispettate personalità e libertà morale del lavoratore (art. 115).
-- **Cookie e tracciamento**: archiviare o leggere informazioni sul dispositivo dell'utente richiede il consenso informato, salvo i cookie tecnici strettamente necessari (art. 122). Vedi [Cookie / ePrivacy](/atti/web/cookie-eprivacy/).
+- **Cookie e tracciamento**: archiviare o leggere informazioni sul dispositivo dell'utente richiede il consenso informato, salvo i cookie tecnici strettamente necessari (art. 122). Vale anche per i pixel nelle email. Vedi [Cookie / ePrivacy](/atti/web/cookie-eprivacy/) e [Tracking pixel nelle email](/atti/web/tracking-pixel-email/).
 - **Marketing**:
   - chiamate automatizzate, email, SMS e messaggi richiedono il consenso (art. 130.1-130.2);
   - telefonate con operatore e posta cartacea sono consentite verso chi non si è iscritto al Registro pubblico delle opposizioni (art. 130.3-bis);
