@@ -1,7 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import { TEMI } from './src/lib/tassonomia.mjs';
+import { existsSync } from 'node:fs';
+import { SOGGETTI, TEMI } from './src/lib/tassonomia.mjs';
+import { ORDINE_SOGGETTI } from './src/lib/ordine-soggetti.mjs';
 import { satteri } from '@astrojs/markdown-satteri';
 import hastBase from './src/lib/hast-base.mjs';
 
@@ -13,6 +15,13 @@ export default defineConfig({
 	site: 'https://matjack1.github.io',
 	base,
 	// Starlight aggiunge i suoi plugin a questo stesso processore
+	// la sezione Ingegneri è confluita nel profilo dei professionisti
+	redirects: {
+		'/ordini/ingegneri/': `${base}/profili/professionisti/`,
+		...Object.fromEntries(
+			['obblighi', 'deontologia', 'ordine-ente-pubblico', 'fonti'].map((p) => [`/ordini/ingegneri/${p}/`, `${base}/profili/professionisti/${p}/`])
+		),
+	},
 	markdown: { processor: satteri({ hastPlugins: [hastBase(base)] }) },
 	integrations: [
 		starlight({
@@ -25,13 +34,18 @@ export default defineConfig({
 				PageTitle: './src/components/PageTitle.astro',
 			},
 			sidebar: [
-				{ label: 'Panoramica', link: '/' },
+				{ label: 'Inizio', link: '/' },
 				{ label: 'Nucleo comune', link: '/nucleo/' },
+				{ label: 'A chi si applica', link: '/a-chi-si-applica/' },
 				{ label: 'Normativa di base', items: [{ autogenerate: { directory: 'fonti' } }] },
-				{ label: 'Per soggetto', items: [{ autogenerate: { directory: 'profili' } }] },
 				{
-					label: 'Ordini professionali',
-					items: [{ label: 'Ingegneri', items: [{ autogenerate: { directory: 'ordini/ingegneri' } }] }],
+					label: 'Per soggetto',
+					// dal soggetto con più atti specifici a quello con meno; i profili con sottopagine sono gruppi
+					items: ORDINE_SOGGETTI.map((k) =>
+						existsSync(new URL(`./src/content/docs/profili/${k}/`, import.meta.url))
+							? { label: SOGGETTI[k], items: [{ slug: `profili/${k}` }, { autogenerate: { directory: `profili/${k}` } }] }
+							: { slug: `profili/${k}` }
+					),
 				},
 				{ label: 'Temi trasversali', items: [{ autogenerate: { directory: 'trasversali' } }] },
 				{ label: 'Enti e autorità', items: [{ autogenerate: { directory: 'enti' } }] },

@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import { getSchede } from '../lib/format';
+
+interface Props {
+	/** Cosa contare */
+	cosa: 'schede' | 'verificate' | 'nucleo' | 'enti';
+}
+
+// Numeri calcolati dal contenuto, da usare nel testo della home.
+const { cosa } = Astro.props;
+const schede = await getSchede();
+const n = {
+	schede: () => schede.length,
+	verificate: () => schede.filter((s) => s.data.stato === 'verificata').length,
+	nucleo: () => schede.filter((s) => s.data.soggetti.includes('tutti')).length,
+	enti: async () => (await getCollection('enti')).length,
+}[cosa];
+---
+
+{await n()}

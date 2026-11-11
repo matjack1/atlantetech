@@ -1,10 +1,9 @@
 // Assi di classificazione delle schede. Usati da schema, sidebar e componenti.
 
-/** A chi si applica un atto. `tutti` = nucleo comune. */
+/** A chi si applica un atto. `tutti` = nucleo comune. L'ordine di presentazione è in lib/ordine-soggetti.mjs. */
 export const SOGGETTI = {
 	piva: 'Partite IVA',
-	professionisti: 'Professionisti con albo',
-	ingegneri: 'Ingegneri',
+	professionisti: 'Ingegneri e professionisti con albo',
 	ets: 'Associazioni ed ETS',
 	parrocchie: 'Parrocchie ed enti ecclesiastici',
 	sport: 'ASD e SSD',
@@ -13,14 +12,16 @@ export const SOGGETTI = {
 	saas: 'SaaS e imprese digitali',
 };
 
-/** Sotto-profili: ereditano gli atti del profilo padre. */
-export const PADRI = {
-	ingegneri: 'professionisti',
-};
-
-/** Pagina profilo, se non è /profili/<soggetto>/. */
-export const PAGINE_PROFILO = {
-	ingegneri: '/ordini/ingegneri/',
+/** Etichette brevi per le intestazioni di colonna (matrice in /a-chi-si-applica/). */
+export const SOGGETTI_BREVI = {
+	piva: 'Partite IVA',
+	professionisti: 'Ingegneri e professionisti',
+	ets: 'ETS',
+	parrocchie: 'Parrocchie',
+	sport: 'ASD e SSD',
+	artigiani: 'Artigiani',
+	cooperative: 'Cooperative',
+	saas: 'SaaS',
 };
 
 /** Ambito tematico; ogni tema è una cartella in src/content/docs/atti/. */

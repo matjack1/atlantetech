@@ -1,28 +1,76 @@
 ---
 title: Atlante tech
 description: Mappa della normativa italiana ed europea sulla tecnologia per imprese, professionisti ed enti.
-tableOfContents: false
+template: splash
 # Senza il suffisso " | Atlante tech" che Starlight aggiunge al titolo della scheda
 head:
   - tag: title
     content: Atlante tech
+hero:
+  tagline: Quali regole sul digitale valgono per te, da quando, e chi le fa rispettare. Privacy, sito web, fatture, lavoro, intelligenza artificiale e sicurezza, per partite IVA, professionisti, associazioni, parrocchie, società sportive, artigiani, cooperative e SaaS.
+  # Link relativi alla home, così valgono anche sotto il base path
+  actions:
+    - text: Inizia dal nucleo comune
+      link: nucleo/
+      icon: right-arrow
+    - text: A chi si applica ogni atto
+      link: a-chi-si-applica/
+      variant: minimal
 ---
 
-import MatriceAtti from '../../components/MatriceAtti.astro';
+import { Card, CardGrid, Steps } from '@astrojs/starlight/components';
+import Conta from '../../components/Conta.astro';
+import CronologiaAtti from '../../components/CronologiaAtti.astro';
+import MappaTemi from '../../components/MappaTemi.astro';
+import SceltaProfilo from '../../components/SceltaProfilo.astro';
 
-Raccolta di schede sulla normativa italiana ed europea in materia di tecnologia, per chi la applica nel quotidiano: partite IVA, professionisti, associazioni, parrocchie, società sportive, artigiani, cooperative e SaaS.
+## Cosa trovi qui
 
-- Il [**Nucleo comune**](/nucleo/) raccoglie ciò che vale per tutti, spesso con una condizione (“se hai un sito”, “se hai dipendenti”).
-- I **profili** nella barra laterale aggiungono ciò che è specifico di ogni soggetto.
-- Le **schede** sono ordinate per tema; ognuna dice a chi si applica e quando, e se è un atto normativo, un provvedimento di un'autorità o uno standard volontario (ISO 27001 e simili).
-- La [**Normativa di base**](/fonti/) parte dalle norme: come funzionano le fonti l'[indice degli atti](/fonti/indice/), dalla Costituzione agli standard, e la [cronologia](/fonti/cronologia/) con le prossime scadenze.
-- [**Enti e autorità**](/enti/) spiega chi scrive, applica e interpreta le regole, dal livello internazionale a quello locale.
-- I **temi trasversali** collegano più atti: [notifica degli incidenti](/trasversali/notifica-incidenti/), [dalla legge ai controlli ISO 27001](/trasversali/dalla-legge-ai-controlli/).
+<CardGrid>
+	<Card title="Le regole che valgono per tutti" icon="approve-check">
+		Sei domande (tratti dati? hai un sito? hai dipendenti? usi l'AI?) bastano a orientarsi nelle <Conta cosa="nucleo" /> schede del [nucleo comune](/nucleo/), con la condizione che fa scattare ogni obbligo.
+	</Card>
+	<Card title="Cosa cambia per chi sei" icon="puzzle">
+		Ogni [profilo](#scegli-il-tuo-profilo) aggiunge al nucleo gli atti propri del soggetto. La tabella [A chi si applica](/a-chi-si-applica/) li confronta tutti insieme.
+	</Card>
+	<Card title="Cosa dice ogni atto" icon="document">
+		<Conta cosa="schede" /> schede, una per atto o standard: a chi si applica, da quando, le prossime scadenze, chi vigila e dove leggere il testo ufficiale.
+	</Card>
+	<Card title="Da dove vengono le regole" icon="open-book">
+		[Come funzionano le fonti](/fonti/): Costituzione, regolamenti e direttive UE, leggi, provvedimenti, standard volontari. Poi l'[indice degli atti](/fonti/indice/) e la [cronologia](/fonti/cronologia/).
+	</Card>
+	<Card title="Chi le scrive e le applica" icon="setting">
+		[Enti e autorità](/enti/), dall'ONU al Comune: chi legifera, chi vigila e sanziona, chi interpreta, a chi rivolgersi.
+	</Card>
+	<Card title="Quando più regole si incrociano" icon="random">
+		Percorsi che attraversano più atti: [notifica degli incidenti](/trasversali/notifica-incidenti/) e [dalla legge ai controlli ISO 27001](/trasversali/dalla-legge-ai-controlli/).
+	</Card>
+</CardGrid>
 
-Le schede in stato **bozza** non sono ancora verificate sul testo ufficiale. Vedi [Come si scrive una scheda](/metodo/scheda/) e [Da verificare](/metodo/da-verificare/).
+## Come leggere l'atlante
 
-## Chi deve cosa
+<Steps>
 
-● nucleo comune, vale per tutti (alle condizioni indicate nella scheda) · ○ specifico del soggetto
+1. **Parti dal [nucleo comune](/nucleo/).** Vale per chiunque, dalla parrocchia al SaaS, quasi sempre a una condizione: “se hai un sito”, “se hai dipendenti”.
 
-<MatriceAtti />
+2. **Aggiungi il tuo profilo.** [Scegli qui sotto](#scegli-il-tuo-profilo) il soggetto che ti descrive: la pagina elenca gli atti in più e gli enti di riferimento.
+
+3. **Apri le schede.** Il riquadro in testa a ogni scheda riassume estremi, destinatari, date e autorità; il testo spiega cosa chiede l'atto in pratica.
+
+4. **Controlla lo stato.** Le schede in **bozza** non sono ancora verificate sul testo ufficiale (<Conta cosa="verificate" /> su <Conta cosa="schede" /> lo sono). Vedi [come si scrive una scheda](/metodo/scheda/) e [cosa resta da verificare](/metodo/da-verificare/).
+
+</Steps>
+
+## Scegli il tuo profilo
+
+<SceltaProfilo />
+
+## Prossime scadenze
+
+<CronologiaAtti vista="scadenze" limite={6} />
+
+Tutte le date nella [cronologia](/fonti/cronologia/).
+
+## Tutte le schede per tema
+
+<MappaTemi />

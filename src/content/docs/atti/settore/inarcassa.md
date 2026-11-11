@@ -7,8 +7,8 @@ estremi: "Statuto e Regolamento generale di previdenza Inarcassa (ente privatizz
 tipo: provvedimento
 giurisdizione: IT
 tema: settore
-soggetti: [ingegneri]
-condizione: "se eserciti la libera professione con partita IVA"
+soggetti: [professionisti]
+condizione: "se sei ingegnere ed eserciti la libera professione con partita IVA"
 autorita: [inarcassa]
 fonti:
   - label: "Inarcassa"

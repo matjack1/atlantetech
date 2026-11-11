@@ -7,7 +7,8 @@ estremi: "CNI, Codice deontologico degli ingegneri italiani (approvato 1/12/2006
 tipo: provvedimento
 giurisdizione: IT
 tema: settore
-soggetti: [ingegneri]
+soggetti: [professionisti]
+condizione: "se sei ingegnere iscritto all’albo"
 applicazione: 2026-06-23
 scadenze:
   - data: 2014-04-09
@@ -48,7 +49,7 @@ Il testo nazionale vincola dopo che il proprio Ordine lo ha recepito con deliber
 
 ## Obblighi chiave
 
-Sintesi articolo per articolo in [Deontologia](/ordini/ingegneri/deontologia/). I più rilevanti in pratica:
+Sintesi articolo per articolo in [Deontologia](/profili/professionisti/deontologia/). I più rilevanti in pratica:
 
 - accettare solo incarichi per cui si ha competenza e organizzazione (art. 4.1);
 - firmare solo prestazioni svolte o dirette (art. 4.2);
@@ -76,14 +77,14 @@ Sull'intelligenza artificiale:
 - Se il contratto lo predispone il professionista, nei rapporti coperti dalla L. 49/2023 deve contenere l'avvertenza sull'equo compenso (art. 16.4).
 - Sito, social e pubblicità dello studio devono rispettare l'art. 9.
 - **AI**:
-  - dichiarare nell'incarico, prima di iniziare, quali sistemi di AI si useranno e per cosa. Il CNI ha diffuso due modelli di dichiarazione con la circolare n. 343/2025 (vedi [Obblighi](/ordini/ingegneri/obblighi/#dati-riservatezza-ai));
+  - dichiarare nell'incarico, prima di iniziare, quali sistemi di AI si useranno e per cosa. Il CNI ha diffuso due modelli di dichiarazione con la circolare n. 343/2025 (vedi [Obblighi](/profili/professionisti/obblighi/#dati-riservatezza-ai));
   - non inserire dati riservati del cliente in servizi di AI che non ne garantiscono la protezione (art. 6.3);
   - documentare la verifica umana dei risultati;
   - fissare regole per i collaboratori, di cui l'ingegnere risponde (art. 13.7).
 
 ## Sanzioni
 
-Le violazioni sono giudicate dal Consiglio di disciplina territoriale (art. 23). Le sanzioni sono quelle previste dall'ordinamento professionale (R.D. 2537/1925), a cui l'art. 13.5 rinvia espressamente per l'AI. Vedi [Deontologia](/ordini/ingegneri/deontologia/#procedimento-disciplinare).
+Le violazioni sono giudicate dal Consiglio di disciplina territoriale (art. 23). Le sanzioni sono quelle previste dall'ordinamento professionale (R.D. 2537/1925), a cui l'art. 13.5 rinvia espressamente per l'AI. Vedi [Deontologia](/profili/professionisti/deontologia/#procedimento-disciplinare).
 
 ## Note aperte
 

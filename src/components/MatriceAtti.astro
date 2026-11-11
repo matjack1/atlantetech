@@ -1,75 +1,254 @@
 ---
-import { SOGGETTI, TEMI } from '../lib/tassonomia.mjs';
-import { getSchede, href, paginaProfilo, siApplica } from '../lib/format';
+import { SOGGETTI, SOGGETTI_BREVI, TEMI } from '../lib/tassonomia.mjs';
+import { ORDINE_SOGGETTI } from '../lib/ordine-soggetti.mjs';
+import { getSchede, href, paginaProfilo } from '../lib/format';
 
-// Matrice atti × soggetti, generata dal frontmatter delle schede. Esclude le schede senza soggetti
-// (Costituzione, Trattati), che non creano obblighi diretti.
-const schede = (await getSchede()).filter((s) => s.data.soggetti.length > 0);
-const temi = Object.entries(TEMI).filter(([tema]) => schede.some((s) => s.data.tema === tema));
-const soggetti = Object.entries(SOGGETTI);
+// Matrice atti × soggetti (/a-chi-si-applica/) per i soli atti specifici: il nucleo comune (soggetti: [tutti]) varrebbe per ogni
+// colonna e sta in NucleoSintesi. Esclude anche le schede senza soggetti (Costituzione, Trattati).
+const schede = (await getSchede()).filter((s) => s.data.soggetti.length > 0 && !s.data.soggetti.includes('tutti'));
+const temi = Object.entries(TEMI)
+	.map(([tema, label]) => ({ tema, label, schede: schede.filter((s) => s.data.tema === tema) }))
+	.filter((t) => t.schede.length > 0);
+// Colonne dal soggetto con più atti specifici a quello con meno.
+const soggetti = ORDINE_SOGGETTI.map((k) => [k, SOGGETTI[k as keyof typeof SOGGETTI]]) as [keyof typeof SOGGETTI, string][];
+
+const conta = (k: keyof typeof SOGGETTI) => schede.filter((s) => s.data.soggetti.includes(k)).length;
 ---
 
-<div class="matrice">
-	<table>
-		<thead>
-			<tr>
-				<th>Atto</th>
-				{
-					soggetti.map(([k, label]) => (
-						<th title={label}>
-							<a href={paginaProfilo(k)}>{label}</a>
-						</th>
-					))
-				}
-			</tr>
-		</thead>
+<div class="matrice not-content">
+	<fieldset class="filtro" hidden>
+		<legend>Mostra gli atti di</legend>
+		<label><input type="radio" name="soggetto" value="" checked /> Tutti</label>
 		{
-			temi.map(([tema, label]) => (
-				<tbody>
-					<tr>
-						<th colspan={soggetti.length + 1} class="tema">
-							{label}
-						</th>
-					</tr>
-					{schede
-						.filter((s) => s.data.tema === tema)
-						.map((s) => (
-							<tr>
-								<td>
-									<a href={href(s.id)}>{s.data.nome ?? s.data.title}</a>
-								</td>
-								{soggetti.map(([k]) => (
-									<td class="cella">
-										{s.data.soggetti.includes('tutti') ? '●' : siApplica(s.data.soggetti, k) ? '○' : ''}
-									</td>
-								))}
-							</tr>
-						))}
-				</tbody>
+			soggetti.map(([k, label]) => (
+				<label title={label}>
+					<input type="radio" name="soggetto" value={k} /> {SOGGETTI_BREVI[k]}
+				</label>
 			))
 		}
-	</table>
+	</fieldset>
+
+	<div class="scorri">
+		<table>
+			<thead>
+				<tr>
+					<th class="atto" scope="col">Atto</th>
+					<th class="quando" scope="col">Quando</th>
+					{
+						soggetti.map(([k, label]) => (
+							<th scope="col" class="sogg" data-col={k} title={label}>
+								<a href={paginaProfilo(k)}>{SOGGETTI_BREVI[k]}</a>
+								<small>{conta(k)}</small>
+							</th>
+						))
+					}
+				</tr>
+			</thead>
+			{
+				temi.map(({ tema, label, schede }) => (
+					<tbody>
+						<tr class="tema">
+							<th colspan={soggetti.length + 2} scope="colgroup" id={`tema-${tema}`}>
+								<span>{label}</span>
+							</th>
+						</tr>
+						{schede.map((s) => (
+							<tr data-soggetti={soggetti.filter(([k]) => s.data.soggetti.includes(k)).map(([k]) => k).join(' ')}>
+								<th class="atto" scope="row">
+									<a href={href(s.id)} title={s.data.estremi}>
+										{s.data.nome ?? s.data.title}
+									</a>
+								</th>
+								<td class="quando">{s.data.condizione}</td>
+								{soggetti.map(([k, label]) => {
+									const si = s.data.soggetti.includes(k);
+									return (
+										<td class="cella" data-col={k} title={si ? label : undefined}>
+											{si ? '●' : ''}
+										</td>
+									);
+								})}
+							</tr>
+						))}
+					</tbody>
+				))
+			}
+		</table>
+	</div>
 </div>
 
-<style>
-	.matrice {
-		overflow-x: auto;
+<script>
+	// Filtro per soggetto: nasconde le righe che non lo riguardano e i temi rimasti vuoti, evidenzia la colonna.
+	for (const m of document.querySelectorAll<HTMLElement>('.matrice')) {
+		const filtro = m.querySelector<HTMLFieldSetElement>('.filtro')!;
+		filtro.hidden = false;
+		filtro.addEventListener('change', (e) => {
+			const k = (e.target as HTMLInputElement).value;
+			m.dataset.soggetto = k;
+			for (const tb of m.querySelectorAll('tbody')) {
+				let visibili = 0;
+				for (const tr of tb.querySelectorAll<HTMLElement>('tr[data-soggetti]')) {
+					const vede = !k || tr.dataset.soggetti!.split(' ').includes(k);
+					tr.hidden = !vede;
+					if (vede) visibili++;
+				}
+				tb.hidden = visibili === 0;
+			}
+			for (const c of m.querySelectorAll<HTMLElement>('[data-col]')) c.classList.toggle('attiva', c.dataset.col === k);
+		});
 	}
-	.matrice table {
-		display: table;
+</script>
+
+<style is:global>
+	/* La pagina della matrice usa tutta la larghezza disponibile; il testo resta su una colonna leggibile. */
+	html:has(.matrice) {
+		--sl-content-width: 100rem;
+	}
+	html:has(.matrice) .sl-markdown-content > :is(p, ul, ol, h2, h3, aside) {
+		max-width: 45rem;
+	}
+</style>
+
+<style>
+	.filtro {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		border: 0;
+		padding: 0;
+		margin: 1rem 0;
+	}
+	.filtro legend {
+		float: left;
+		margin-inline-end: 0.5rem;
+		padding-block: 0.25rem;
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		color: var(--sl-color-gray-2);
+	}
+	.filtro label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		padding: 0.2rem 0.7rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 999px;
+		font-size: var(--sl-text-sm);
+		cursor: pointer;
+	}
+	.filtro label:has(:checked) {
+		border-color: var(--sl-color-accent);
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-accent-high);
+	}
+	.filtro input {
+		accent-color: var(--sl-color-accent);
+		margin: 0;
+	}
+
+	.scorri {
+		overflow-x: auto;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+	}
+	table {
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0;
 		font-size: var(--sl-text-sm);
 	}
+	th,
+	td {
+		padding: 0.35rem 0.6rem;
+		border-bottom: 1px solid var(--sl-color-hairline);
+		text-align: start;
+		vertical-align: middle;
+	}
 	thead th {
+		position: sticky;
+		top: 0;
+		z-index: 2;
+		background: var(--sl-color-bg-nav);
 		vertical-align: bottom;
 		font-weight: 600;
-		min-width: 5.5rem;
+		border-bottom: 1px solid var(--sl-color-gray-5);
 	}
-	th.tema {
+	thead th.sogg {
+		text-align: center;
+		min-width: 5.5rem;
+		line-height: 1.2;
+	}
+	thead th.sogg a {
+		display: block;
+		color: var(--sl-color-white);
+		text-decoration: none;
+	}
+	thead th.sogg a:hover {
+		color: var(--sl-color-accent-high);
+		text-decoration: underline;
+	}
+	thead small {
+		display: block;
+		font-weight: 400;
+		color: var(--sl-color-gray-3);
+	}
+	/* Prima colonna fissa durante lo scorrimento orizzontale. */
+	.atto {
+		position: sticky;
+		left: 0;
+		z-index: 1;
+		background: var(--sl-color-bg);
+		min-width: 12rem;
+		font-weight: 400;
+	}
+	thead .atto {
+		z-index: 3;
+		background: var(--sl-color-bg-nav);
+	}
+	/* Il nome del tema resta visibile durante lo scorrimento orizzontale (la cella occupa tutta la riga). */
+	tr.tema span {
+		position: sticky;
+		left: 0.6rem;
+	}
+	tr.tema th {
 		background: var(--sl-color-gray-6);
-		text-align: start;
+		font-weight: 600;
+		color: var(--sl-color-white);
+		padding-top: 0.5rem;
+	}
+	tbody tr:not(.tema):hover > * {
+		background: var(--sl-color-gray-6);
+	}
+	.quando {
+		display: none;
+		min-width: 16rem;
+		color: var(--sl-color-gray-3);
+		font-size: var(--sl-text-xs);
 	}
 	.cella {
 		text-align: center;
 		color: var(--sl-color-accent-high);
+		font-size: var(--sl-text-base);
+	}
+	.cella + .cella,
+	thead .sogg + .sogg {
+		border-inline-start: 1px solid var(--sl-color-hairline);
+	}
+	.attiva {
+		background: var(--sl-color-accent-low) !important;
+	}
+
+	/* Schermi larghi: c'è spazio per la condizione accanto al nome, e la tabella non scorre più in orizzontale,
+	   così l'intestazione può restare ferma sotto la barra di navigazione mentre si scorre la pagina. */
+	@media (min-width: 90rem) {
+		.quando {
+			display: table-cell;
+		}
+		.scorri {
+			overflow: visible;
+		}
+		thead th {
+			top: var(--sl-nav-height);
+		}
 	}
 </style>

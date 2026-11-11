@@ -4,9 +4,11 @@ import { annoDi, formatData, getSchede, href } from '../lib/format';
 interface Props {
 	/** `anni`: tutte le schede per anno dell'atto; `scadenze`: le date di applicazione e le scadenze non ancora passate */
 	vista: 'anni' | 'scadenze';
+	/** Solo le prime N scadenze (vista `scadenze`) */
+	limite?: number;
 }
 
-const { vista } = Astro.props;
+const { vista, limite } = Astro.props;
 const schede = await getSchede();
 const nome = (s: (typeof schede)[number]) => s.data.nome ?? s.data.title;
 
@@ -22,7 +24,8 @@ const scadenze = schede
 		...s.data.scadenze.map((x) => ({ s, data: x.data, cosa: x.cosa })),
 	])
 	.filter((x) => x.data >= oggi)
-	.sort((a, b) => a.data.getTime() - b.data.getTime() || nome(a.s).localeCompare(nome(b.s), 'it'));
+	.sort((a, b) => a.data.getTime() - b.data.getTime() || nome(a.s).localeCompare(nome(b.s), 'it'))
+	.slice(0, limite);
 
 // Dal più recente: per anno dell'atto, poi per data di applicazione; senza anno o data in fondo (annoDi = 9999).
 const datato = (anno: number) => (anno === 9999 ? 0 : anno);

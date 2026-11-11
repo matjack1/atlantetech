@@ -983,7 +983,7 @@
   sigla: CNI
   livello: nazionali
   tipo: categoria
-  soggetti: [ingegneri]
+  soggetti: [professionisti]
   poteri: [regola, giudica, registra, indirizza]
   temi: [settore]
   sito: https://www.cni.it/
@@ -998,7 +998,7 @@
   nome: Inarcassa
   livello: nazionali
   tipo: categoria
-  soggetti: [ingegneri]
+  soggetti: [professionisti]
   poteri: [regola, registra]
   temi: [settore]
   sito: https://www.inarcassa.it/
@@ -1197,7 +1197,7 @@
   nome: Ordini provinciali degli ingegneri
   livello: territoriali
   tipo: categoria
-  soggetti: [ingegneri]
+  soggetti: [professionisti]
   poteri: [registra, indirizza, autorizza]
   temi: [settore]
   ruolo: >-
@@ -1209,7 +1209,7 @@
   nome: Consigli di disciplina territoriali
   livello: territoriali
   tipo: categoria
-  soggetti: [ingegneri]
+  soggetti: [professionisti]
   poteri: [giudica]
   temi: [settore]
   ruolo: >-
@@ -1325,7 +1325,7 @@
   luogo: torino
   scala: metropoli
   tipo: categoria
-  soggetti: [ingegneri]
+  soggetti: [professionisti]
   poteri: [registra, indirizza, autorizza]
   temi: [settore]
   sito: https://torino.ordingegneri.it/
@@ -1523,7 +1523,7 @@
   luogo: torino
   scala: regione
   tipo: categoria
-  soggetti: [ingegneri]
+  soggetti: [professionisti]
   poteri: [indirizza]
   temi: [settore]
   sito: http://www.fiopa.it/

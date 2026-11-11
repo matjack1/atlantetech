@@ -1,0 +1,32 @@
+---
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { getEntry } from 'astro:content';
+import { SOGGETTI } from '../lib/tassonomia.mjs';
+import { ORDINE_SOGGETTI } from '../lib/ordine-soggetti.mjs';
+import { getSchede, paginaProfilo, siApplica } from '../lib/format';
+
+// Una card per soggetto, dal più al meno regolato: descrizione della pagina profilo e numero di atti oltre al nucleo comune.
+const schede = (await getSchede()).filter((s) => !s.data.soggetti.includes('tutti'));
+const profili = await Promise.all(
+	ORDINE_SOGGETTI.map(async (k) => {
+		const label = SOGGETTI[k as keyof typeof SOGGETTI];
+		const id = `profili/${k}`;
+		const pagina = await getEntry('docs', id);
+		if (!pagina) throw new Error(`Pagina profilo mancante: ${id}`);
+		const n = schede.filter((s) => siApplica(s.data.soggetti, k)).length;
+		return { k, label, descrizione: pagina.data.description, n };
+	})
+);
+---
+
+<CardGrid>
+	{
+		profili.map(({ k, label, descrizione, n }) => (
+			<LinkCard
+				title={label}
+				description={`${descrizione ?? ''} Nucleo comune + ${n} att${n === 1 ? 'o' : 'i'} specific${n === 1 ? 'o' : 'i'}.`}
+				href={paginaProfilo(k)}
+			/>
+		))
+	}
+</CardGrid>

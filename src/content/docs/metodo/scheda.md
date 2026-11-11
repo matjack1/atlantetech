@@ -4,7 +4,7 @@ sidebar:
   order: 1
 ---
 
-Ogni atto ha una scheda in `src/content/docs/atti/<tema>/<slug>.md`. Temi e soggetti sono definiti in `src/lib/tassonomia.mjs`. I metadati stanno nel frontmatter: il riquadro sotto il titolo, la matrice in [Panoramica](/), il [Nucleo comune](/nucleo/) e le pagine profilo si generano da lì.
+Ogni atto ha una scheda in `src/content/docs/atti/<tema>/<slug>.md`. Temi e soggetti sono definiti in `src/lib/tassonomia.mjs`. I metadati stanno nel frontmatter: il riquadro sotto il titolo, la matrice in [A chi si applica](/a-chi-si-applica/), il [Nucleo comune](/nucleo/) e le pagine profilo si generano da lì.
 
 ## Frontmatter
 

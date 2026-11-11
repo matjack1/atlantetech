@@ -1,0 +1,71 @@
+---
+import { TEMI } from '../lib/tassonomia.mjs';
+import { getSchede, href } from '../lib/format';
+
+// Tutte le schede raggruppate per tema, in colonne: sostituisce la barra laterale nella home.
+const schede = await getSchede();
+const temi = Object.entries(TEMI)
+	.map(([tema, label]) => ({ tema, label, schede: schede.filter((s) => s.data.tema === tema) }))
+	.filter((t) => t.schede.length > 0);
+---
+
+<div class="mappa not-content">
+	{
+		temi.map(({ tema, label, schede }) => (
+			<section id={`tema-${tema}`}>
+				<h3>
+					{label} <span class="n">{schede.length}</span>
+				</h3>
+				<ul>
+					{schede.map((s) => (
+						<li>
+							<a href={href(s.id)} title={s.data.estremi}>
+								{s.data.nome ?? s.data.title}
+							</a>
+						</li>
+					))}
+				</ul>
+			</section>
+		))
+	}
+</div>
+
+<style>
+	.mappa {
+		columns: 16rem;
+		column-gap: 2rem;
+		margin-top: 1.5rem;
+	}
+	section {
+		break-inside: avoid;
+		margin-bottom: 1.5rem;
+	}
+	h3 {
+		font-size: var(--sl-text-base);
+		font-weight: 600;
+		color: var(--sl-color-white);
+		margin: 0 0 0.4rem;
+		padding-bottom: 0.3rem;
+		border-bottom: 1px solid var(--sl-color-hairline);
+	}
+	.n {
+		font-weight: 400;
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-size: var(--sl-text-sm);
+		line-height: 1.7;
+	}
+	a {
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+	}
+	a:hover {
+		color: var(--sl-color-accent-high);
+		text-decoration: underline;
+	}
+</style>

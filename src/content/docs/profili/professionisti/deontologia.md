@@ -61,4 +61,4 @@ Il codice si applica a tutti gli iscritti, di ogni settore e sezione, **in qualu
 
 Dal 23/06/2026 il codice ha regole espresse sull'AI (artt. 3.5, 6.3, 7.3 e 13), che recepiscono l'art. 13 della [L. 132/2025](/atti/ai/legge-ai-italia/). Non ha regole specifiche su cibersicurezza o protezione dei dati, oltre al dovere di riservatezza: si applicano [GDPR](/atti/dati/gdpr/) e [Codice Privacy](/atti/dati/codice-privacy/).
 
-Per l'uso dell'AI in pratica vedi [Obblighi del professionista](/ordini/ingegneri/obblighi/#dati-riservatezza-ai).
+Per l'uso dell'AI in pratica vedi [Obblighi del professionista](/profili/professionisti/obblighi/#dati-riservatezza-ai).

@@ -1,0 +1,71 @@
+---
+import { TEMI } from '../lib/tassonomia.mjs';
+import { getSchede, href } from '../lib/format';
+
+// Il nucleo comune in forma compatta, per tema, con la condizione di ogni atto.
+const schede = (await getSchede()).filter((s) => s.data.soggetti.includes('tutti'));
+const temi = Object.entries(TEMI)
+	.map(([tema, label]) => ({ tema, label, schede: schede.filter((s) => s.data.tema === tema) }))
+	.filter((t) => t.schede.length > 0);
+---
+
+<div class="nucleo not-content">
+	{
+		temi.map(({ label, schede }) => (
+			<section>
+				<h3>{label}</h3>
+				<ul>
+					{schede.map((s) => (
+						<li>
+							<a href={href(s.id)} title={s.data.estremi}>
+								{s.data.nome ?? s.data.title}
+							</a>
+							<span>{s.data.condizione ?? 'sempre'}</span>
+						</li>
+					))}
+				</ul>
+			</section>
+		))
+	}
+</div>
+
+<style>
+	.nucleo {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+	section {
+		padding: 0.75rem 1rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+	}
+	h3 {
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+		color: var(--sl-color-gray-2);
+		margin: 0 0 0.5rem;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 0.5rem;
+	}
+	li {
+		display: grid;
+		line-height: 1.35;
+	}
+	a {
+		font-weight: 600;
+	}
+	span {
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+</style>

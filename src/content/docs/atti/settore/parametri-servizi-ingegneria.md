@@ -7,8 +7,8 @@ estremi: "D.M. Giustizia 17 giugno 2016 (affidamenti pubblici); D.M. 20 luglio 2
 tipo: atto
 giurisdizione: IT
 tema: settore
-soggetti: [ingegneri]
-condizione: "se lavori per la PA o in contenzioso"
+soggetti: [professionisti]
+condizione: "se sei ingegnere e lavori per la PA o in contenzioso"
 stato: bozza
 ---
 

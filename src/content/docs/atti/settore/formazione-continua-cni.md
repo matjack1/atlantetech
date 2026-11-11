@@ -7,7 +7,8 @@ estremi: "CNI, Regolamento per l’aggiornamento della competenza professionale 
 tipo: provvedimento
 giurisdizione: IT
 tema: settore
-soggetti: [ingegneri]
+soggetti: [professionisti]
+condizione: "se sei ingegnere iscritto all’albo"
 applicazione: 2014-01-01
 scadenze:
   - data: 2026-01-01
@@ -53,7 +54,7 @@ Sei iscritto all'albo degli ingegneri, in qualsiasi sezione e settore, e **eserc
 
 ## Sanzioni
 
-Chi esercita senza aver assolto l'obbligo è deferito dal Consiglio dell'Ordine al Consiglio di disciplina territoriale (regolamento, art. 12; Testo unico, § 12.1). Le sanzioni vanno dall'avvertimento alla cancellazione dall'albo (R.D. 2537/1925, art. 45; vedi [Deontologia](/ordini/ingegneri/deontologia/#procedimento-disciplinare)).
+Chi esercita senza aver assolto l'obbligo è deferito dal Consiglio dell'Ordine al Consiglio di disciplina territoriale (regolamento, art. 12; Testo unico, § 12.1). Le sanzioni vanno dall'avvertimento alla cancellazione dall'albo (R.D. 2537/1925, art. 45; vedi [Deontologia](/profili/professionisti/deontologia/#procedimento-disciplinare)).
 
 ## Note aperte
 

@@ -18,7 +18,12 @@ const temi = Object.entries(TEMI).filter(([k]) => schede.some((s) => s.data.tema
 	temi.map(([tema, label]) => (
 		<>
 			<h3>{label}</h3>
-			<table>
+			<table class="elenco">
+				<colgroup>
+					<col class="atto" />
+					<col />
+					<col class="data" />
+				</colgroup>
 				<thead>
 					<tr>
 						<th>Atto</th>
@@ -44,3 +49,18 @@ const temi = Object.entries(TEMI).filter(([k]) => schede.some((s) => s.data.tema
 		</>
 	))
 }
+
+<style>
+	/* Stessa larghezza e stesse colonne per tutte le tabelle della pagina, così si leggono allineate. */
+	.elenco {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+	}
+	.atto {
+		width: 35%;
+	}
+	.data {
+		width: 7rem;
+	}
+</style>
