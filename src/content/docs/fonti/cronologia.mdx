@@ -1,0 +1,22 @@
+---
+title: Cronologia degli atti
+description: Tutte le schede in ordine di tempo, con le prossime date di applicazione e le scadenze.
+sidebar:
+  order: 3
+---
+
+import CronologiaAtti from '../../../components/CronologiaAtti.astro';
+
+Le stesse schede dell'[Indice degli atti](/fonti/indice/), in ordine di tempo invece che per tipo di fonte.
+
+## Prossime scadenze
+
+Date di applicazione e altre scadenze non ancora passate alla data dell'ultimo aggiornamento del sito.
+
+<CronologiaAtti vista="scadenze" />
+
+## Per anno
+
+Dalla più recente, ordinate per anno dell'atto, il primo che compare negli estremi, e dentro l'anno per data di applicazione. Un atto modificato più volte resta all'anno della prima versione: l'AI Act è del 2024 anche se l'Omnibus digitale lo ha cambiato nel 2026. Gli standard senza anno negli estremi sono in fondo.
+
+<CronologiaAtti vista="anni" />

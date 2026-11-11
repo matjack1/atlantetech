@@ -1,0 +1,85 @@
+---
+import { annoDi, formatData, getSchede, href } from '../lib/format';
+
+interface Props {
+	/** `anni`: tutte le schede per anno dell'atto; `scadenze`: le date di applicazione e le scadenze non ancora passate */
+	vista: 'anni' | 'scadenze';
+}
+
+const { vista } = Astro.props;
+const schede = await getSchede();
+const nome = (s: (typeof schede)[number]) => s.data.nome ?? s.data.title;
+
+// «Oggi» è la data della build: il sito è statico.
+const oggi = new Date();
+oggi.setHours(0, 0, 0, 0);
+
+const scadenze = schede
+	.flatMap((s) => [
+		...(s.data.tipo !== 'standard' && s.data.applicazione
+			? [{ s, data: s.data.applicazione, cosa: 'Si applica' }]
+			: []),
+		...s.data.scadenze.map((x) => ({ s, data: x.data, cosa: x.cosa })),
+	])
+	.filter((x) => x.data >= oggi)
+	.sort((a, b) => a.data.getTime() - b.data.getTime() || nome(a.s).localeCompare(nome(b.s), 'it'));
+
+// Dal più recente: per anno dell'atto, poi per data di applicazione; senza anno o data in fondo (annoDi = 9999).
+const datato = (anno: number) => (anno === 9999 ? 0 : anno);
+const perAnno = schede
+	.map((s) => ({ s, anno: annoDi(s.data.estremi) }))
+	.sort(
+		(a, b) =>
+			datato(b.anno) - datato(a.anno) ||
+			(b.s.data.applicazione?.getTime() ?? -Infinity) - (a.s.data.applicazione?.getTime() ?? -Infinity) ||
+			nome(a.s).localeCompare(nome(b.s), 'it')
+	);
+---
+
+{
+	vista === 'scadenze' ? (
+		<table>
+			<thead>
+				<tr>
+					<th>Data</th>
+					<th>Atto</th>
+					<th>Cosa</th>
+				</tr>
+			</thead>
+			<tbody>
+				{scadenze.map(({ s, data, cosa }) => (
+					<tr>
+						<td>{formatData(data)}</td>
+						<td>
+							<a href={href(s.id)}>{nome(s)}</a>
+						</td>
+						<td>{cosa}</td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+	) : (
+		<table>
+			<thead>
+				<tr>
+					<th>Anno</th>
+					<th>Atto</th>
+					<th>Estremi</th>
+					<th>Applicazione</th>
+				</tr>
+			</thead>
+			<tbody>
+				{perAnno.map(({ s, anno }) => (
+					<tr>
+						<td>{anno === 9999 ? '—' : anno}</td>
+						<td>
+							<a href={href(s.id)}>{nome(s)}</a>
+						</td>
+						<td>{s.data.estremi}</td>
+						<td>{s.data.tipo === 'standard' ? '—' : formatData(s.data.applicazione)}</td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+	)
+}
