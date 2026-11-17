@@ -5,11 +5,11 @@ sidebar:
   order: 2
 ---
 
-Punti aperti al 28/10/2026. Lo stato delle iniziative si basa su informazioni aggiornate a giugno 2026.
+Punti aperti al 17/11/2026. Lo stato delle iniziative si basa su informazioni aggiornate a giugno 2026, salvo il mandato del Consiglio sul Digital Omnibus (ottobre 2026).
 
 ## Iniziative in corso
 
-- **Digital Omnibus** (proposta della Commissione, novembre 2025): modifiche a GDPR, regole sui cookie, AI Act (incluso il possibile rinvio degli obblighi per l'alto rischio) e Data Act. Verificare lo stato dell'iter e le date effettive. La parte sull'AI è legge: Reg. (UE) 2026/1744, «Omnibus digitale sull'IA», dell'8/7/2026 (GU UE L del 24/7/2026), che modifica l'AI Act: rinvia l'alto rischio al 2027-2028 e attenua l'alfabetizzazione (vedi [AI Act](/atti/ai/ai-act/)). Per la parte su GDPR e cookie, a fine ottobre 2026 il Parlamento non ha ancora votato e i triloghi non sono iniziati (fonti di settore, non ancora riscontrate sui documenti ufficiali).
+- **Digital Omnibus** (proposta della Commissione, novembre 2025): modifiche a GDPR, regole sui cookie, AI Act (incluso il possibile rinvio degli obblighi per l'alto rischio) e Data Act. Verificare lo stato dell'iter e le date effettive. La parte sull'AI è legge: Reg. (UE) 2026/1744, «Omnibus digitale sull'IA», dell'8/7/2026 (GU UE L del 24/7/2026), che modifica l'AI Act: rinvia l'alto rischio al 2027-2028 e attenua l'alfabetizzazione (vedi [AI Act](/atti/ai/ai-act/)). Per la parte su GDPR e cookie il Consiglio ha adottato il mandato negoziale (Coreper 21/10/2026, doc. ST 14756/26): le regole sui cookie restano nell'art. 5(3) della direttiva ePrivacy, che viene riscritto. Restano il consenso, un elenco chiuso di esenzioni, il rifiuto con un solo clic e un'attesa di quattro mesi prima di chiedere di nuovo; si applicherebbero 24 mesi dopo l'adozione. Saltano gli artt. 88a e 88b GDPR proposti dalla Commissione, compresi i segnali di consenso dal browser. Dettagli in [Cookie / ePrivacy](/atti/web/cookie-eprivacy/). Il Parlamento non ha ancora una posizione e i triloghi non sono iniziati (comunicato del Consiglio del 21/10/2026).
 - **Digital Fairness Act**: proposta attesa nel 2026 su pratiche commerciali online, dark pattern, abbonamenti.
 
 ## Punti aperti nelle schede

@@ -63,6 +63,6 @@ Fino a 10 milioni di euro o al 2% del fatturato mondiale annuo, se superiore, pe
 
 ## Note aperte
 
-- **Digital Omnibus**: la proposta della Commissione del novembre 2025 modificherebbe definizioni, regole sull'AI, notifica dei breach e cookie. La parte sul GDPR, a fine ottobre 2026, non è legge: il Parlamento non ha ancora votato e i triloghi non sono iniziati. La parte che modifica l'AI Act è invece già in vigore come Reg. (UE) 2026/1744. Vedi [Da verificare](/metodo/da-verificare/).
+- **Digital Omnibus**: la proposta della Commissione del novembre 2025 modificherebbe definizioni, regole sull'AI, notifica dei breach e cookie. La parte sul GDPR non è legge. Il Consiglio ha adottato il mandato negoziale il 21/10/2026 (doc. ST 14756/26), mentre il Parlamento non ha ancora una posizione e i triloghi non sono iniziati. Il mandato lascia i cookie nella direttiva ePrivacy, senza i nuovi artt. 88a e 88b: vedi [Cookie / ePrivacy](/atti/web/cookie-eprivacy/). La parte che modifica l'AI Act è invece già in vigore come Reg. (UE) 2026/1744. Vedi [Da verificare](/metodo/da-verificare/).
 - **Reg. (UE) 2025/2518**: dal 2 aprile 2027 cambia la procedura per reclami e indagini sui trattamenti transfrontalieri; gli obblighi sostanziali restano gli stessi.
 - **EU-US Data Privacy Framework**: verificare l'esito delle impugnazioni della decisione di adeguatezza prima di basarci i trasferimenti.
