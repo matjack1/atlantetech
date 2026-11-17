@@ -1,6 +1,6 @@
 ---
 import Default from '@astrojs/starlight/components/PageTitle.astro';
-import { TEMI, TIPI } from '../lib/tassonomia.mjs';
+import { SOGGETTI, TEMI, TIPI } from '../lib/tassonomia.mjs';
 import { getEntries } from 'astro:content';
 import { etichettaSoggetti, formatData, hrefEnte, nomeBreve } from '../lib/format';
 
@@ -31,6 +31,11 @@ const autorita = data.estremi ? await getEntries(data.autorita) : [];
 							{etichettaSoggetti(data.soggetti)}
 							{data.condizione && <>, {data.condizione}</>}
 						</dd>
+						{Object.entries(data.condizioni).map(([k, c]) => (
+							<dd>
+								{SOGGETTI[k as keyof typeof SOGGETTI]}: {c}
+							</dd>
+						))}
 					</>
 				)}
 				{data.recepimento && (

@@ -6,8 +6,10 @@ nome: "Codice appalti"
 estremi: "D.Lgs. 31 marzo 2023, n. 36"
 giurisdizione: IT
 tema: settore
-soggetti: [professionisti, artigiani, cooperative, saas]
+soggetti: [professionisti, artigiani, cooperative, saas, scuole]
 condizione: "se partecipi a gare pubbliche"
+condizioni:
+  scuole: "come stazione appaltante: acquisti su piattaforme certificate e MePA"
 applicazione: 2023-07-01
 scadenze:
   - data: 2024-01-01

@@ -622,6 +622,21 @@
     Dal Ministero dipendono la Polizia di Stato e i Vigili del fuoco, che tengono gli elenchi dei
     professionisti antincendio.
 
+- id: ministero-istruzione
+  nome: Ministero dell'istruzione e del merito
+  sigla: MIM
+  livello: nazionali
+  tipo: istituzioni
+  soggetti: [scuole]
+  poteri: [regola, vigila, indirizza]
+  temi: [settore, dati, pa]
+  sito: https://www.mim.gov.it/
+  ruolo: >-
+    Indirizza e vigila sulle istituzioni scolastiche, anche tramite gli Uffici scolastici
+    regionali. Gestisce i sistemi informativi della scuola (SIDI), le iscrizioni online e i
+    servizi per le famiglie, e finanzia la digitalizzazione delle scuole con i fondi PNRR.
+  note: Ruolo degli USR come responsabili della prevenzione della corruzione e della trasparenza delle scuole.
+
 - id: dipartimento-sport
   nome: Dipartimento per lo sport
   livello: nazionali
@@ -700,7 +715,7 @@
   livello: nazionali
   tipo: autorita
   poteri: [regola, vigila, registra]
-  temi: [settore, lavoro]
+  temi: [settore, lavoro, pa]
   sito: https://www.anticorruzione.it/
   ruolo: >-
     Contratti pubblici: banca dati nazionale, fascicolo virtuale dell'operatore economico,
@@ -753,7 +768,7 @@
   livello: nazionali
   tipo: agenzie
   poteri: [regola, vigila, autorizza, indirizza]
-  temi: [documenti, ai, contratti, web]
+  temi: [documenti, ai, contratti, web, pa]
   sito: https://www.agid.gov.it/
   ruolo: >-
     Adotta le linee guida attuative del CAD, vincolanti per la PA (documento informatico,

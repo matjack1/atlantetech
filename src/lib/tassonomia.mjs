@@ -10,6 +10,7 @@ export const SOGGETTI = {
 	artigiani: 'Artigiani e piccole imprese',
 	cooperative: 'Cooperative',
 	saas: 'SaaS e imprese digitali',
+	scuole: 'Scuole statali',
 };
 
 /** Etichette brevi per le intestazioni di colonna (matrice in /a-chi-si-applica/). */
@@ -22,6 +23,7 @@ export const SOGGETTI_BREVI = {
 	artigiani: 'Artigiani',
 	cooperative: 'Cooperative',
 	saas: 'SaaS',
+	scuole: 'Scuole',
 };
 
 /** Ambito tematico; ogni tema è una cartella in src/content/docs/atti/. */
@@ -38,6 +40,7 @@ export const TEMI = {
 	settore: 'Norme di settore',
 	piattaforme: 'Piattaforme e dati',
 	sicurezza: 'Cybersicurezza',
+	pa: 'Pubblica amministrazione digitale',
 	standard: 'Standard e framework (volontari)',
 };
 

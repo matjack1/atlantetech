@@ -8,6 +8,8 @@ giurisdizione: IT
 tema: fisco
 soggetti: [tutti]
 condizione: "se hai partita IVA"
+condizioni:
+  scuole: "come destinataria: accetta solo fatture elettroniche, con il codice univoco dell'IPA"
 applicazione: 2019-01-01
 scadenze:
   - data: 2024-01-01

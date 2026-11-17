@@ -21,6 +21,8 @@ giurisdizione: UE                # UE | IT | CEI | ISO | INT
 tema: piattaforme                # cartella e chiave di TEMI
 soggetti: [saas]                 # chiavi di SOGGETTI; [tutti] = nucleo comune; vuoto = nessun obbligo diretto
 condizione: "se offri servizi cloud"  # quando scatta, mostrata nelle tabelle
+condizioni:                      # facoltativo: condizione diversa per un soggetto, nella sua pagina profilo
+  scuole: "come PA: …"
 applicazione: 2025-09-12         # data di applicazione principale
 recepimento: "D.Lgs. …"          # solo per direttive
 scadenze:                        # altre date rilevanti
@@ -35,7 +37,7 @@ verificataIl: 2026-10-27         # quando si è controllato sul testo ufficiale
 ---
 ```
 
-L'[Indice degli atti](/fonti/indice/) colloca ogni scheda in un tipo di fonte ricavato da `tipo`, `giurisdizione` ed estremi (`fonteDi` in `src/lib/format.ts`): gli estremi devono iniziare con la forma abituale, ad esempio `Reg. (UE)`, `Dir. (UE)`, `L.`, `D.Lgs.`, `D.L.`, `D.P.R.`. Se il tipo ricavato è sbagliato si indica `fonte`. Le schede senza `soggetti`, come Costituzione e Trattati, non compaiono nelle pagine profilo né nella matrice.
+L'[Indice degli atti](/fonti/indice/) colloca ogni scheda in un tipo di fonte ricavato da `tipo`, `giurisdizione` ed estremi (`fonteDi` in `src/lib/format.ts`): gli estremi devono iniziare con la forma abituale, ad esempio `Reg. (UE)`, `Dir. (UE)`, `L.`, `D.Lgs.`, `D.L.`, `D.P.R.`. Se il tipo ricavato è sbagliato si indica `fonte`. `condizioni` serve quando la condizione generale è sbagliata per un soggetto: le scuole statali sono PA, e per loro il whistleblowing vale sempre e la fattura elettronica si riceve, non si emette. Le schede senza `soggetti`, come Costituzione e Trattati, non compaiono nelle pagine profilo né nella matrice.
 
 Il build fallisce se un campo non rispetta lo schema (`src/content.config.ts`) o se `autorita` cita un ente che non esiste.
 

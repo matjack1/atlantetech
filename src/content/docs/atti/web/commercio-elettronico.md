@@ -8,6 +8,8 @@ giurisdizione: UE
 tema: web
 soggetti: [tutti]
 condizione: "se offri servizi o vendi online"
+condizioni:
+  scuole: "di norma no, salvo servizi a pagamento online"
 applicazione: 2002-01-17
 recepimento: "D.Lgs. 9 aprile 2003, n. 70"
 fonti:

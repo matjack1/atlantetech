@@ -7,6 +7,8 @@ estremi: "D.Lgs. 7 marzo 2005, n. 82"
 giurisdizione: IT
 tema: documenti
 soggetti: [tutti]
+condizioni:
+  scuole: "sempre, come PA: domicilio digitale in IPA, SPID e CIE, pagoPA, protocollo e conservazione"
 applicazione: 2006-01-01
 autorita: [agid, acn]
 fonti:

@@ -7,6 +7,8 @@ estremi: "Reg. (UE) 2016/679"
 giurisdizione: UE
 tema: dati
 soggetti: [tutti]
+condizioni:
+  scuole: "sempre; il DPO è obbligatorio, come per ogni autorità pubblica (art. 37(1)(a))"
 applicazione: 2018-05-25
 scadenze:
   - data: 2027-04-02

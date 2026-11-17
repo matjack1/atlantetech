@@ -19,6 +19,8 @@ const scheda = z.object({
 	tema: z.enum(chiavi(TEMI)).optional(),
 	soggetti: z.array(z.enum(['tutti', ...chiavi(SOGGETTI)])).default([]),
 	condizione: z.string().optional(),
+	// condizione diversa per un soggetto, al posto di `condizione` nella sua pagina profilo (es. le scuole, che sono PA)
+	condizioni: z.partialRecord(z.enum(chiavi(SOGGETTI)), z.string()).default({}),
 	applicazione: z.coerce.date().optional(),
 	scadenze: z.array(z.object({ data: z.coerce.date(), cosa: z.string() })).default([]),
 	recepimento: z.string().optional(),

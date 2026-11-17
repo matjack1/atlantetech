@@ -8,6 +8,8 @@ giurisdizione: IT
 tema: web
 soggetti: [tutti]
 condizione: "se ricevi contributi pubblici ≥ 10.000 €/anno"
+condizioni:
+  scuole: "di norma no: la scuola pubblica in Amministrazione trasparente (D.Lgs. 33/2013)"
 fonti:
   - label: "Testo (Normattiva)"
     url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2017-08-04;124"

@@ -8,6 +8,8 @@ giurisdizione: IT
 tema: lavoro
 soggetti: [tutti]
 condizione: "se hai ≥ 50 lavoratori o un modello 231"
+condizioni:
+  scuole: "sempre, come PA, a prescindere dal numero di lavoratori"
 applicazione: 2023-07-15
 recepimento: "Recepisce la Dir. (UE) 2019/1937"
 scadenze:

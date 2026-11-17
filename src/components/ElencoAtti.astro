@@ -40,7 +40,7 @@ const temi = Object.entries(TEMI).filter(([k]) => schede.some((s) => s.data.tema
 									<a href={href(s.id)}>{s.data.nome ?? s.data.title}</a>
 									{soggetto !== 'tutti' && s.data.soggetti.includes('tutti') && <small> · nucleo</small>}
 								</td>
-								<td>{s.data.condizione ?? 'Sempre'}</td>
+								<td>{s.data.condizioni[soggetto as keyof typeof s.data.condizioni] ?? s.data.condizione ?? 'Sempre'}</td>
 								<td>{formatData(s.data.applicazione)}</td>
 							</tr>
 						))}

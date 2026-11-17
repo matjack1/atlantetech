@@ -45,3 +45,4 @@ Punti aperti al 17/11/2026. Lo stato delle iniziative si basa su informazioni ag
 - [AgID](https://www.agid.gov.it/)
 - [AGCOM](https://www.agcom.it/)
 - [Commissione europea, strategia digitale](https://digital-strategy.ec.europa.eu/)
+- Scuole statali: delibera ANAC per le istituzioni scolastiche e ruolo dell'USR come RPCT; determinazione di adozione delle linee guida di design AgID; decorrenza dell'albo online (L. 69/2009); commi del D.L. 95/2012 sul registro elettronico; regole della legge italiana sull'AI per i minori.
