@@ -28,6 +28,7 @@ Punti aperti al 17/11/2026. Lo stato delle iniziative si basa su informazioni ag
 - Decreto CEI 2018: testo vigente, link ufficiale, confine con le attività civili delle parrocchie.
 - Safeguarding sportivo (D.Lgs. 39/2021, art. 16): scadenze di adeguamento e linee guida delle federazioni.
 - Codice appalti: soglie BIM dopo il correttivo (D.Lgs. 209/2024).
+- Scuole statali: delibera ANAC per le istituzioni scolastiche e ruolo dell'USR come RPCT; determinazione di adozione delle linee guida di design AgID; decorrenza dell'albo online (L. 69/2009); commi del D.L. 95/2012 sul registro elettronico; regole della legge italiana sull'AI per i minori.
 - NIS2: estremi delle determinazioni ACN sulle misure di base e decorrenza dell'obbligo di notifica.
 - Qualificazione cloud PA: certificazioni ISO richieste per livello.
 - Cybersecurity Act: stato dello schema EUCS e della proposta di revisione.
@@ -45,4 +46,3 @@ Punti aperti al 17/11/2026. Lo stato delle iniziative si basa su informazioni ag
 - [AgID](https://www.agid.gov.it/)
 - [AGCOM](https://www.agcom.it/)
 - [Commissione europea, strategia digitale](https://digital-strategy.ec.europa.eu/)
-- Scuole statali: delibera ANAC per le istituzioni scolastiche e ruolo dell'USR come RPCT; determinazione di adozione delle linee guida di design AgID; decorrenza dell'albo online (L. 69/2009); commi del D.L. 95/2012 sul registro elettronico; regole della legge italiana sull'AI per i minori.
